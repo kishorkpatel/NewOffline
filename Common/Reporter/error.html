@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Qualitia Error</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<script type="text/javascript" src="Jquery/jquery-1.7.2.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="Jquery/jquery.treeTable.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Jquery/jquery.treeTable.js"></script>
+    
+    <script type="text/javascript">
+		var ERROR_XML = "error.xml";
+		var ERROR_XSLT = "error.xslt";
+		
+		function getXmlDocument(sFile) {
+			var xmlHttp, oXML;   
+
+			try {
+				if(document.all){
+					xmlHttp = getXMLObject();
+					xmlHttp.async = false;            // Use syncronous communication
+					xmlHttp.resolveExternals = false;
+					xmlHttp.load(sFile);
+					if (xmlHttp.parseError.errorCode ===0){
+						oXML = xmlHttp;
+					} else {
+						oXML = null;
+					}
+				}else{
+					xmlHttp = new XMLHttpRequest();
+					xmlHttp.open("GET", sFile, false); // Use syncronous communication
+					if (xmlHttp.overrideMimeType) xmlHttp.overrideMimeType('text/xml'); // Changes mime type to xml. Bamboo fails to read xslt without this
+					xmlHttp.send(null);
+					
+					if (top.location.href.indexOf('http:') > -1){ // Only validate for http: and skip for file: 
+						if (xmlHttp.status === 200 || xmlHttp.status === 304) {
+							oXML = xmlHttp.responseXML;
+						}else { 
+							oXML = null;
+						}
+					}else {oXML = xmlHttp.responseXML;}
+				}
+			} catch(e) {
+				if (top.location.href.indexOf('http:') > -1){
+					alert("Unknown Exception.");
+				}else {
+					alert("Please use IE or Firefox. Other browsers might not be supported when viewing local reports");
+				}
+			}
+			return oXML;
+		}
+
+		function getXMLObject() {
+			var aVersions = new Array("Msxml2.DOMDocument.6.0", "Msxml2.DOMDocument.3.0");
+
+			for (var i=0; i<aVersions.length; i++) {
+				try {
+					var oXML = new ActiveXObject(aVersions[i]);
+					return oXML;
+				} 
+				catch(e) {
+				}
+			}
+
+			return null;
+		}
+	
+	
+		function loadErrorReport() {
+
+			var xml = getXmlDocument(ERROR_XML);
+			
+			if (xml==null) { 
+				document.getElementById("xsltOutput").innerHTML = "<font size='4' color='red'>Report cannot be generated... <BR> " + ERROR_XML + " not found... </font>";
+				return false;
+			}
+			
+			var xsl = getXmlDocument(ERROR_XSLT);
+			var xf = null;
+
+			if (document.all) {
+			  xf = xml.transformNode(xsl);  
+			  document.getElementById("xsltOutput").innerHTML = xf;
+			}// code for Mozilla, Firefox, Opera,etc.
+			else if (document.implementation && 
+					 document.implementation.createDocument) {
+
+			  xsltProcessor=new XSLTProcessor();
+			  xsltProcessor.importStylesheet(xsl);  
+			  resultDocument = xsltProcessor.transformToFragment(xml,document);
+			  document.getElementById("xsltOutput").appendChild(resultDocument);
+			
+			}
+			
+			//$("#tc_table").treeTable();
+		}
+
+
+    </script>
+
+    
+</head>
+<body onload="loadErrorReport()" style="margin-left: 2px; margin-right: 2px;">
+    <table id="wrapper" cellpadding="0" style="height: 97%;" width="100%" cellspacing="0"
+        border="0">
+        <tr style="height: 55%;">
+            <td style="vertical-align: top; height: 100%; text-align: center;">
+                <div id="xsltOutput" style="margin: 0; border: solid 1px #9DC4ED; width: 99%; height: 100%;">                    
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+    <title>Qualitia Test Execution Report</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <script type="text/javascript" src="Jquery/jquery-1.7.2.min.js"></script>
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="Jquery/jquery.treeTable.css" rel="stylesheet" type="text/css" />
+	
+	<style>		
+		.black_overlay{
+			display: none;
+			position: absolute;
+			top: 0%;
+			left: 0%;
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			z-index:1001;
+			-moz-opacity: 0.8;
+			opacity:.80;
+			filter: alpha(opacity=80);
+		}
+		.white_content {
+			display: none;
+			position: absolute;
+			top: 25%;
+			left: 10%;
+			width: 80%;
+			height: 60%;
+			padding: 16px;
+			border: 8px solid #E2EAF9;
+			background-color: white;
+			z-index:1002;
+			overflow: auto;
+		}
+	</style>
+	
+
+	<!--[if IE 9]>
+		<style>
+			.ie_scroll{overflow-y:scroll;}
+		</style>
+	<![endif]-->
+    <script type="text/javascript" src="Jquery/jquery.treeTable.js"></script>
+    
+    <script type="text/javascript">
+        var dryRunFlag = false;
+		
+		function getXmlDocument(sFile) {
+			var xmlHttp, oXML;   
+			// try to use the native XML parser
+			try {
+				xmlHttp = new XMLHttpRequest();
+				xmlHttp.open("GET", sFile, false); // Use syncronous communication
+				if (xmlHttp.overrideMimeType) xmlHttp.overrideMimeType('text/xml');
+				xmlHttp.send(null);
+				
+				if (top.location.href.indexOf('http:') > -1){ // Only validate for http: and skip for file: 
+					if (xmlHttp.status === 200 || xmlHttp.status === 304) {
+						oXML = xmlHttp.responseXML;
+					}else { 
+						oXML = null;
+					}
+				}else {oXML = xmlHttp.responseXML;}
+				
+//				alert ("oXML::" + sFile + ":" + oXML);
+			} catch(e) {
+				// can't use the native parser, use the ActiveX instead
+				xmlHttp = getXMLObject();
+				xmlHttp.async = false;            // Use syncronous communication
+				xmlHttp.resolveExternals = false;
+				xmlHttp.load(sFile);
+				if (xmlHttp.parseError.errorCode ===0){
+					oXML = xmlHttp;
+				} else {
+					oXML = null;
+				}
+				//oXML = xmlHttp;
+			}
+			return oXML;
+		}
+
+			// get the best ActiveX object that can read XML
+		function getXMLObject() {
+			var aVersions = new Array("Msxml2.DOMDocument.6.0", "Msxml2.DOMDocument.3.0");
+
+			for (var i=0; i<aVersions.length; i++) {
+				try {
+					var oXML = new ActiveXObject(aVersions[i]);
+					return oXML;
+				} 
+				catch(e) {
+				}
+			}
+			return null;
+		}
+
+		
+		var tcIterationFolderPath="";
+        function loadReport() {
+            var tcURL;
+            var tcIteration;
+			var blnInfoLog;
+			var blnDebugLog;
+			var blnErrorLog;
+			var type='N';
+
+            var currentUrl = new String(top.location.href);
+
+            if (currentUrl.indexOf('?') > -1 && currentUrl.indexOf('file:') > -1) {
+                var queryString = currentUrl.split('?');
+                var paramArray = queryString[1].split('#');
+				tcURL = paramArray[0].replace('.xml', '');
+                dryRunFlag = true;
+                tcIteration = paramArray[4]; //added for jira report attachment
+				type = paramArray[5];
+				br = decodeURIComponent(paramArray[6]);
+				epic = decodeURIComponent(paramArray[7]);
+				story = decodeURIComponent(paramArray[8]);
+			}else {
+				var qualitiaCookie = top.document.cookie.split(';')[0];
+				paramArray = qualitiaCookie.split('#');
+                var qualitiaCookie = top.document.cookie.split(';')[0];
+				var cookieDataArray=qualitiaCookie.split('#');
+                tcURL = cookieDataArray[0];
+                tcIteration = cookieDataArray[1];
+				type = cookieDataArray[5];
+				br = decodeURIComponent(cookieDataArray[6]);
+				epic = decodeURIComponent(cookieDataArray[7]);
+				story = decodeURIComponent(cookieDataArray[8]);
+			}
+			
+            /* 	Code Change due to performance fix on 27Nov15 by Omkar K.
+				Now since XML file is different for each TCIteration it lies within 
+				Iteraion folder. eg. TCFolderName/Iteration_1/1.xml */
+			tcURL=GetTCName(tcURL);
+			//alert("tcURL" + tcURL);
+			tcIterationFolderPath=tcURL + "/" + "ITR_" + tcIteration;
+			tcURL = tcURL + "/" + "ITR_" + tcIteration + "/" + tcIteration;
+						
+			var xml = getXmlDocument(tcURL+".xml");
+			if (xml == null) { 
+				document.getElementById("xsltOutput").innerHTML = "<font size='3' color='red'>Report cannot be generated... <BR>" + tcURL + ".xml not found... </font>";
+				return;
+			}
+			var browserName=ie_ver();			
+			if (browserName != 0) { // for ie
+				
+				//var msxml = new ActiveXObject("Msxml2.DOMDocument.6.0");
+				xml = getXmlDocument(tcURL+".xml");
+				var msxsl = new ActiveXObject("MSXML2.FreeThreadedDOMDocument.6.0");
+				//msxml.load(tcURL+".xml");
+				msxsl.async = false;
+				if(type == 'J')
+				msxsl.load("TestCaseDetailtypej.xslt");
+				else
+				msxsl.load("TestCaseDetail.xslt");
+
+				var processor = new ActiveXObject("Msxml2.XSLTemplate.6.0");
+				processor.stylesheet = msxsl;
+				var objXSLTProc = processor.createProcessor();
+				objXSLTProc.input = xml;
+				objXSLTProc.addParameter("iterationNo", tcIteration)
+				objXSLTProc.addParameter("br", br)
+				objXSLTProc.addParameter("epic", epic)
+				objXSLTProc.addParameter("story", story)
+				objXSLTProc.transform();
+				
+				document.getElementById("xsltOutput").innerHTML = objXSLTProc.output;
+			} else if (document.implementation && 
+					 document.implementation.createDocument) { // for Mozilla, Firefox, Opera,etc.
+					 //alert(1);
+			  	//xml = getXmlDocument(tcURL+".xml");
+				var xsl;
+				if(type == 'J')
+					xsl = getXmlDocument("TestCaseDetailtypej.xslt");
+				else
+					xsl = getXmlDocument("TestCaseDetail.xslt");
+				
+				
+				
+				xsltProcessor=new XSLTProcessor();
+				xsltProcessor.importStylesheet(xsl);
+				xsltProcessor.setParameter(null, "iterationNo", tcIteration);
+				xsltProcessor.setParameter(null, "br", br);
+				xsltProcessor.setParameter(null, "epic", epic);
+				xsltProcessor.setParameter(null, "story", story);
+				resultDocument = xsltProcessor.transformToFragment(xml,document);
+
+				document.getElementById("xsltOutput").appendChild(resultDocument);
+			}
+
+            if (dryRunFlag) {
+                $("#divbackreport").html("");
+            } 
+
+            $("#tc_table").treeTable({ treeColumn: 1, indent: 15 });
+
+            $("#tc_table td").each(function () {
+                if (this.innerHTML == "") {
+                    this.innerHTML = "&nbsp;";
+                }
+            });
+
+            $('#spanfullview').click(function () {
+                if ($(this).attr('title') == "Full View") {
+                    parent.document.getElementById('FrameSet').rows = '*';
+					document.getElementById('thediv').style.height='95%';
+                    $(this).attr('title',"Log View");
+                }
+                else {
+                    parent.document.getElementById('FrameSet').rows = '*,35%';
+					document.getElementById('thediv').style.height='85%';
+                    $(this).attr('title',"Full View");
+                }
+            });
+        }
+
+ function GetTCName(test1) {
+            var len = test1.toString().length;
+            var tempTCName = "";
+            for (var i = 0; i < len; i++) {
+                if (test1.charAt(i) == ':' || test1.charAt(i) == '\\' || test1.charAt(i) == '/' || test1.charAt(i) == '|' || test1.charAt(i) == '?' || test1.charAt(i) == '<' || test1.charAt(i) == '>' || test1.charAt(i) == '"') {
+                }
+                else
+                    tempTCName = tempTCName + test1.charAt(i).toString();
+            }
+            return tempTCName;
+        }
+
+        function LoadDetails(el) {
+            if (el.title == "step") {
+				//alert("el.title:" + el.title);
+                showImage(el);
+            }
+            ShowLogFrame(el, 'logFrame');
+            $(".selected_row").removeClass("selected_row");
+            $(el).addClass("selected_row");
+        }
+
+
+        function ShowLogFrame(el, frameName) {
+			//alert("ShowLogFrame el:" + el + " frame:" + frameName);
+			try{
+            var logFrame = parent.frames[1];
+			//alert("logFrame::" + logFrame);
+			
+            if (logFrame == undefined) return;
+
+            var objLogframe = logFrame.document.getElementById(frameName);
+			//alert("objLogframe:: " + objLogframe);
+            var objLink;
+            var objs;
+            var LinkId = new String();
+            var re;
+            var objAction;
+            var szSplit;
+
+            var LogId = $(el).attr('logid');
+
+            try {
+                objs = objLogframe.contentWindow.document.getElementsByTagName('a');
+				//alert("objs:: " + objs);
+            } catch (exception) {
+				//alert ("exception");
+                return;
+            }
+
+             for (k = 0; k < objs.length; k++) {
+                LinkId = objs[k].id;
+                if (LinkId.indexOf(LogId, 0) > -1) {
+                    objs[k].scrollIntoView();
+                    break;
+                }
+            }
+			}catch(ex){
+				//alert("Show Log ex::" + ex);
+			}
+
+        }
+		
+		function showCompareTabularResult(outPutFileName)
+		{
+			document.getElementById('light').style.display='block';
+			document.getElementById('fade').style.display='block';			
+			
+			var browserName=ie_ver();
+				var xml = getXmlDocument(outPutFileName);			
+				
+				if (xml==null) { 
+					document.getElementById("xsltOutput").innerHTML = "<font size='4' color='red'>Report cannot be generated... <BR> xml not found... </font>";
+					return false;
+				}
+				
+				var xsl = getXmlDocument("Report.xslt");
+				var xf = null;
+
+				if (browserName != 0) {
+				  xf = xml.transformNode(xsl);  
+				  document.getElementById("light").innerHTML = "<div align='right'><a id='close' href = 'javascript:void(0)' onclick = 'closeDialog();'><img src='Images/button_cancel.png' height='16px' width='16px'/></a></div>"+xf;
+				}// code for Mozilla, Firefox, Opera,etc.
+				else if (document.implementation && 
+						 document.implementation.createDocument) {
+				  xsltProcessor=new XSLTProcessor();
+				  xsltProcessor.importStylesheet(xsl);  
+				  resultDocument = xsltProcessor.transformToFragment(xml,document);
+				  document.getElementById("light").appendChild(resultDocument);
+				}
+		}
+		
+		function closeDialog()
+		{			
+			var closeEle=document.getElementById('close');			
+			if(closeEle!=null)
+			{
+				document.getElementById("light").innerHTML="<div align='right'><a id='close' href = 'javascript:void(0)' onclick = 'closeDialog();' style='font-family:Tahoma;font-size:12px;'><img src='Images/button_cancel.png' height='16px' width='16px'/></a></div>";
+			}
+			document.getElementById('light').style.display='none';
+			document.getElementById('fade').style.display='none';
+		}
+
+        function showImage(el) {
+			//alert("showImage el:" + el.title);
+            try {
+			var objImageFrame = parent.frames['LogFrameSet1']; // Changed by Ravi (2013-10-30) to use name rather than index
+            var captureBitMap = objImageFrame.document.getElementById("imgCaptureBitMap");
+
+            var path = tcIterationFolderPath;
+            var imagePath, captureImagePath, errorImagePath, finalImagePath;
+			
+			var rootPath = top.location.href;
+			rootPath = rootPath.replace(/\\/g, "/");
+			rootPath = rootPath.substring(0, rootPath.lastIndexOf("/"));
+            errorImagePath = rootPath + "/Images/";
+
+			imagePath = $(el).attr('imageid').replace("step_tc", "Snapshot");
+            path = path.replace(/\\/g, "/");
+
+            captureImagePath = path + "/Capture_Images/";
+            var isCondition = $(el).attr('condition');
+			var imgType = ($(el).attr('imageType') == 'jpg') ? ".jpg" : ".png"
+          
+			if (isCondition == 'condition') {
+                finalImagePath = errorImagePath + "CI_NotAvailable.png";
+            } else if (el.childNodes[3].childNodes[0].src!=undefined && el.childNodes[3].childNodes[0].src.indexOf("Not_Executed.png",0) > -1) {
+                finalImagePath = errorImagePath + "CI_NotExecuted.png";
+            } else {
+				finalImagePath = captureImagePath + imagePath + imgType;
+            }             
+			
+			//alert("el.childNodes[3].childNodes[0]:" + el.childNodes[3].childNodes[0]);
+            captureBitMap.src = finalImagePath;
+			//alert("captureBitMap.src:" + captureBitMap.src + ">>finalImagePath:" + finalImagePath);
+			}catch (exception){
+				//alert ("Show Image exception:" + exception);
+			}
+        }
+
+// The below functions are not being used as new ActiveXObject("Scripting.FileSystemObject") throws an error for shared files
+// Though works fine for local files.
+        function CheckFolderExist(path) {
+            try {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var folderBool;
+                folderBool = fso.FolderExists(path);
+                return folderBool;
+            }
+            catch (err) {
+                return false;
+            }
+        }
+
+		
+        function CheckFileExist(path) {
+            try {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var folderBool;
+                folderBool = fso.FileExists(path);
+                return folderBool;
+            }
+            catch (err) {
+                return false;
+            }
+        }
+
+        function clickonBack() {
+            top.location = "SummaryReport.html";
+        }
+		
+		 function ie_ver(){ 
+			var iev=0;
+			var ieold = (/MSIE (\d+\.\d+);/.test(navigator.userAgent));
+			var trident = !!navigator.userAgent.match(/Trident\/7.0/);
+			var rv=navigator.userAgent.indexOf("rv:11.0");
+
+			if (ieold) iev=new Number(RegExp.$1);
+			if (navigator.appVersion.indexOf("MSIE 10") != -1) iev=10;
+			if (rv!=-1) iev=11;
+			if(trident) iev=9;
+			return iev;        
+        }
+
+    </script>
+
+</head>
+<body onload="loadReport();" style="margin-left: 2px; margin-right: 2px; height:100%;">
+    <!--table id="wrapper" cellpadding="0" style="height: 100%; width:100%" cellspacing="0" border="0">
+        <tr>
+            <td style="vertical-align: top; height: 90%; text-align: center;"-->
+                <div id="xsltOutput" style="margin: 0; width: 99%; height: 95%;">                    
+                </div>
+				<div id="light" class="white_content"><div align="right"><a id="close" style="text-align:right;font-family:Tahoma;font-size:12px;" href = "javascript:void(0)" onclick = "closeDialog();"><img height="16px" width="16px" src='Images/button_cancel.png'/></a></div></div>
+				<div id="fade" class="black_overlay"></div>
+            <!--/td>
+        </tr>
+    </table-->
+
+</body>
+</html>

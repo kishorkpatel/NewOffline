@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Qualitia Test Execution Report</title>
+
+    <script language="javascript" type="text/javascript">
+        var m_LogPath;
+        var m_ReporterPath;
+        var m_oDictCatch;
+        var m_ExecutionIdDict;
+        var m_fs;
+        //////////////////////////////////////////////////////////////
+        //Constants
+        //////////////////////////////////////////////////////////////
+        var USER_ID = "UID";
+        var REPORT_DATE = "RD";
+        var LONG_REPORT_DATE = "LRD";
+        var SUITE_NAME = "SN";
+        var RELEASE_NUMBER = "RN";
+        var BUILD_NUMBER = "BN";
+        var ITERATION_NUMBER = "IN";
+        var SUITE_EXECUTION_ID = "SEI";
+        var FOLDER_PATH = "FP";
+        //////////////////////////////////////////////////////////////
+
+        function GetReporterPath()
+        {
+            var WshShell, fso;
+            fso = new ActiveXObject("Scripting.FileSystemObject");
+            var szPath = window.document.URL;
+            szPath = szPath.replace("file://", "");
+
+            szPath = fso.GetParentFolderName(szPath);
+
+            return szPath + "\\Common\\Reporter";
+        }
+
+        function ReadConfiguration() {
+            try
+            {
+                var oOption;
+                oOption = document.createElement("OPTION");
+                oOption.text = "<---Select--->";
+                oOption.value = "";
+                document.getElementById("CmbReportDates").add(oOption);
+
+                oOption = document.createElement("OPTION");
+                oOption.text = "<---Select--->";
+                oOption.value = "";
+                document.getElementById("CmbSuites").add(oOption);
+
+                oOption = document.createElement("OPTION");
+                oOption.text = "<---Select--->";
+                oOption.value = "";
+                document.getElementById("CmbRelease").add(oOption);
+
+                var logNode, reporterNode;
+                var mxml = new ActiveXObject("Microsoft.XMLDOM");
+                mxml.async = false;
+                mxml.load("Qualitia.exe.config");
+
+                m_ReporterPath = GetReporterPath();
+
+                if (m_ReporterPath == "") {
+                    alert("reporter not found.");
+                    return;
+                }
+
+                logNode = mxml.selectSingleNode("//configuration/applicationSettings/Qualitia.Properties.Settings/setting[@name='LogPath']/value");
+
+                if (logNode != null) {
+                    m_LogPath = logNode.text;
+
+
+                    m_oDictCatch = new ActiveXObject("Scripting.Dictionary");
+                    m_ExecutionIdDict = new ActiveXObject("Scripting.Dictionary");
+                    m_fs = new ActiveXObject("Scripting.FileSystemObject");
+                    ReadLogFileFolder(m_LogPath);
+                    if (m_oDictCatch.Count > 0) {
+                        FillReportDates();
+                    }
+                }
+                else {
+                    m_LogPath = "";
+                    alert("Log Path not found.");
+                }
+            }
+            catch(err)
+            {
+                alert("Unexpected error occured in report.");
+            }
+        }
+
+        function ReadLogFileFolder(FolderPath) {
+            if (m_fs.FolderExists(FolderPath)) {
+                var pFolder = m_fs.GetFolder(FolderPath);
+
+                if (m_fs.FileExists(FolderPath + "\\TAF_Report.xml")) { //Check for TAF_Report
+                    //Create inner hashtable & store in catch
+                    var mxml = new ActiveXObject("Microsoft.XMLDOM");
+                    mxml.async = false;
+                    mxml.load(FolderPath + "\\TAF_Report.xml");
+
+                    var root = mxml.selectSingleNode("//Tree");
+                    var attrList = root.attributes;
+
+                    var szExecutionId = attrList.getNamedItem("SuiteExecutionID").value;
+                    if (!m_ExecutionIdDict.Exists(szExecutionId)) {
+                        var innerDict = new ActiveXObject("Scripting.Dictionary");
+                        innerDict.add(USER_ID, attrList.getNamedItem("UserName").value);
+
+                        innerDict.add(REPORT_DATE, dateFormat(String(pFolder.DateCreated), "mmm d, yyyy"));
+                        innerDict.add(LONG_REPORT_DATE, dateFormat(String(pFolder.DateCreated), "ddd mmm dd yyyy HH:MM:ss"));
+
+                        innerDict.add(RELEASE_NUMBER, attrList.getNamedItem("ReleaseNumber").value);
+                        innerDict.add(BUILD_NUMBER, attrList.getNamedItem("BuildNumber").value);
+                        innerDict.add(ITERATION_NUMBER, attrList.getNamedItem("IterationNumber").value);
+                        innerDict.add(SUITE_EXECUTION_ID, szExecutionId);
+                        innerDict.add(FOLDER_PATH, pFolder.Path);
+
+                        root = mxml.selectSingleNode("//Tree/Branch[@Type='SUITE']");
+                        attrList = root.attributes;
+                        innerDict.add(SUITE_NAME, attrList.getNamedItem("branchText").value);
+
+                        m_oDictCatch.add(m_oDictCatch.Count, innerDict);
+                    }
+                }
+
+                var e = new Enumerator(pFolder.SubFolders);
+                for (; !e.atEnd(); e.moveNext()) {
+                    ReadLogFileFolder(e.item().Path);
+                }
+            }
+            else
+                return;
+        }
+
+        function FillReportDates() {
+            var oSelect;
+            var oOption;
+            var innerDict, uniqueDict;
+            var i;
+            var szDate;
+
+            oSelect = document.getElementById("CmbReportDates");
+
+            oSelect.innerHTML = "";
+
+            oOption = document.createElement("OPTION");
+            oOption.text = "<---Select--->";
+            oOption.value = "";
+            oSelect.add(oOption);
+
+            uniqueDict = new ActiveXObject("Scripting.Dictionary");
+
+            for (i = 0; i < m_oDictCatch.Count; i++) {
+                innerDict = m_oDictCatch.Item(i);
+                szDate = innerDict.Item(REPORT_DATE);
+
+                if (!uniqueDict.Exists(szDate)) {
+                    uniqueDict.add(szDate, null);
+
+                    oOption = document.createElement("OPTION");
+                    oOption.text = szDate;
+                    oOption.value = szDate;
+                    oSelect.add(oOption);
+
+                }
+            }
+        }
+
+        function FillSuiteNames() {
+            var oSelect = document.getElementById("CmbReportDates");
+            if (oSelect.selectedIndex > 0) {
+                var oSelectSuite;
+                var innerDict, uniqueDict;
+                var i;
+                var szDate, szSuiteName;
+                var oOption;
+                var ReportDate;
+
+                ReportDate = oSelect.options[oSelect.selectedIndex].value;
+                oSelectSuite = document.getElementById("CmbSuites");
+                oSelectSuite.innerHTML = "";
+                uniqueDict = new ActiveXObject("Scripting.Dictionary");
+
+                oOption = document.createElement("OPTION");
+                oOption.text = "<---Select--->";
+                oOption.value = "";
+                oSelectSuite.add(oOption);
+
+                for (i = 0; i < m_oDictCatch.Count; i++) {
+                    innerDict = m_oDictCatch.Item(i);
+                    szDate = innerDict.Item(REPORT_DATE);
+
+                    if (szDate == ReportDate) {
+                        szSuiteName = innerDict.Item(SUITE_NAME);
+                        if (!uniqueDict.Exists(szSuiteName)) {
+                            uniqueDict.add(szSuiteName, null);
+
+                            oOption = document.createElement("OPTION");
+                            oOption.text = szSuiteName;
+                            oOption.value = szSuiteName;
+                            oSelectSuite.add(oOption);
+                        }
+                    }
+                }
+            }
+        }
+
+        function FillReleaseNumbers() {
+            var oSelectDate = document.getElementById("CmbReportDates");
+            var oSelectSuite = document.getElementById("CmbSuites");
+            if (oSelectDate.selectedIndex > 0 && oSelectSuite.selectedIndex > 0) {
+                var oSelectRelease;
+                var innerDict, uniqueDict;
+                var i;
+                var szDate, szSuiteName, szRelease;
+                var oOption;
+                var ReportDate, SuiteName;
+
+                ReportDate = oSelectDate.options[oSelectDate.selectedIndex].value;
+                SuiteName = oSelectSuite.options[oSelectSuite.selectedIndex].value;
+
+                oSelectRelease = document.getElementById("CmbRelease");
+                oSelectRelease.innerHTML = "";
+
+                uniqueDict = new ActiveXObject("Scripting.Dictionary");
+
+                oOption = document.createElement("OPTION");
+                oOption.text = "<---Select--->";
+                oOption.value = "";
+                oSelectRelease.add(oOption);
+
+                for (i = 0; i < m_oDictCatch.Count; i++) {
+                    innerDict = m_oDictCatch.Item(i);
+                    szDate = innerDict.Item(REPORT_DATE);
+                    szSuiteName = innerDict.Item(SUITE_NAME);
+                    if (szDate == ReportDate && szSuiteName == SuiteName) {
+                        szRelease = innerDict.Item(RELEASE_NUMBER);
+                        if (!uniqueDict.Exists(szRelease)) {
+                            uniqueDict.add(szRelease, null);
+
+                            oOption = document.createElement("OPTION");
+                            oOption.text = szRelease;
+                            oOption.value = szRelease;
+                            oSelectRelease.add(oOption);
+                        }
+                    }
+                }
+            }
+        }
+
+        function SearchCatch() {
+            var oSelectDate = document.getElementById("CmbReportDates");
+            var oSelectSuite = document.getElementById("CmbSuites");
+            var oSelectRelease = document.getElementById("CmbRelease");
+            if (oSelectDate.selectedIndex > 0 && oSelectSuite.selectedIndex > 0 && oSelectRelease.selectedIndex > 0) {
+                var innerDict, uniqueDict;
+                var i;
+                var szDate, szSuiteName, szRelease;
+                var oOption;
+                var ReportDate, SuiteName, ReleaseNumber;
+                var objTable;
+
+                ReportDate = oSelectDate.options[oSelectDate.selectedIndex].value;
+                SuiteName = oSelectSuite.options[oSelectSuite.selectedIndex].value;
+                ReleaseNumber = oSelectRelease.options[oSelectRelease.selectedIndex].value;
+
+                uniqueDict = new ActiveXObject("Scripting.Dictionary");
+
+                for (i = 0; i < m_oDictCatch.Count; i++) {
+                    innerDict = m_oDictCatch.Item(i);
+                    szDate = innerDict.Item(REPORT_DATE);
+                    szSuiteName = innerDict.Item(SUITE_NAME);
+                    szRelease = innerDict.Item(RELEASE_NUMBER);
+
+                    if (szDate == ReportDate && szSuiteName == SuiteName && szRelease == ReleaseNumber) {
+                        uniqueDict.add(uniqueDict.Count, i);
+                    }
+                }
+
+                if (uniqueDict.Count > 0)
+                    GenerateTable(uniqueDict);
+            }
+            else {
+                if (oSelectDate.selectedIndex <= 0) {
+                    alert("Please select Report Date.");
+                    return;
+                }
+
+                if (oSelectSuite.selectedIndex <= 0) {
+                    alert("Please select Suite.");
+                    return;
+                }
+
+                if (oSelectRelease.selectedIndex <= 0) {
+                    alert("Please select Release Number.");
+                    return;
+                }
+            }
+        }
+
+        function GenerateTable(KeyDict) {
+            var szKey;
+            var oTable;
+            var oRow, oCell;
+            var i, j;
+            var innerDict;
+
+            oTable = document.getElementById("Grid");
+
+            oTable.deleteTHead();
+
+            var oTHead = oTable.createTHead();
+            var heading = new Array();
+            heading[0] = "Suite Name";
+            heading[1] = "Build";
+            heading[2] = "Release";
+            heading[3] = "Iteration No";
+            heading[4] = "Generated On";
+            heading[5] = "";
+
+            // Insert a row into the header.
+
+            oRow = oTHead.insertRow(-1);
+            oTHead.setAttribute("bgColor", "lightskyblue");
+            // Insert cells into the header row.
+            for (i = 0; i < heading.length; i++) {
+                oCell = oRow.insertCell(-1);
+                oCell.align = "center";
+                oCell.style.fontWeight = "bold";
+                oCell.innerHTML = heading[i];
+            }
+
+            var oBody = oTBody0;
+
+            while (oBody.rows.length > 0) {
+                oBody.deleteRow();
+            }
+
+            for (i = 0; i < KeyDict.Count; i++) {
+                szKey = KeyDict.Item(i);
+                innerDict = m_oDictCatch.Item(szKey);
+
+                oRow = oBody.insertRow(-1);
+
+                oCell = oRow.insertCell(-1);
+                oCell.innerHTML = innerDict.Item(SUITE_NAME);
+
+                oCell = oRow.insertCell(-1);
+                oCell.innerHTML = innerDict.Item(BUILD_NUMBER);
+
+                oCell = oRow.insertCell(-1);
+                oCell.innerHTML = innerDict.Item(RELEASE_NUMBER);
+
+                oCell = oRow.insertCell(-1);
+                oCell.innerHTML = innerDict.Item(ITERATION_NUMBER);
+
+                oCell = oRow.insertCell(-1);
+                oCell.innerHTML = innerDict.Item(LONG_REPORT_DATE);
+
+                oCell = oRow.insertCell(-1);
+                oCell.innerHTML = "<a href='#' onclick='ShowDetailReport(" + szKey + ");'>View Detail Report</a>";
+            }
+        }
+
+        function ShowDetailReport(szKey) {
+            var innerDict = m_oDictCatch.Item(szKey);
+
+	        var szLogFolderPath;
+	        var szLogPath, szDebugPath, szErrorPath, szTemp;
+	        var szConfigPath, strExecutionID;
+
+	        szLogFolderPath = innerDict.Item(FOLDER_PATH);
+		    strExecutionID = innerDict.Item(SUITE_EXECUTION_ID);
+
+	        var FileSysObj = new ActiveXObject("Scripting.FileSystemObject");
+
+	        szLogPath = szLogFolderPath + "\\" + "InfoLog.html";
+	        szDebugPath = szLogFolderPath + "\\" + "DebugLog.html";
+	        szErrorPath = szLogFolderPath + "\\" + "ErrorLog.html";
+
+	        if (FileSysObj.FileExists(m_ReporterPath + "\\InfoLog.html"))
+	        {
+	            FileSysObj.DeleteFile(m_ReporterPath + "\\InfoLog.html", true);
+	        }
+
+	        if (FileSysObj.FileExists(m_ReporterPath + "\\ErrorLog.html"))
+	        {
+	            FileSysObj.DeleteFile(m_ReporterPath + "\\ErrorLog.html", true);
+	        }
+
+	        if (FileSysObj.FileExists(m_ReporterPath + "\\DebugLog.html"))
+	        {
+	            FileSysObj.DeleteFile(m_ReporterPath + "\\DebugLog.html", true);
+	        }
+
+	        if (FileSysObj.FileExists(m_ReporterPath + "\\TAF_Report.xml"))
+	        {
+	            FileSysObj.DeleteFile(m_ReporterPath + "\\TAF_Report.xml", true);
+	        }
+
+	        if (FileSysObj.FileExists(m_ReporterPath + "\\Report.txt")) {
+	            FileSysObj.DeleteFile(m_ReporterPath + "\\Report.txt", true);
+	        }
+
+	        if (FileSysObj.FileExists(szLogPath))
+	            FileSysObj.CopyFile(szLogPath, m_ReporterPath + "\\InfoLog.html");
+
+	        if (FileSysObj.FileExists(szErrorPath))
+	            FileSysObj.CopyFile(szErrorPath, m_ReporterPath + "\\ErrorLog.html");
+
+	        if (FileSysObj.FileExists(szDebugPath))
+	            FileSysObj.CopyFile(szDebugPath, m_ReporterPath + "\\DebugLog.html");
+
+	        FileSysObj.CopyFile(szLogFolderPath + "\\TAF_Report.xml", m_ReporterPath + "\\TAF_Report.xml");
+
+	        window.document.URL = m_ReporterPath + "\\final_Report.html";
+        }
+
+        /*
+        * Date Format 1.2.2
+        * (c) 2007-2008 Steven Levithan <stevenlevithan.com>
+        * MIT license
+        * Includes enhancements by Scott Trenda <scott.trenda.net> and Kris Kowal <cixar.com/~kris.kowal/>
+        *
+        * Accepts a date, a mask, or a date and a mask.
+        * Returns a formatted version of the given date.
+        * The date defaults to the current date/time.
+        * The mask defaults to dateFormat.masks.default.
+        */
+        var dateFormat = function() {
+            var token = /d{1,4}|m{1,4}|yy(?:yy)?|([HhMsTt])\1?|[LloSZ]|"[^"]*"|'[^']*'/g,
+		timezone = /\b(?:[PMCEA][SDP]T|(?:Pacific|Mountain|Central|Eastern|Atlantic) (?:Standard|Daylight|Prevailing) Time|(?:GMT|UTC)(?:[-+]\d{4})?)\b/g,
+		timezoneClip = /[^-+\dA-Z]/g,
+		pad = function(val, len) {
+		    val = String(val);
+		    len = len || 2;
+		    while (val.length < len) val = "0" + val;
+		    return val;
+		};
+
+            // Regexes and supporting functions are cached through closure
+            return function(date, mask, utc) {
+                var dF = dateFormat;
+
+                // You can't provide utc if you skip other args (use the "UTC:" mask prefix)
+                if (arguments.length == 1 && (typeof date == "string" || date instanceof String) && !/\d/.test(date)) {
+                    mask = date;
+                    date = undefined;
+                }
+
+                // Passing date through Date applies Date.parse, if necessary
+                date = date ? new Date(date) : new Date();
+                if (isNaN(date)) throw new SyntaxError("invalid date");
+
+                mask = String(dF.masks[mask] || mask || dF.masks["default"]);
+
+                // Allow setting the utc argument via the mask
+                if (mask.slice(0, 4) == "UTC:") {
+                    mask = mask.slice(4);
+                    utc = true;
+                }
+
+                var _ = utc ? "getUTC" : "get",
+			d = date[_ + "Date"](),
+			D = date[_ + "Day"](),
+			m = date[_ + "Month"](),
+			y = date[_ + "FullYear"](),
+			H = date[_ + "Hours"](),
+			M = date[_ + "Minutes"](),
+			s = date[_ + "Seconds"](),
+			L = date[_ + "Milliseconds"](),
+			o = utc ? 0 : date.getTimezoneOffset(),
+			flags = {
+			    d: d,
+			    dd: pad(d),
+			    ddd: dF.i18n.dayNames[D],
+			    dddd: dF.i18n.dayNames[D + 7],
+			    m: m + 1,
+			    mm: pad(m + 1),
+			    mmm: dF.i18n.monthNames[m],
+			    mmmm: dF.i18n.monthNames[m + 12],
+			    yy: String(y).slice(2),
+			    yyyy: y,
+			    h: H % 12 || 12,
+			    hh: pad(H % 12 || 12),
+			    H: H,
+			    HH: pad(H),
+			    M: M,
+			    MM: pad(M),
+			    s: s,
+			    ss: pad(s),
+			    l: pad(L, 3),
+			    L: pad(L > 99 ? Math.round(L / 10) : L),
+			    t: H < 12 ? "a" : "p",
+			    tt: H < 12 ? "am" : "pm",
+			    T: H < 12 ? "A" : "P",
+			    TT: H < 12 ? "AM" : "PM",
+			    Z: utc ? "UTC" : (String(date).match(timezone) || [""]).pop().replace(timezoneClip, ""),
+			    o: (o > 0 ? "-" : "+") + pad(Math.floor(Math.abs(o) / 60) * 100 + Math.abs(o) % 60, 4),
+			    S: ["th", "st", "nd", "rd"][d % 10 > 3 ? 0 : (d % 100 - d % 10 != 10) * d % 10]
+			};
+
+                return mask.replace(token, function($0) {
+                    return $0 in flags ? flags[$0] : $0.slice(1, $0.length - 1);
+                });
+            };
+        } ();
+
+        // Some common format strings
+        dateFormat.masks = {
+            "default": "ddd mmm dd yyyy HH:MM:ss",
+            shortDate: "m/d/yy",
+            mediumDate: "mmm d, yyyy",
+            longDate: "mmmm d, yyyy",
+            fullDate: "dddd, mmmm d, yyyy",
+            shortTime: "h:MM TT",
+            mediumTime: "h:MM:ss TT",
+            longTime: "h:MM:ss TT Z",
+            isoDate: "yyyy-mm-dd",
+            isoTime: "HH:MM:ss",
+            isoDateTime: "yyyy-mm-dd'T'HH:MM:ss",
+            isoUtcDateTime: "UTC:yyyy-mm-dd'T'HH:MM:ss'Z'"
+        };
+
+        // Internationalization strings
+        dateFormat.i18n = {
+            dayNames: [
+		"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",
+		"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"
+	    ],
+            monthNames: [
+		"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+		"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"
+	]
+        };
+
+        // For convenience...
+        Date.prototype.format = function(mask, utc) {
+            return dateFormat(this, mask, utc);
+        };
+    </script>
+
+</head>
+<body onload="ReadConfiguration();">
+    <center>
+        <div>
+            <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                    <td style="margin: 3px">
+                        Report Date:&nbsp;
+                    </td>
+                    <td style="margin: 3px">
+                        <select style="width: 150px" id="CmbReportDates" onchange="FillSuiteNames();">
+                        </select>&nbsp;&nbsp;
+                    </td>
+                    <td style="margin: 3px">
+                        Suite Name:&nbsp;
+                    </td>
+                    <td style="margin: 3px">
+                        <select id="CmbSuites" style="width: 150px" onchange="FillReleaseNumbers()">
+                        </select>&nbsp;&nbsp;
+                    </td>
+                    <td style="margin: 3px">
+                        Release Number:&nbsp;
+                    </td>
+                    <td style="margin: 3px">
+                        <select id="CmbRelease" style="width: 150px">
+                        </select>&nbsp;&nbsp;
+                    </td>
+                    <td style="margin: 3px">
+                        <input type="button" value="Go" onclick="SearchCatch();" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br /><br /><br />
+        <div>
+            <table id="Grid" cellpadding="2" cellspacing="0" border="1">
+                <tbody id="oTBody0"></tbody>
+            </table>
+        </div>
+    </center>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Qualitia Test Execution Report</title>
+	<script type="text/javascript" src="js/DatabaseVPJs.js"></script>
+    <style type="text/css" media="all">
+        html, body, #wrapper
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 11px;
+            font-family: Tahoma;
+            color: Black;
+        }
+        #QualitiaHeader ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #QualitiaHeader li
+        {
+            float: left;
+            border: 1px solid #bbb;
+            border-bottom-width: 0;
+            margin: 0;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #QualitiaHeader a
+        {
+            text-decoration: none;
+            display: block;
+            background: #E2EAF9;
+            padding: 1px;
+            color: Black;
+            width: 100px;
+            text-align: center;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #QualitiaHeader a:hover
+        {
+            background: #ddf;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #QualitiaHeader #selected
+        {
+            border-color: #bbb;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #QualitiaHeader #selected a
+        {
+            position: relative;
+            top: 1px;
+            background: white;
+            color: Black;
+            font-weight: bold;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #content
+        {
+            border: 0px solid lightblue;
+            clear: both;
+            padding: 0px;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        h1
+        {
+            margin: 0;
+            padding: 0 0 1em 0;
+            font-size: 11px;
+            font-family: Tahoma;
+        }		
+    </style>
+
+    <script language='javascript' type="text/javascript">
+	
+		window.onload = loadDocument; 
+		
+		// all the below global variables are intialized once only 
+		// and thats in initGlobalParams() function. They are not manipulated anywhere else, ONLY READ
+		var TC_URL = "";
+        var TC_ITERATION = "";
+		var IS_DRY_RUN = false;
+		var IS_INFO_ON = true;
+		var IS_DEBUG_ON = true
+		var IS_ERROR_ON = true;
+
+		function getXmlDocument(format,resultFile,firstFile,secondFile)
+		{			
+			if(format.toLowerCase()=="browser")
+			{
+				var f1= parent.frames['TestCaseLog'];
+				f1.showCompareTabularResult(resultFile);
+			}
+			else{
+				DatabaseVP(format,resultFile);
+			}
+		}
+		
+		
+		function initGlobalParams(){
+			var currentUrl = new String(top.location.href); 
+			IS_DRY_RUN = (currentUrl.indexOf('?') > -1 && currentUrl.indexOf('file:') > -1);
+			var DEFAULT_LOG_STATE = true;
+			var paramArray;
+			
+			if (IS_DRY_RUN){  // params passed through querystring in case of dry run
+				var urlQueryString = currentUrl.split('?');
+				var queryString = urlQueryString[1];
+				paramArray = queryString.split('#');
+				
+                TC_URL = paramArray[0].replace('.xml', '');
+				TC_ITERATION = paramArray[4];  /* Dry Run does not need iteration. Iteration no added(By omkar on 13th Jan 15) for jira report attachment.*/
+				TC_URL = TC_URL + "/" + "ITR_" + TC_ITERATION;
+				
+				IS_INFO_ON = (paramArray[1] && paramArray[1] !=null && paramArray[1].toLowerCase()!="false")?true:false; // convert string to boolean
+				IS_DEBUG_ON = (paramArray[2] && paramArray[2] !=null && paramArray[2].toLowerCase()!="false")?true:false;
+				IS_ERROR_ON= (paramArray[3] && paramArray[3] !=null && paramArray[3].toLowerCase()!="false")?true:false;
+				
+            }else { // all others use cookies
+				var qualitiaCookie = top.document.cookie.split(';')[0];
+				paramArray = qualitiaCookie.split('#');
+				TC_URL = paramArray[0];
+				TC_ITERATION = paramArray[1];
+
+				IS_INFO_ON = (paramArray[2] && paramArray[2] !=null && paramArray[2].toLowerCase()!="false")?true:false;
+				IS_DEBUG_ON = (paramArray[3] && paramArray[3] !=null && paramArray[3].toLowerCase()!="false")?true:false;
+				IS_ERROR_ON= (paramArray[4] && paramArray[4] !=null && paramArray[4].toLowerCase()!="false")?true:false;
+				
+				TC_URL = GetTCName(); //Remove special characters from test case name
+				
+				/* Code Change due to performance fix on 27Nov15 by Omkar K. 
+				Split the logs at TCIteration level. Now separate Info,Error,Debug logs are created for each TCIteration in the TCIteration folder. e.g TCName/Iteration_1/Info.log */
+				TC_URL = TC_URL + "/" + "ITR_" + TC_ITERATION;
+				//alert(TC_URL);
+				
+            }
+
+		
+		}
+		
+
+		// Select log tab based on the config flag settings for info, debug and error
+		function enableLogView(){
+
+			// funtion TO BE CALLED AFTER INITILIZING THE INFO DEBUG and ERROR flags 
+			/////// Just remove the TAB (li) if log flag is false
+
+			var logLinkList = document.getElementById("logLinkList");
+			if (!IS_INFO_ON) {
+				var infoLogTab = document.getElementById("InfoLogLink").parentNode;
+				logLinkList.removeChild(infoLogTab);
+			}
+
+			if (!IS_DEBUG_ON) {
+				var debugLogtab = document.getElementById("DebugLogLink").parentNode;
+				logLinkList.removeChild(debugLogtab);
+			}
+
+			if (!IS_ERROR_ON) {
+				var errorLogTab = document.getElementById("ErrorLogLink").parentNode;
+				logLinkList.removeChild(errorLogTab);
+			}
+			
+			
+			/////// Select the TAB (li) based on priority (INFO -> DEBUG -> ERROR) in that order
+			if(IS_INFO_ON){
+				document.getElementById("InfoLogLink").parentNode.id = "selected"; 
+			}else if(IS_DEBUG_ON){
+				document.getElementById("DebugLogLink").parentNode.id = "selected";
+			}else if(IS_ERROR_ON){
+				document.getElementById("ErrorLogLink").parentNode.id = "selected";
+			} 
+		
+		}
+		
+		
+		// This function is called on load and will initialize global params and 
+		// accordingly enable the no. of tabs to be viewed
+	    function loadDocument() {
+			
+			initGlobalParams();  // Initialize and store params stored in global variables
+			
+			enableLogView(); // enable log view based on the settings in the config
+			
+            if (document.getElementById("InfoLogLink")) {
+                ChangeTabText(document.getElementById("InfoLogLink"));
+            }
+            else if (document.getElementById("DebugLogLink")) {
+                ChangeTabText(document.getElementById("DebugLogLink"));
+            }
+            else if (document.getElementById("ErrorLogLink")) {
+                ChangeTabText(document.getElementById("ErrorLogLink"));
+            }
+        }
+		
+
+		
+        function ReplaceAll(Source, stringToFind, stringToReplace) {
+            var temp = Source;
+            var index = temp.indexOf(stringToFind);
+            while (index != -1) {
+                temp = temp.replace(stringToFind, stringToReplace);
+                index = temp.indexOf(stringToFind);
+            }
+            return temp;
+        }
+		
+
+		// Beware this uses a global variable but does not manipulate it
+        function GetTCName() {
+			// uses global variable TC_URL to get the TCName
+            var len = TC_URL.toString().length;
+            var tempTCName = "";
+            for (var i = 0; i < len; i++) {
+                if (TC_URL.charAt(i) == ':' || TC_URL.charAt(i) == '\\' || TC_URL.charAt(i) == '/' || TC_URL.charAt(i) == '|' || TC_URL.charAt(i) == '?' || TC_URL.charAt(i) == '<' || TC_URL.charAt(i) == '>' || TC_URL.charAt(i) == '"') {
+                }
+                else
+                    tempTCName = tempTCName + TC_URL.charAt(i).toString();
+            }
+            return tempTCName;
+        }
+		
+		
+        function ChangeTabText(link) {
+			
+			TCPath1 = TC_URL;
+			
+            var mainFrame = (window.parent.frames[0]);
+            var logPathElement = mainFrame.document.getElementById("LogPath");
+            var logPath ="";
+            if (logPathElement != null) {
+                logPath = logPathElement.value;
+            }
+            var szSelectedTab = document.getElementById("selected");
+            if (szSelectedTab != null) {
+                szSelectedTab.id = "";
+            }
+
+            var liTab = link.parentNode;
+            liTab.id = "selected";
+
+            var id = link.id;
+
+			// removed check for missing file using Scripting.FileSystemObject
+			// as it does not work in shared mode. Now this also make the below code
+			// compatible with FF, Opera, Mozilla along with IE.
+            if (id == "InfoLogLink") { 
+				document.getElementById("logFrame").src = TCPath1 + "/InfoLog.html";
+            }else if (id == "DebugLogLink") {
+				document.getElementById("logFrame").src = TCPath1 + "/DebugLog.html";
+            }
+            else if (id == "ErrorLogLink") {
+                  document.getElementById("logFrame").src = TCPath1 + "/ErrorLog.html";
+            }
+        }        
+    </script>
+
+</head>
+<body style="margin-left: 6px; margin-right: 5px;" >
+    <div id="QualitiaHeader">
+        <ul id="logLinkList">
+			<li id="selected"><a id="InfoLogLink" href="#" onclick="ChangeTabText(this);">Info Log</a></li>
+			<li><a id="DebugLogLink" href="#" onclick="ChangeTabText(this);">Debug Log</a></li>
+			<li><a id="ErrorLogLink" href="#" onclick="ChangeTabText(this);">Error Log</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <iframe style="width: 100%; height: 90%;" src="#" id='logFrame'></iframe>
+    </div>
+	
+</body>
+</html>

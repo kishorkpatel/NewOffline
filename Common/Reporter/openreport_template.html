@@ -1,0 +1,25 @@
+<html>
+<head>
+
+<title>Test Case Details Report</title>
+
+<script type="text/javascript">
+	
+	var userAgentHeader = navigator.userAgent; //get the complete user agent header
+
+	//if header contains string Chrome, show message to user.
+	if (userAgentHeader.indexOf("Chrome") > -1 && userAgentHeader.indexOf("Edge") <= -1) 
+	{
+		alert("Please use IE or Firefox. Other browsers might not be supported when viewing local reports.");
+	} 
+	else //Except chrome, all common browsers are supported.
+	{
+		//open Test case report html file in same window. Pass query string
+		location.href = "%REQUIRED_FOLDER/TestCaseReport.html?%TC_DIRECTORY_NAME#%IS_INFO_ON#%IS_DEBUG_ON#%IS_ERROR_ON#%ITERATION_NO#%TCType#%BrName#%EpicName#%StoryName"
+	}
+	
+</script>
+
+</head>
+
+</html>

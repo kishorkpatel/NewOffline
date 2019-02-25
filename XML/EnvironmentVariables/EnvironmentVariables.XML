@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EnvironmentVariables>
+  <variable Name="url" Datatype="String">
+    <Value>https://wwwf1.hdfcergo.com/UTesting/TravelOnline/Integration/TravelIndexDetail/NiyCY03bZpJnDZ8n9h,kLytbmczh,9LZIvrN1eg4xWxoVUz9VlWcs858c1x3EhoE</Value>
+  </variable>
+  <variable Name="LargeWaitTime" Datatype="String">
+    <Value>120</Value>
+  </variable>
+  <variable Name="pollingInterval" Datatype="String">
+    <Value>3</Value>
+  </variable>
+  <variable Name="timeOut" Datatype="String">
+    <Value>100</Value>
+  </variable>
+  <variable Name="keyClickability" Datatype="String">
+    <Value>Result</Value>
+  </variable>
+  <variable Name="statusIfConditionNotSatisfied" Datatype="String">
+    <Value>fail</Value>
+  </variable>
+</EnvironmentVariables>

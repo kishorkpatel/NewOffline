@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Qualitia.Sel.Properties>
+	<setting  seq="19" align="h" type="CheckBox" caption="Interactive" category="A" desc="Sets Se into interactive mode">
+		<element key="SInteractive" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting  seq="03" align="h" type="CheckBox" caption="Profiles Location" category="A" desc="Specifies the directory that holds the profiles that java clients can use to start up selenium.  Currently  supported for Firefox only.">
+		<element key="SProfilesLocation" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting  seq="04" align="h" type="Text"  caption="Firefox Profile Template" category="A" desc="Allows you to use a custom profile template instead of the default one">
+		<element key="SFirefoxProfileTemplate" seqno="1" caption="Firefox Profile Template" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting  seq="10" align="h" type="Text" caption="Forced Browser Mode" category="A" desc="Browser mentioned here will be used by Se irrespective of what's passed in Browser Type">
+		<element key="SForcedBrowserMode" seqno="1" caption="Forced Browser Mode" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="11" align="h" type="Text" caption="Forced Browser Mode Rest Of Line" category="A" desc="Browser mentioned here will be used by Se irrespective of what's passed in Browser Type">
+		<element key="SForcedBrowserModeRestOfLine" seqno="1" caption="Forced Browser Mode Rest Of Line" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting  seq="12" align="h" type="CheckBox" caption="BrowserSessionReuse" category="A" desc="?? stops re-initialization and spawning of the browser between tests">
+		<element key="SBrowserSessionReuse" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting  seq="09" align="h" type="CheckBox" caption="Avoid Proxy" category="A" desc="set this flag to make the browser use our proxy only for URLs containing '/selenium-server'">
+		<element key="SAvoidProxy" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>	
+	<setting seq="17" align="h" type="CheckBox" caption="Se Debug Flag" category="A" desc="?? puts you into debug mode, with more trace information and diagnostics">
+		<element key="SDebug" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting  seq="18" align="h" type="CheckBox" caption="Browser Side Log" category="A" desc="enables logging on the browser side; logging messages will be transmitted to the server.  This can affect performance.">
+		<element key="SBrowserSideLog" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="13" align="h" type="CheckBox" caption="Ensure Clean Session" category="A" desc="If the browser does not have user profiles, make sure every new session has no artifacts from previous  sessions.  For example, enabling this option will cause all user cookies to be archived before launching IE, and restored after IE is closed">
+		<element key="SEnsureCleanSession" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="01" align="h" type="CheckBox" caption="Trust All SSL Certificates" category="A" desc="Forces the Selenium proxy to trust all  SSL certificates">
+		<element key="STrustAllSSLCertificates" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="20" align="h" type="Text" caption="Selenium Server Host : Port" category="B" desc="Uses localhost as your selenium server. ">
+		<element key="SServer" seqno="1" caption="Selenium Server Host" isChecked="false" isEnabled="False" />
+		<element key="SPort" seqno="2" caption="Selenium Server Port" isChecked="false" isEnabled="True"/>
+	</setting>
+	<setting  seq="02" align="h" type="Text" caption="Timeout" category="A" desc="number of seconds after which selenium request would timeout">
+		<element key="STimeout" seqno="1" caption="Timeout" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="14" align="h" type="CheckBox" caption="Proxy Injection Mode" category="A" desc="puts you into proxy injection mode, a mode  where the selenium server acts as a proxy server for all content going to the test application">
+		<element key="SproxyInjectionMode" seqno="1" caption="" isChecked="false" isEnabled="False" />
+	</setting>
+	<setting seq="15" align="h" type="Text" caption="Dont Inject Regex" category="A" desc="an optional regular expression that proxy injection mode can use to know when to bypss injection">
+		<element key="SdontInjectRegex" seqno="1" caption="Dont Inject Regex" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="16" align="h" type="Text" caption="User Content Transformation" category="A" desc="A regular  expression which is matched against all test HTML content; the  second is a string which will replace matches.  These flags can be used any number of times.  A simple example of how this could be useful: if you add '-userContentTransformation https http' then all 'https' strings in the HTML of the test application will be changed to be 'http'.">
+		<element key="SuserContentTransformation" seqno="1" caption="User Content Transformation" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="08" align="h" type="CheckBox" caption="Multi-Window" category="A" desc="Turning this Off will allow you to run Selenium within a frame. Should not be used for websites that use a frame">
+		<element key="SMultiWindow" seqno="1" caption="" isChecked="false" isEnabled="true" />
+	</setting>
+	<setting seq="21" align="h" type="CheckBox" caption="Keep Selenium Server Alive" category="B" desc="When turned on, Qualitia will not shutdown the Se Server even after Qualitia finishes execution.">
+		<element key="SeleniumSwitch" seqno="1" caption="" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="22" align="h" type="DropDown" caption="Browser Type" category="B" desc="The browser that you wish to use to run your tests">
+		<element key="SBrowserType" seqno="1" caption="Browser Type" isChecked="false" isEnabled="True" >
+			<data caption="Internet Explorer" value="iexplore" />
+			<data caption="Firefox" value="firefox" />
+		</element>
+	</setting>
+	<setting seq="05" align="h" type="Text" caption="Proxy Host : Port" category="A" desc="Your proxy server if you are using one.">
+		<element key="sProxyHost" seqno="1" caption="Proxy Host" isChecked="false" isEnabled="True" />
+		<element key="sProxyPort" seqno="2" caption="Proxy Port" isChecked="false" isEnabled="True" />
+	</setting>	
+	<setting seq="06" align="h" type="Text" caption="Proxy User" category="A" desc="Your proxy username in case your proxy server requires one">
+		<element key="sProxyUser" seqno="1" caption="Proxy User" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="07" align="h" type="Text" caption="Proxy Password" category="A" desc="Your proxy password required for authentication">
+		<element key="sProxyPassword" seqno="1" caption="Proxy Password" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="23" align="h" type="OpenFolderDialog" caption="AutoIT Install Path" category="B" desc="Path where you have installed AutoIT (AutoIT.exe). This is required only if you are using actions like Authentication, download and upload">
+		<element key="AutoITPath" seqno="1" caption="AutoIT Install Path" isChecked="false" isEnabled="True" />
+	</setting>
+	<setting seq="24" align="h" type="DropDown" caption="Selenium Xpath Engine" category="B" desc="The engine that Se would use to identify objects based on Xpath. Default Se engine is slower on IE. Use Cybozu (JavaScript-Xpath) for faster processing">
+		<element key="XpathLibrary" seqno="1" caption="Selenium Xpath Engine" isChecked="false" isEnabled="True">
+			<data caption="JSXPATH" value="JSXPATH" />
+			<data caption="XPATH" value="XPATH" />
+		</element>
+	</setting>
+	<setting seq="25" align="h" type="DropDown" caption="New Browser For Every" category="B" desc="New browser instance would be created for every \\r\\n test case / test suite">
+		<element key="QualitiaExecMode" seqno="1" caption="New Browser For Every" isChecked="false" isEnabled="True">
+			<data caption="Testcase" value="PT"/>
+			<data caption="Suite" value="PS"/>
+		</element>
+	</setting>
+	<setting seq="26" align="h" type="OpenFileDialog" caption="Java Install Path" category="B" desc="Your java installation path">
+		<element key="myjava" seqno="1" caption="Java Install Path" isChecked="false" isEnabled="True"/>
+	</setting>
+	<setting seq="27" align="h" type="OpenFileDialog" caption="Selenium Server Jar Path" category="B" desc="Your selenium-server-standalone-x.xx.x.jar path if you wish to override the default">
+		<element key="SServerPath" seqno="1" caption="Selenium Server Jar Path" isChecked="false" isEnabled="True"/>
+	</setting>	
+</Qualitia.Sel.Properties>

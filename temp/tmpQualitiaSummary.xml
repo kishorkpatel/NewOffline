@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><Report Browser="GOOGLECHROME" BrowserVersion="70.0.3538.102" BuildNumber="1.01" CreateDebugLog="true" CreateErrorLog="true" CreateInfoLog="true" ExecutionEnvironment="LOCAL" ExecutionType="O" HostName="RACLAP23-COMP" IsDownloadVideo="False" MobileBrowser="NA" MobileExecutionEnvironment="NA" MobileOS="NA" MobileOSVersion="NA" OS="WINDOWS" OSVersion="WINDOWS 10" ProjectName="hdfcergo" ReleaseNumber="1.01" SuiteExecutionID="1.01_1.01_RACLAP23-COMP_admin_1" SuiteIterationNumber="1" Tool="webdriver" UserName="admin" isError="false">
+    <Suite EndTime="2018-11-14 12:13:22" ExecutionTime="0:0:59" Id="c99d6ef3c0ee4a08a7cb3a2140b218cc" Name="hdfc" ScheduleName="" StartTime="2018-11-14 12:12:23">
+        <TCs>
+            <TC BR="" BRStatus="" Desc="New Travel Insurance policy creation_E2E" DownloadVideoLink="" Epic="" EpicStatus="" ExecutionTime="00:00:58.690" ManualTCId="New Travel Insurance policy creation_E2E" OnError="Continue" ReportLink="file:///D:/HDFCergo_projectdb/Qualitia Offline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/TestCaseReport.html?New Travel Insurance policy creation_E2E_685e58c45bc3447c982e68f7504fe691#true#true#true" RunId="685e58c45bc3447c982e68f7504fe691" ScenarioId="8db26862e6064ac699f698433ce6a4dd" ScenarioName="Travel NB New Journey" StartTime="2018-11-14 12:12:23.985" Status="1" Story="" StoryKey="" StoryStatus="" TCName="New Travel Insurance policy creation_E2E" TCSeqId="1" TcId="61b3eb5111ef4ed8a812973cc18d8fb3" Type="" endTime="2018-11-14 12:13:22.827">
+                <TCIteration ExecutionTime="00:00:34.538" IterationNo="1" Status="1" TCDataSetTag=""/>
+                <TCIteration ExecutionTime="00:00:12.075" IterationNo="2" Status="1" TCDataSetTag=""/>
+                <TCIteration ExecutionTime="00:00:12.077" IterationNo="3" Status="1" TCDataSetTag=""/>
+            </TC>
+        </TCs>
+    </Suite>
+</Report>

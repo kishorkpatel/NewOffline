@@ -1,0 +1,299 @@
+{
+	"configuration": {
+		"traversal_rules": ["Parent", "Sibling", "Child"],
+		"timeout": 1000,
+		"max_depth": 10,
+		"anchor_limit": 1,
+		"per_anchor_path_limit": 1,
+		"max_xpaths_per_node": 10,
+		"total_xpath_limit": 1,
+		"enable_combinations": true,
+		"max_combinations": 5,
+		"enable_minimization": true,
+		"logging": false,
+		"write_to_console": false,
+		"log_level": 0,
+		"restrictedNodes": ["script", "head", "noscript", "br", "style"]
+	},
+	"pattern_rules": {
+		"_GLOBAL": {
+			"priority": ["text", "definedAttributes", "nativeAttributes"],
+			"text": {
+				"useNormalizeSpace": true,
+				"useForAnchor": true,
+				"useForTarget": true,
+				"useForIntermediate": true
+			},
+			"definedAttributes": {
+				"name": {},
+				"id": {},
+				"value": {},
+				"title": {},
+				"text": {},
+				"class": {
+					"isBlacklisted": false,
+					"useForAnchor": false,
+					"useForTarget": true,
+					"useForIntermediate": true,
+					"allowFullValueMatch": true,
+					"allowPartialValueMatch": true,
+					"allowOnlyAttributeMatch": false
+				}
+			},
+			"nativeAttributes": {
+				"blacklistedAttributes": ["style"],
+				"blacklistedValues": [],
+				"useForAnchor": true,
+				"useForTarget": true,
+				"useForIntermediate": true,
+				"allowFullValueMatch": true,
+				"allowPartialValueMatch": true,
+				"allowOnlyAttributeMatch": true,
+				"max_native_attributes_per_node": 2
+			}
+		},
+		"INPUT": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"name": {},
+				"placeholder": {},
+				"type": {},
+				"value": {},
+				"id": {}
+			}
+		},
+		"A": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true,
+				"useForAnchor": true,
+				"useForTarget": true,
+				"useForIntermediate": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"type": {},
+				"href": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+			}
+		},
+		"FORM": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"action": {},
+				"accept-charset": {},
+				"target": {}
+			}
+
+		},
+
+		"AREA": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"alt": {},
+				"href": {},
+				"shape": {},
+				"target": {},
+				"type": {},
+				"title": {}
+			}
+		},
+
+		"BUTTON": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"form": {},
+				"value": {},
+				"type": {}
+			}
+
+		},
+		"DATA": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"value": {}
+			}
+		},
+
+
+		"FIELDSET": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"form": {}
+			}
+		},
+
+		"IMG": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"src": {},
+				"srcset": {},
+				"alt": {}
+			}
+		},
+
+		"SPAN": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"src": {},
+				"srcset": {},
+				"alt": {}
+			}
+		},
+
+		"DIV": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"src": {},
+				"srcset": {},
+				"alt": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+			}
+		},
+
+
+		"LABEL": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"for": {},
+				"form": {}
+			}
+		},
+		"LI": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"value": {}
+			}
+		},
+		"UL": {
+			"priority": ["definedAttributes"],
+
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				},
+				"value": {},
+				"role": {}
+			}
+		},
+		"TABLE": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+
+			}
+		},
+		"TD": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+			}
+		},
+		"TR": {
+			"priority": ["definedAttributes"],
+
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+			}
+		},
+		"TEXTAREA": {
+			"priority": ["text", "definedAttributes"],
+			"text": {
+				"useNormalizeSpace": true
+			},
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"placeholder": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+			}
+		},
+
+		"IFRAME": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"title": {}
+			}
+		},
+		"SECTION": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+			}
+		},
+		"SELECT": {
+			"priority": ["definedAttributes"],
+			"definedAttributes": {
+				"id": {},
+				"name": {},
+				"class": {
+					"allowOnlyAttributeMatch": false
+				}
+
+			}
+		}
+	}
+}

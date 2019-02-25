@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+    <title>Qualitia Test Execution Report</title>	
+	<script language='javascript' type="text/javascript">
+		window.onload = frameLayout;
+		
+		function frameLayout(){
+			var IS_DRY_RUN = false;
+			var IS_INFO_ON = true;
+			var IS_DEBUG_ON = true
+			var IS_ERROR_ON = true;
+			var DEFAULT_LOG_STATE = true;
+			
+			var currentUrl = new String(top.location.href); 
+			IS_DRY_RUN = (currentUrl.indexOf('?') > -1 && currentUrl.indexOf('file:') > -1)
+
+			var paramArray;
+			if (IS_DRY_RUN){  // params passed through querystring in case of dry run
+				var urlQueryString = currentUrl.split('?');
+				var queryString = urlQueryString[1];
+				paramArray = queryString.split('#');
+				
+				TC_URL = paramArray[0].replace('.xml', '');
+				TC_ITERATION = "-1";  // Dry Run does not need iteration
+				// convert string to boolean
+				IS_INFO_ON = (paramArray[1] && paramArray[1] !=null && paramArray[1].toLowerCase()!="false")?true:false;
+				IS_DEBUG_ON = (paramArray[2] && paramArray[2] !=null && paramArray[2].toLowerCase()!="false")?true:false;
+				IS_ERROR_ON= (paramArray[3] && paramArray[3] !=null && paramArray[3].toLowerCase()!="false")?true:false;
+				
+			}else { // all others use cookies
+				var qualitiaCookie = top.document.cookie.split(';')[0];
+				paramArray = qualitiaCookie.split('#');
+				TC_URL = paramArray[0];
+				TC_ITERATION = paramArray[1];
+
+				IS_INFO_ON = (paramArray[2] && paramArray[2] !=null && paramArray[2].toLowerCase()!="false")?true:false;
+				IS_DEBUG_ON = (paramArray[3] && paramArray[3] !=null && paramArray[3].toLowerCase()!="false")?true:false;
+				IS_ERROR_ON= (paramArray[4] && paramArray[4] !=null && paramArray[4].toLowerCase()!="false")?true:false;
+				
+			}
+			if(!IS_INFO_ON && !IS_DEBUG_ON && !IS_ERROR_ON){
+				var logFrame = document.getElementById('LogFrameSet');
+				document.getElementById('FrameSet1').removeChild(logFrame);
+				document.getElementById('FrameSet1').cols="100%";
+			}
+		}
+
+	</script>
+</head>
+	
+	<frameset rows='*,40%' id='FrameSet' name='FrameSet'>
+		<frame src='TestCaseDetail.html' id='TestCaseLog' name='TestCaseLog'/>
+		<frameset cols='60%,40%' id='FrameSet1'>
+			<frame src='LogFrame.html' name='LogFrameSet' id='LogFrameSet' />
+			<frame src='capturebitmap.html' name='LogFrameSet1' id='LogFrameSet1'/>
+		</frameset>
+	</frameset>
+	
+<noframes></noframes>
+</html>

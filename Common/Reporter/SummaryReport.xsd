@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Report">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Suite">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TCs">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" name="TC">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="TCIteration">
+                            <xs:complexType>
+                              <xs:attribute name="IterationNo" type="xs:unsignedShort" use="required" />
+                              <xs:attribute name="TCDataSetTag" type="xs:string" use="required" />
+                              <xs:attribute name="ExecutionTime" type="xs:string" use="required" />
+                              <xs:attribute name="Status" type="xs:string" use="required" />
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="BR" type="xs:string" use="optional" />
+                        <xs:attribute name="BRStatus" type="xs:string" use="optional" />
+                        <xs:attribute name="Desc" type="xs:string" use="required" />
+                        <xs:attribute name="DownloadVideoLink" type="xs:string" use="required" />
+                        <xs:attribute name="Epic" type="xs:string" use="optional" />
+                        <xs:attribute name="EpicStatus" type="xs:string" use="optional" />
+                        <xs:attribute name="ExecutionTime" type="xs:time" use="required" />
+                        <xs:attribute name="ManualTCId" type="xs:string" use="required" />
+                        <xs:attribute name="OnError" type="xs:string" use="required" />
+                        <xs:attribute name="ReportLink" type="xs:string" use="required" />
+                        <xs:attribute name="RunId" type="xs:string" use="required" />
+                        <xs:attribute name="ScenarioId" type="xs:string" use="required" />
+                        <xs:attribute name="ScenarioName" type="xs:string" use="required" />
+                        <xs:attribute name="StartTime" type="xs:string" use="required" />
+                        <xs:attribute name="Status" type="xs:string" use="required" />
+                        <xs:attribute name="Story" type="xs:string" use="optional" />
+                        <xs:attribute name="StoryKey" type="xs:string" use="optional" />
+                        <xs:attribute name="StoryStatus" type="xs:string" use="optional" />
+                        <xs:attribute name="TCName" type="xs:string" use="required" />
+                        <xs:attribute name="TCSeqId" type="xs:string" use="required" />
+                        <xs:attribute name="TcId" type="xs:string" use="required" />
+                        <xs:attribute name="Type" type="xs:string" use="required" />
+                        <xs:attribute name="endTime" type="xs:string" use="required" />
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="Id" type="xs:string" use="required" />
+            <xs:attribute name="Name" type="xs:string" use="required" />
+            <xs:attribute name="ScheduleName" type="xs:string" use="required" />
+            <xs:attribute name="StartTime" type="xs:string" use="required" />
+            <xs:attribute name="EndTime" type="xs:string" use="required" />
+            <xs:attribute name="ExecutionTime" type="xs:string" use="required" />
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+       <xs:attribute name="Browser" type="xs:string" use="optional" />
+      <xs:attribute name="BrowserVersion" type="xs:string" use="optional" />
+      <xs:attribute name="BuildNumber" type="xs:string" use="required" />
+      <xs:attribute name="CreateDebugLog" type="xs:boolean" use="required" />
+      <xs:attribute name="CreateErrorLog" type="xs:boolean" use="required" />
+      <xs:attribute name="CreateInfoLog" type="xs:boolean" use="required" />
+      <xs:attribute name="ExecutionEnvironment" type="xs:string" use="required" />
+      <xs:attribute name="ExecutionType" type="xs:string" use="required" />
+      <xs:attribute name="HostName" type="xs:string" use="required" />
+      <xs:attribute name="IsDownloadVideo" type="xs:string" use="required" />
+      <xs:attribute name="MobileBrowser" type="xs:string" use="required" />
+      <xs:attribute name="MobileExecutionEnvironment" type="xs:string" use="required" />
+      <xs:attribute name="MobileOS" type="xs:string" use="optional" />
+      <xs:attribute name="MobileOSVersion" type="xs:string" use="optional" />
+      <xs:attribute name="OS" type="xs:string" use="optional" />
+      <xs:attribute name="OSVersion" type="xs:string" use="optional" />
+      <xs:attribute name="ProjectName" type="xs:string" use="required" />
+      <xs:attribute name="ReleaseNumber" type="xs:string" use="required" />
+      <xs:attribute name="SuiteExecutionID" type="xs:string" use="required" />
+      <xs:attribute name="SuiteIterationNumber" type="xs:unsignedByte" use="required" />
+      <xs:attribute name="Tool" type="xs:string" use="required" />
+      <xs:attribute name="UserName" type="xs:string" use="required" />
+      <xs:attribute name="isError" type="xs:boolean" use="required" />
+	  
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

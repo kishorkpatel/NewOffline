@@ -1,0 +1,1875 @@
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:96) - Current path >>file:/D:/HDFCergo_projectdb/QualitiaOffline/qualitiaoffline-5.3.8.jar!/masterproperties
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:106) - Config filepath >>./config/qualitia.properties
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:114) - Calling convertToMap() by passing parameter command line arguments.
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:45) - convertToMap()++
+[14-02-19 13:40:08:008] [Thread=main] INFO  (CmdLineProcessor.java:46) - Converting command-line arguments i.e. key-value pairs into Map key-value pairs...
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:50) - There are no command line arguments specified.
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:51) - convertToMap()-- Returning null
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:118) - before handle jvm properties
+[14-02-19 13:40:08:008] [Thread=main] INFO  (QualitiaJVMArgsHandler.java:45) - Qualitia System Properties(JVM args) file found at ./config/qualitiasystem.properties
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaJVMArgsHandler.java:52) - Count of JVM props from file = 0
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaJVMArgsHandler.java:53) - JVM props from file = []
+[14-02-19 13:40:08:008] [Thread=main] INFO  (QualitiaJVMArgsHandler.java:98) - No JVM properties are passed from command line or file.
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:120) - after handle jvm properties.
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:122) - after removing jvm properties from args
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:160) - removeSauceArguments()++
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:173) - removeSauceArguments()--
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:185) - >> removeBrowserStackArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:198) - << removeBrowserStackArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:259) - >> removeTestObjectArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:271) - << removeTestObjectArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:204) - >> removePerfectoWebArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:217) - << removePerfectoWebArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:222) - >> removeSauceMobileArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:236) - << removeSauceMobileArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:241) - >> removePerfectoMobileArguments()
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (CmdLineProcessor.java:254) - << removePerfectoMobileArguments()
+[14-02-19 13:40:08:008] [Thread=main] ERROR (QualitiaOffline.java:2392) - CI tool 'NA' Not Supported. So it execution as DEFAULT
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:179) - qtmpFilePath >>./temp/3806086f77ae4c5bae7b7a1c6beb3fde.qtmp
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:181) - reference properties size = 56
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:182) - reference properties list = [QualitiaProperty{propertyName='ToolName', propertyValue='webdriver', toolName='CM'}, QualitiaProperty{propertyName='xmlPath', propertyValue='D:\HDFCergo_projectdb\QualitiaOffline\XML', toolName='CM'}, QualitiaProperty{propertyName='CreateDebugLog', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='CreateErrorLog', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='CreateInfoLog', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='CapturePassBitMap', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='CaptureFailBitMap', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='CaptureDefectBitMap', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='ProjectName', propertyValue='hdfcergo', toolName='CM'}, QualitiaProperty{propertyName='UserName', propertyValue='admin', toolName='CM'}, QualitiaProperty{propertyName='LogPath', propertyValue='D:\HDFCergo_projectdb\QualitiaOffline\LOG', toolName='CM'}, QualitiaProperty{propertyName='SyncTimeInSeconds', propertyValue='10', toolName='CM'}, QualitiaProperty{propertyName='QualitiaExecMode', propertyValue='PT', toolName='CM'}, QualitiaProperty{propertyName='CI_Tool', propertyValue='NA', toolName='CM'}, QualitiaProperty{propertyName='ShowReportAfterExec', propertyValue='False', toolName='CM'}, QualitiaProperty{propertyName='BuildNum', propertyValue='1.01', toolName='CM'}, QualitiaProperty{propertyName='ReleaseNum', propertyValue='1.01', toolName='CM'}, QualitiaProperty{propertyName='AutoITPath', propertyValue='c:\Program Files\Auto IT', toolName='CM'}, QualitiaProperty{propertyName='SBrowserType', propertyValue='GoogleChrome', toolName='CM'}, QualitiaProperty{propertyName='ProductVersion', propertyValue='5.3.8.0', toolName='CM'}, QualitiaProperty{propertyName='ExecutionHighlight', propertyValue='False', toolName='CM'}, QualitiaProperty{propertyName='FailStepOnBrowserScreenshotFailure', propertyValue='True', toolName='CM'}, QualitiaProperty{propertyName='ExecutionEnvironment', propertyValue='LOCAL', toolName='CM'}, QualitiaProperty{propertyName='RemoteURL', propertyValue='http://localhost:4444/', toolName='CM'}, QualitiaProperty{propertyName='ExecutionType', propertyValue='1', toolName='null'}, QualitiaProperty{propertyName='ReportPath', propertyValue='./Common/Reporter', toolName='null'}, QualitiaProperty{propertyName='ChromeDriverPath', propertyValue='D:\HDFCergo_projectdb\QualitiaOffline\chromedriver.exe', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='BrowserProfilePath', propertyValue='', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='BrowserBinaryPath', propertyValue='', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='HeadlessMode', propertyValue='False', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='ScreenCaptureMode', propertyValue='BROWSER', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='IEDriverPath', propertyValue='C:\Users\chirag.jain\AppData\Local\QualitiaWDClient\Selenium\IEDriverServer.exe', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='Display', propertyValue='0', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='FirefoxDriverPath', propertyValue='', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='AppiumServerURL', propertyValue='http://127.0.0.1:4723/wd/hub', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='MobilePlatform', propertyValue='Android', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='MobileUDID', propertyValue='', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='DefaultWebExecutionPlatform', propertyValue='Desktop', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='MobileExecutionEnvironment', propertyValue='LOCAL', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='MobileBrowser', propertyValue='GoogleChrome', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='MobileNativeObjectsSyncTime', propertyValue='2', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='WaitMode', propertyValue='EXPLICIT', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='TimeoutInSeconds', propertyValue='40', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='PollingIntervalInMilliSeconds', propertyValue='100', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='PageTimeoutInSeconds', propertyValue='20', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='GridPlatform', propertyValue='', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='OptimizationMode', propertyValue='False', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='IgnoreAngularSynchronization', propertyValue='False', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='JiraUserId', propertyValue='default_value', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='JiraProjectKey', propertyValue='', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='JiraBugPriority', propertyValue='Medium', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='JiraUrl', propertyValue='default_value', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='EncryptedJiraPasskey', propertyValue='yUFHG6bKFiVzpqug1iAiQg', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='AttachReportToJiraDefect', propertyValue='False', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='IncludeScreenshotsInJiraAttachment', propertyValue='False', toolName='WEBDRIVER'}, QualitiaProperty{propertyName='AutoCreateJiraDefect', propertyValue='False', toolName='WEBDRIVER'}]
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (QualitiaOffline.java:184) - reference properties written successfully in temp/guid.properties
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (callController.java:270) - 
+******************************************************************************************************
+*************************** Qualitia Execution Engine Started in Offline mode *********************************
+******************************************************************************************************
+
+[14-02-19 13:40:08:008] [Thread=main] INFO  (callController.java:45) - List of Jars (only) used in classpath: custom action folders not listed here
+qualitiaoffline-5.3.8.jar
+commons-lang3-3.3.jar
+commons-exec-1.2.jar
+commons-io-2.4.jar
+junit-4.8.1.jar
+jxl.jar
+log4j-1.2.17.jar
+mysql-connector-java-5.1.6-bin.jar
+sqljdbc4.jar
+libthrift-0.9.3.jar
+httpclient-4.5.3.jar
+httpcore-4.4.6.jar
+httpmime-4.5.1.jar
+selenium-server-standalone-3.11.0.jar
+selenium-server-standalone-2.53.1.jar
+slf4j-api-1.7.13.jar
+slf4j-simple-1.7.13.jar
+json-simple-1.1.1.jar
+serializer-2.7.1.jar
+accessors-smart-1.2.jar
+activation-1.1.jar
+asm-5.0.4.jar
+btf-1.2.jar
+commons-codec-1.9.jar
+commons-lang3-3.4.jar
+commons-logging-1.2.jar
+csvjdbc-1.0-20.jar
+groovy-2.4.12.jar
+groovy-json-2.4.12.jar
+groovy-xml-2.4.12.jar
+guava-16.0.1.jar
+guava-23.0.jar
+hamcrest-core-1.3.jar
+hamcrest-library-1.3.jar
+jackson-all-1.9.9.jar
+jackson-annotations-2.2.3.jar
+jackson-core-2.2.3.jar
+jackson-coreutils-1.8.jar
+jackson-databind-2.2.3.jar
+jaxb-api-2.2.12.jar
+joda-time-2.3.jar
+jopt-simple-4.6.jar
+json-path-2.3.0.jar
+json-path-3.0.7.jar
+json-smart-2.3.jar
+json-schema-validator-2.2.6.jar
+json-schema-validator-3.0.7.jar
+jsr305-3.0.0.jar
+junit-4.12.jar
+libphonenumber-6.2.jar
+mailapi-1.4.3.jar
+msg-simple-1.1.jar
+rest-assured-3.0.7.jar
+rest-assured-common-3.0.7.jar
+rhino-1.7R4.jar
+slf4j-api-1.7.25.jar
+tagsoup-1.2.1.jar
+uri-template-0.9.jar
+xml-path-3.1.0.jar
+reportium-java-1.2.3.jar
+commons-compress-1.17.jar
+java-client-5.0.4.jar
+poi-3.12-beta1-20150228.jar
+poi-ooxml-3.12-beta1-20150228.jar
+poi-ooxml-schemas-3.12-beta1-20150228.jar
+xmlbeans-2.6.0.jar
+
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (callController.java:369) - List of Arguments :: ./temp/3806086f77ae4c5bae7b7a1c6beb3fde.properties
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (ConfigFileReader.java:95) - passing filePath : ./temp/3806086f77ae4c5bae7b7a1c6beb3fde.properties to FIS
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (ConfigFileReader.java:97) - FIS creation successful.
+[14-02-19 13:40:08:008] [Thread=main] INFO  (ConfigFileReader.java:106) - List of Qualitia Properties: {projectname=hdfcergo, chromedriverpath=D:/HDFCergo_projectdb/QualitiaOffline/chromedriver.exe, mobileudid=, createdebuglog=True, screencapturemode=BROWSER, capturedefectbitmap=True, executionenvironment=LOCAL, logpath=D:/HDFCergo_projectdb/QualitiaOffline/LOG, appiumserverurl=http://127.0.0.1:4723/wd/hub, jiraurl=default_value, waitmode=EXPLICIT, attachreporttojiradefect=False, encryptedjirapasskey=yUFHG6bKFiVzpqug1iAiQg, sbrowsertype=GoogleChrome, iedriverpath=C:/Users/chirag.jain/AppData/Local/QualitiaWDClient/Selenium/IEDriverServer.exe, failsteponbrowserscreenshotfailure=True, createinfolog=True, optimizationmode=False, browserprofilepath=, toolname=webdriver, qualitiaexecmode=PT, releasenum=1.01, showreportafterexec=False, defaultwebexecutionplatform=Desktop, mobileplatform=Android, ignoreangularsynchronization=False, executiontype=1, jiraprojectkey=, display=0, productversion=5.3.8.0, synctimeinseconds=10, buildnum=1.01, autoitpath=c:/Program Files/Auto IT, timeoutinseconds=40, reportpath=./Common/Reporter, username=admin, createerrorlog=True, headlessmode=False, autocreatejiradefect=False, gridplatform=, pollingintervalinmilliseconds=100, browserbinarypath=, jirauserid=default_value, capturepassbitmap=True, mobilebrowser=GoogleChrome, xmlpath=D:/HDFCergo_projectdb/QualitiaOffline/XML, ci_tool=NA, remoteurl=http://localhost:4444/, includescreenshotsinjiraattachment=False, pagetimeoutinseconds=20, executionhighlight=False, mobilenativeobjectssynctime=2, capturefailbitmap=True, jirabugpriority=Medium, mobileexecutionenvironment=LOCAL, firefoxdriverpath=}
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (ConfigFileReader.java:223) - ProjectName=<<hdfcergo>>
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (ConfigFileReader.java:226) - Changed to lower case to support Unix connection. ProjectName=<<hdfcergo>>
+[14-02-19 13:40:08:008] [Thread=main] WARN  (ConfigFileReader.java:314) - Invalid AutoITPath: <<c:/Program Files/Auto IT>>. Test cases using AutoIT actions will fail
+[14-02-19 13:40:08:008] [Thread=main] WARN  (ConfigFileReader.java:336) - Profile Path not provided. Default profile will be used.
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (ConfigFileReader.java:344) - HeadlessMode >> False
+[14-02-19 13:40:08:008] [Thread=main] INFO  (ConfigFileReader.java:302) - executionhighlight::>>False
+[14-02-19 13:40:08:008] [Thread=main] DEBUG (ConfigFileReader.java:405) - ExecutionEnvironment: LOCAL
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:200) - SuiteID=|d62243c8e74946e8b24095791567e3df|	 SuiteName=|HDFC1|	 ScheduleName=||
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:246) - tcId=|61b3eb5111ef4ed8a812973cc18d8fb3|
+tcName=|New Travel Insurance policy creation_E2E|
+RunId=|4ed86e862b2247a984b3d13545eeb6fa|
+tcSeqId=|1|
+TCFileName=|New Travel Insurance policy creation_E2E.XML|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:540) - Calling getXmlToJavaObject
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:545) - End getXmlToJavaObject
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |86fa313e9c224d9f9ea1d3084a469922|	 TaskName= |To Hit URL and verify HomePage| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ab423441fd11444ab2a0afd1a5bb104f|	 TaskName= |Select Value for TripType| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |9f65fe1f994b41cf95ad34465944bf6a|	 TaskName= |Select Value for Travellers & enter age| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |5967debeeeb141daa735d395d0a0ec01|	 TaskName= |5967debeeeb141daa735d395d0a0ec01| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |1b5a2f9b08a54b5686a72a8aa464d088|	 TaskName= |1b5a2f9b08a54b5686a72a8aa464d088| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bed2cf4fceee478a969e7a5691c86782|	 TaskName= |Select value for Parent Traveller| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |8946d0382fde43bdb38fd3c03a6fbdc3|	 TaskName= |8946d0382fde43bdb38fd3c03a6fbdc3| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |261bab12ea1b4524ba9a974a5c9b946a|	 TaskName= |Click On Continue button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |85d0d0d781634d0ba9e343a47cee2118|	 TaskName= |To enter details on Travel details page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |619b1c8e6f9b4264917122467097bee9|	 TaskName= |Click on View Quote button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |58686952972348858a5a15b1cfe1231a|	 TaskName= |58686952972348858a5a15b1cfe1231a| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |8e39157aea6948da8b36731d90337ae0|	 TaskName= |Select Region from popup| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |09b2369c0adc440ba5cea0c5bc40707c|	 TaskName= |09b2369c0adc440ba5cea0c5bc40707c| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |49da300e99bc42a79d80b60aa9702641|	 TaskName= |Fill Your Details_Popup| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |d014fb36712e41b0bd0c3e0730c6e1bb|	 TaskName= |To Select Plan on Choose your travel insurance plan Screen| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |62a3e0b9212e45af9d70da2e64ebe7eb|	 TaskName= |To fill in details of Proposer details Screen| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |d2ac9c26d91d4e55ade3a24aa5e95bad|	 TaskName= |To enter Insured details| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |b4998295ab7a45f9ac6e7562935ffa51|	 TaskName= |b4998295ab7a45f9ac6e7562935ffa51| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bbdf9e2271c14b2b900f1d0fe4f35003|	 TaskName= |bbdf9e2271c14b2b900f1d0fe4f35003| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |18130fbbd9444272ac958913e222ba63|	 TaskName= |Click on Next| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |e82c096197fe4586813da7d7bf6be3ac|	 TaskName= |To enter Kindly Confirm page details| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |539fa144570e41889ef2642c27fc4f69|	 TaskName= |GetTransactionNo| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ec7c7705a49a41889afbe831b43a1974|	 TaskName= |To enter detail Make Payement page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |e1fa0a6fc6de425a9624a0287c85d9f1|	 TaskName= |To Select Bank details| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |d87b297712eb4ff28230a015e53b5125|	 TaskName= |To Select Bank status| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |6c17c22fbdff454aa538d4b37d706ded|	 TaskName= |To store Policy Number| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:566) - Building Task to Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |1| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |2| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |3| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |4| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |5| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |6| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |7| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |8| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |9| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |10| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |11| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |12| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |13| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |14| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |15| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |16| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |17| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |18| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |19| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |20| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |21| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |22| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |23| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |24| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |25| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |26| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|New Travel Insurance policy creation_E2E|
+No. Of Tasks |26|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|5967debeeeb141daa735d395d0a0ec01|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|1b5a2f9b08a54b5686a72a8aa464d088|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|1b5a2f9b08a54b5686a72a8aa464d088|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|8946d0382fde43bdb38fd3c03a6fbdc3|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|1b5a2f9b08a54b5686a72a8aa464d088|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|58686952972348858a5a15b1cfe1231a|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=|58686952972348858a5a15b1cfe1231a|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|09b2369c0adc440ba5cea0c5bc40707c|
+taskName=||
+taskSeq=|13|
+IsSystemTask=|true|
+ParentId=|58686952972348858a5a15b1cfe1231a|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|49da300e99bc42a79d80b60aa9702641|
+taskName=|Fill Your Details_Popup|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d014fb36712e41b0bd0c3e0730c6e1bb|
+taskName=|To Select Plan on Choose your travel insurance plan Screen|
+taskSeq=|15|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|62a3e0b9212e45af9d70da2e64ebe7eb|
+taskName=|To fill in details of Proposer details Screen|
+taskSeq=|16|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=10
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d2ac9c26d91d4e55ade3a24aa5e95bad|
+taskName=|To enter Insured details|
+taskSeq=|17|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=37
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|b4998295ab7a45f9ac6e7562935ffa51|
+taskName=||
+taskSeq=|18|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|bbdf9e2271c14b2b900f1d0fe4f35003|
+taskName=||
+taskSeq=|19|
+IsSystemTask=|true|
+ParentId=|b4998295ab7a45f9ac6e7562935ffa51|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|18130fbbd9444272ac958913e222ba63|
+taskName=|Click on Next|
+taskSeq=|20|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|e82c096197fe4586813da7d7bf6be3ac|
+taskName=|To enter Kindly Confirm page details|
+taskSeq=|21|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|539fa144570e41889ef2642c27fc4f69|
+taskName=|GetTransactionNo|
+taskSeq=|22|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ec7c7705a49a41889afbe831b43a1974|
+taskName=|To enter detail Make Payement page|
+taskSeq=|23|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|e1fa0a6fc6de425a9624a0287c85d9f1|
+taskName=|To Select Bank details|
+taskSeq=|24|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d87b297712eb4ff28230a015e53b5125|
+taskName=|To Select Bank status|
+taskSeq=|25|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|6c17c22fbdff454aa538d4b37d706ded|
+taskName=|To store Policy Number|
+taskSeq=|26|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|New Travel Insurance policy creation_E2E|
+No. Of Tasks |26|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=2
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|5967debeeeb141daa735d395d0a0ec01|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|1b5a2f9b08a54b5686a72a8aa464d088|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|1b5a2f9b08a54b5686a72a8aa464d088|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=2
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|8946d0382fde43bdb38fd3c03a6fbdc3|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|1b5a2f9b08a54b5686a72a8aa464d088|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|58686952972348858a5a15b1cfe1231a|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=|58686952972348858a5a15b1cfe1231a|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|09b2369c0adc440ba5cea0c5bc40707c|
+taskName=||
+taskSeq=|13|
+IsSystemTask=|true|
+ParentId=|58686952972348858a5a15b1cfe1231a|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|49da300e99bc42a79d80b60aa9702641|
+taskName=|Fill Your Details_Popup|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d014fb36712e41b0bd0c3e0730c6e1bb|
+taskName=|To Select Plan on Choose your travel insurance plan Screen|
+taskSeq=|15|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|62a3e0b9212e45af9d70da2e64ebe7eb|
+taskName=|To fill in details of Proposer details Screen|
+taskSeq=|16|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=10
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d2ac9c26d91d4e55ade3a24aa5e95bad|
+taskName=|To enter Insured details|
+taskSeq=|17|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=37
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|b4998295ab7a45f9ac6e7562935ffa51|
+taskName=||
+taskSeq=|18|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|bbdf9e2271c14b2b900f1d0fe4f35003|
+taskName=||
+taskSeq=|19|
+IsSystemTask=|true|
+ParentId=|b4998295ab7a45f9ac6e7562935ffa51|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|18130fbbd9444272ac958913e222ba63|
+taskName=|Click on Next|
+taskSeq=|20|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|e82c096197fe4586813da7d7bf6be3ac|
+taskName=|To enter Kindly Confirm page details|
+taskSeq=|21|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|539fa144570e41889ef2642c27fc4f69|
+taskName=|GetTransactionNo|
+taskSeq=|22|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ec7c7705a49a41889afbe831b43a1974|
+taskName=|To enter detail Make Payement page|
+taskSeq=|23|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|e1fa0a6fc6de425a9624a0287c85d9f1|
+taskName=|To Select Bank details|
+taskSeq=|24|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d87b297712eb4ff28230a015e53b5125|
+taskName=|To Select Bank status|
+taskSeq=|25|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|6c17c22fbdff454aa538d4b37d706ded|
+taskName=|To store Policy Number|
+taskSeq=|26|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|New Travel Insurance policy creation_E2E|
+No. Of Tasks |26|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|5967debeeeb141daa735d395d0a0ec01|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|1b5a2f9b08a54b5686a72a8aa464d088|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|1b5a2f9b08a54b5686a72a8aa464d088|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|8946d0382fde43bdb38fd3c03a6fbdc3|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|1b5a2f9b08a54b5686a72a8aa464d088|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|58686952972348858a5a15b1cfe1231a|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=|58686952972348858a5a15b1cfe1231a|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|09b2369c0adc440ba5cea0c5bc40707c|
+taskName=||
+taskSeq=|13|
+IsSystemTask=|true|
+ParentId=|58686952972348858a5a15b1cfe1231a|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|49da300e99bc42a79d80b60aa9702641|
+taskName=|Fill Your Details_Popup|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d014fb36712e41b0bd0c3e0730c6e1bb|
+taskName=|To Select Plan on Choose your travel insurance plan Screen|
+taskSeq=|15|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|62a3e0b9212e45af9d70da2e64ebe7eb|
+taskName=|To fill in details of Proposer details Screen|
+taskSeq=|16|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=10
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d2ac9c26d91d4e55ade3a24aa5e95bad|
+taskName=|To enter Insured details|
+taskSeq=|17|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=37
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|b4998295ab7a45f9ac6e7562935ffa51|
+taskName=||
+taskSeq=|18|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|bbdf9e2271c14b2b900f1d0fe4f35003|
+taskName=||
+taskSeq=|19|
+IsSystemTask=|true|
+ParentId=|b4998295ab7a45f9ac6e7562935ffa51|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|18130fbbd9444272ac958913e222ba63|
+taskName=|Click on Next|
+taskSeq=|20|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|e82c096197fe4586813da7d7bf6be3ac|
+taskName=|To enter Kindly Confirm page details|
+taskSeq=|21|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|539fa144570e41889ef2642c27fc4f69|
+taskName=|GetTransactionNo|
+taskSeq=|22|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ec7c7705a49a41889afbe831b43a1974|
+taskName=|To enter detail Make Payement page|
+taskSeq=|23|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|e1fa0a6fc6de425a9624a0287c85d9f1|
+taskName=|To Select Bank details|
+taskSeq=|24|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|d87b297712eb4ff28230a015e53b5125|
+taskName=|To Select Bank status|
+taskSeq=|25|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|6c17c22fbdff454aa538d4b37d706ded|
+taskName=|To store Policy Number|
+taskSeq=|26|
+IsSystemTask=|false|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:246) - tcId=|60c3c67903944ebbafaa1af405fa68fa|
+tcName=|Validation for Travel insurance homepage & Travel details page|
+RunId=|a863415ac8b74da7b8b105ac0efb4ac8|
+tcSeqId=|2|
+TCFileName=|Validation testcase for travel inurance homepage.XML|
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:540) - Calling getXmlToJavaObject
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:545) - End getXmlToJavaObject
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |86fa313e9c224d9f9ea1d3084a469922|	 TaskName= |To Hit URL and verify HomePage| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |df031006aa18418c840fe6a44077d82a|	 TaskName= |Validation for Traveller type drop down clickability| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |9710f141be76425fb05879eb2e11e17c|	 TaskName= |Validate Trip Type dropdown values| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ab423441fd11444ab2a0afd1a5bb104f|	 TaskName= |Select Value for TripType| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |0db0c335a60c4523931ee8e8f6dbd602|	 TaskName= |Validation for Travellers type drop down| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |1b1cd49bba7d451cbf832c5673f7cf4b|	 TaskName= |Validation for Traveller type Age| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |4e4ddcc555184a17b6d5dcceaaea02c0|	 TaskName= |4e4ddcc555184a17b6d5dcceaaea02c0| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |0c7f1ce86f744464ad9f18079340d4e4|	 TaskName= |0c7f1ce86f744464ad9f18079340d4e4| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |add62a64c75c4449a0cfea9832c1a40e|	 TaskName= |Validation for Parent Traveller drop down| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bed2cf4fceee478a969e7a5691c86782|	 TaskName= |Select value for Parent Traveller| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ff054b5682c746c6ab9f8a1066639401|	 TaskName= |ff054b5682c746c6ab9f8a1066639401| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |261bab12ea1b4524ba9a974a5c9b946a|	 TaskName= |Click On Continue button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |f337bb2a947144538f9ca3cd5b4db382|	 TaskName= |Validation of Travel Details Page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |c1733e130ea8472ab44f39658bc1875a|	 TaskName= |Validation for Country  on Travel details page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |d368984e7d0a43c68ee8b7689f37254b|	 TaskName= |Validation for Dates on Travel details page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:566) - Building Task to Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |1| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |2| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |3| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |4| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |5| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |6| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |7| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |8| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |9| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |10| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |11| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |12| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |13| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |14| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |15| steps mapped
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|Validation for Travel insurance homepage & Travel details page|
+No. Of Tasks |15|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|df031006aa18418c840fe6a44077d82a|
+taskName=|Validation for Traveller type drop down clickability|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|9710f141be76425fb05879eb2e11e17c|
+taskName=|Validate Trip Type dropdown values|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|4|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|0db0c335a60c4523931ee8e8f6dbd602|
+taskName=|Validation for Travellers type drop down|
+taskSeq=|5|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=4
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=8
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|1b1cd49bba7d451cbf832c5673f7cf4b|
+taskName=|Validation for Traveller type Age|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=22
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=31
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|4e4ddcc555184a17b6d5dcceaaea02c0|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|0c7f1ce86f744464ad9f18079340d4e4|
+taskName=||
+taskSeq=|8|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:407) - taskID=|add62a64c75c4449a0cfea9832c1a40e|
+taskName=|Validation for Parent Traveller drop down|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=|0c7f1ce86f744464ad9f18079340d4e4|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=8
+[14-02-19 13:40:09:009] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=26
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=|0c7f1ce86f744464ad9f18079340d4e4|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|ff054b5682c746c6ab9f8a1066639401|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=|0c7f1ce86f744464ad9f18079340d4e4|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|f337bb2a947144538f9ca3cd5b4db382|
+taskName=|Validation of Travel Details Page|
+taskSeq=|13|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|c1733e130ea8472ab44f39658bc1875a|
+taskName=|Validation for Country  on Travel details page|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=2
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=14
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|d368984e7d0a43c68ee8b7689f37254b|
+taskName=|Validation for Dates on Travel details page|
+taskSeq=|15|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=33
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:246) - tcId=|e74172c5c3de4d89b26d48c2011a18e3|
+tcName=|Validation of Comapre Functionality|
+RunId=|9f45cf850f00465681650b339c903124|
+tcSeqId=|3|
+TCFileName=|Validation of Comapre Functionality.XML|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:540) - Calling getXmlToJavaObject
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:545) - End getXmlToJavaObject
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |86fa313e9c224d9f9ea1d3084a469922|	 TaskName= |To Hit URL and verify HomePage| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ab423441fd11444ab2a0afd1a5bb104f|	 TaskName= |Select Value for TripType| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |9f65fe1f994b41cf95ad34465944bf6a|	 TaskName= |Select Value for Travellers & enter age| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |de4091ec38ce4e9681b9e9e233633585|	 TaskName= |de4091ec38ce4e9681b9e9e233633585| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |985e6be034f7494f9d88e0f6976207d7|	 TaskName= |985e6be034f7494f9d88e0f6976207d7| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bed2cf4fceee478a969e7a5691c86782|	 TaskName= |Select value for Parent Traveller| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ed351f44b36d416aa8bd30cfd7cf5cc6|	 TaskName= |ed351f44b36d416aa8bd30cfd7cf5cc6| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |261bab12ea1b4524ba9a974a5c9b946a|	 TaskName= |Click On Continue button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |813426d9b8234af5bda8eb39a1c18f1e|	 TaskName= |813426d9b8234af5bda8eb39a1c18f1e| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |b7b063f7ff194a6c82b9bb12cc776c05|	 TaskName= |b7b063f7ff194a6c82b9bb12cc776c05| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bccdd1a36ba74fd68e2a3654e9438f01|	 TaskName= |To Enable Multi Trip Option and validations| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |90c6d0f346e9415a8ecd4afcba97dd04|	 TaskName= |90c6d0f346e9415a8ecd4afcba97dd04| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |85d0d0d781634d0ba9e343a47cee2118|	 TaskName= |To enter details on Travel details page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |474ab4dff14a48c3a5d7897b4f5901d7|	 TaskName= |474ab4dff14a48c3a5d7897b4f5901d7| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |619b1c8e6f9b4264917122467097bee9|	 TaskName= |Click on View Quote button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |d4cf0303bd434bd283d8f010b9f94b97|	 TaskName= |d4cf0303bd434bd283d8f010b9f94b97| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |8e39157aea6948da8b36731d90337ae0|	 TaskName= |Select Region from popup| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |e055d8544c674a5f88b4d68fbec11de3|	 TaskName= |e055d8544c674a5f88b4d68fbec11de3| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |49da300e99bc42a79d80b60aa9702641|	 TaskName= |Fill Your Details_Popup| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |cf554a8a893e4c079f2e69d3d54819dc|	 TaskName= |To Validate Available Plans| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |e8ad39dad0f64169a5e363ed92b36a28|	 TaskName= |To Click on Add To Compare Button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |4d9e8380b0494772920da51fb4ae943d|	 TaskName= |To Click on Compare Now| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |dec3c73c145a44cbb17e24e3977c35f3|	 TaskName= |Validation of Coverage details on Comparison Screen| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |95586a469bce42f98ad7718eedda264a|	 TaskName= |Validation of Click of BAck to quotes button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |e8ad39dad0f64169a5e363ed92b36a28|	 TaskName= |To Click on Add To Compare Button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |4d9e8380b0494772920da51fb4ae943d|	 TaskName= |To Click on Compare Now| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |0cbc03c28f1c42429136f6b6c06e8647|	 TaskName= |To Click on Buy Plan from Comparison Page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:566) - Building Task to Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |1| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |2| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |3| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |4| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |5| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |6| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |7| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |8| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |9| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |10| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |11| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |12| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |13| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |14| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |15| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |16| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |17| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |18| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |19| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |20| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |21| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |22| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |23| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |24| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |25| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |26| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |27| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|Validation of Comapre Functionality|
+No. Of Tasks |27|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|de4091ec38ce4e9681b9e9e233633585|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|985e6be034f7494f9d88e0f6976207d7|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|985e6be034f7494f9d88e0f6976207d7|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|ed351f44b36d416aa8bd30cfd7cf5cc6|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|985e6be034f7494f9d88e0f6976207d7|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|813426d9b8234af5bda8eb39a1c18f1e|
+taskName=||
+taskSeq=|9|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|b7b063f7ff194a6c82b9bb12cc776c05|
+taskName=||
+taskSeq=|10|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bccdd1a36ba74fd68e2a3654e9438f01|
+taskName=|To Enable Multi Trip Option and validations|
+taskSeq=|11|
+IsSystemTask=|false|
+ParentId=|b7b063f7ff194a6c82b9bb12cc776c05|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=14
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|90c6d0f346e9415a8ecd4afcba97dd04|
+taskName=||
+taskSeq=|12|
+IsSystemTask=|true|
+ParentId=|b7b063f7ff194a6c82b9bb12cc776c05|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|13|
+IsSystemTask=|false|
+ParentId=|90c6d0f346e9415a8ecd4afcba97dd04|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|474ab4dff14a48c3a5d7897b4f5901d7|
+taskName=||
+taskSeq=|14|
+IsSystemTask=|true|
+ParentId=|b7b063f7ff194a6c82b9bb12cc776c05|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|15|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|d4cf0303bd434bd283d8f010b9f94b97|
+taskName=||
+taskSeq=|16|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|17|
+IsSystemTask=|false|
+ParentId=|d4cf0303bd434bd283d8f010b9f94b97|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|e055d8544c674a5f88b4d68fbec11de3|
+taskName=||
+taskSeq=|18|
+IsSystemTask=|true|
+ParentId=|d4cf0303bd434bd283d8f010b9f94b97|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|49da300e99bc42a79d80b60aa9702641|
+taskName=|Fill Your Details_Popup|
+taskSeq=|19|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|cf554a8a893e4c079f2e69d3d54819dc|
+taskName=|To Validate Available Plans|
+taskSeq=|20|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=6
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|e8ad39dad0f64169a5e363ed92b36a28|
+taskName=|To Click on Add To Compare Button|
+taskSeq=|21|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|4d9e8380b0494772920da51fb4ae943d|
+taskName=|To Click on Compare Now|
+taskSeq=|22|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=2
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|dec3c73c145a44cbb17e24e3977c35f3|
+taskName=|Validation of Coverage details on Comparison Screen|
+taskSeq=|23|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=41
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|95586a469bce42f98ad7718eedda264a|
+taskName=|Validation of Click of BAck to quotes button|
+taskSeq=|24|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|e8ad39dad0f64169a5e363ed92b36a28|
+taskName=|To Click on Add To Compare Button|
+taskSeq=|25|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=2
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=7
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|4d9e8380b0494772920da51fb4ae943d|
+taskName=|To Click on Compare Now|
+taskSeq=|26|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=2
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|0cbc03c28f1c42429136f6b6c06e8647|
+taskName=|To Click on Buy Plan from Comparison Page|
+taskSeq=|27|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:246) - tcId=|84e80fbeb1884c299db63cf7a66af4b1|
+tcName=|Validation_Fill your details page|
+RunId=|2aff06890cc7447b8d5f6df9b69dec64|
+tcSeqId=|4|
+TCFileName=|Validation_Fill your details page.XML|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:540) - Calling getXmlToJavaObject
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:545) - End getXmlToJavaObject
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |86fa313e9c224d9f9ea1d3084a469922|	 TaskName= |To Hit URL and verify HomePage| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |ab423441fd11444ab2a0afd1a5bb104f|	 TaskName= |Select Value for TripType| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |9f65fe1f994b41cf95ad34465944bf6a|	 TaskName= |Select Value for Travellers & enter age| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |b592e31b076144beac50040089aad77f|	 TaskName= |b592e31b076144beac50040089aad77f| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |0aef8dd9923d4d219180e04e8d247103|	 TaskName= |0aef8dd9923d4d219180e04e8d247103| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bed2cf4fceee478a969e7a5691c86782|	 TaskName= |Select value for Parent Traveller| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |a5fc15c8b6f44f849eab2040b45d1d13|	 TaskName= |a5fc15c8b6f44f849eab2040b45d1d13| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |261bab12ea1b4524ba9a974a5c9b946a|	 TaskName= |Click On Continue button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |85d0d0d781634d0ba9e343a47cee2118|	 TaskName= |To enter details on Travel details page| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |619b1c8e6f9b4264917122467097bee9|	 TaskName= |Click on View Quote button| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |bf2038d0b7c04059bc2fcab8fa49a2cd|	 TaskName= |bf2038d0b7c04059bc2fcab8fa49a2cd| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |8e39157aea6948da8b36731d90337ae0|	 TaskName= |Select Region from popup| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |c1d843047be948848e51449937f334ef|	 TaskName= |c1d843047be948848e51449937f334ef| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:851) - Adding TaskName node for TaskID= |33d89538aa254d0e988ac8b0e681734c|	 TaskName= |Validation for Kindly fill your details fields| to Hashmap TASKNAMEPERTC
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:566) - Building Task to Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |1| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |2| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |3| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |4| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |5| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |6| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |7| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |8| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |9| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |10| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |11| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |12| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |13| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:578) - Building Step HashMap
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:708) - TaskSeq= |14| steps mapped
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|Validation_Fill your details page|
+No. Of Tasks |14|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|b592e31b076144beac50040089aad77f|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|0aef8dd9923d4d219180e04e8d247103|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|0aef8dd9923d4d219180e04e8d247103|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|a5fc15c8b6f44f849eab2040b45d1d13|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|0aef8dd9923d4d219180e04e8d247103|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|c1d843047be948848e51449937f334ef|
+taskName=||
+taskSeq=|13|
+IsSystemTask=|true|
+ParentId=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|33d89538aa254d0e988ac8b0e681734c|
+taskName=|Validation for Kindly fill your details fields|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=9
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=56
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|Validation_Fill your details page|
+No. Of Tasks |14|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=2
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|b592e31b076144beac50040089aad77f|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|0aef8dd9923d4d219180e04e8d247103|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|0aef8dd9923d4d219180e04e8d247103|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=2
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|a5fc15c8b6f44f849eab2040b45d1d13|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|0aef8dd9923d4d219180e04e8d247103|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|c1d843047be948848e51449937f334ef|
+taskName=||
+taskSeq=|13|
+IsSystemTask=|true|
+ParentId=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|33d89538aa254d0e988ac8b0e681734c|
+taskName=|Validation for Kindly fill your details fields|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=9
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=56
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:375) - Test Case Details... 
+TCName=|Validation_Fill your details page|
+No. Of Tasks |14|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+taskSeq=|1|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|ab423441fd11444ab2a0afd1a5bb104f|
+taskName=|Select Value for TripType|
+taskSeq=|2|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|9f65fe1f994b41cf95ad34465944bf6a|
+taskName=|Select Value for Travellers & enter age|
+taskSeq=|3|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=15
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|b592e31b076144beac50040089aad77f|
+taskName=||
+taskSeq=|4|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|0aef8dd9923d4d219180e04e8d247103|
+taskName=||
+taskSeq=|5|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bed2cf4fceee478a969e7a5691c86782|
+taskName=|Select value for Parent Traveller|
+taskSeq=|6|
+IsSystemTask=|false|
+ParentId=|0aef8dd9923d4d219180e04e8d247103|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=11
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|a5fc15c8b6f44f849eab2040b45d1d13|
+taskName=||
+taskSeq=|7|
+IsSystemTask=|true|
+ParentId=|0aef8dd9923d4d219180e04e8d247103|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|261bab12ea1b4524ba9a974a5c9b946a|
+taskName=|Click On Continue button|
+taskSeq=|8|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=3
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|85d0d0d781634d0ba9e343a47cee2118|
+taskName=|To enter details on Travel details page|
+taskSeq=|9|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=16
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|619b1c8e6f9b4264917122467097bee9|
+taskName=|Click on View Quote button|
+taskSeq=|10|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+taskName=||
+taskSeq=|11|
+IsSystemTask=|true|
+ParentId=||
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|8e39157aea6948da8b36731d90337ae0|
+taskName=|Select Region from popup|
+taskSeq=|12|
+IsSystemTask=|false|
+ParentId=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=5
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|c1d843047be948848e51449937f334ef|
+taskName=||
+taskSeq=|13|
+IsSystemTask=|true|
+ParentId=|bf2038d0b7c04059bc2fcab8fa49a2cd|
+OnError=|Continue|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=1
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:407) - taskID=|33d89538aa254d0e988ac8b0e681734c|
+taskName=|Validation for Kindly fill your details fields|
+taskSeq=|14|
+IsSystemTask=|false|
+ParentId=||
+OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:411) - No. Of Task Iteration=9
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:419) - No. Of Steps=56
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:934) - Calling createReportTemplates
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:1165) - Summary Report Initialized successfully
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:1174) - TC Count=4
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:1186) - strThreads >>
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:1190) - Image thread count >>2
+[14-02-19 13:40:10:010] [Thread=Thread1] INFO  (SnapshotWriter.java:37) - Inside Run...
+[14-02-19 13:40:10:010] [Thread=Thread2] INFO  (SnapshotWriter.java:37) - Inside Run...
+[14-02-19 13:40:10:010] [Thread=main] INFO  (JiraDefectLoggingController.java:25) - Defect creation flags: isOffline: true ShouldCreateDefect: false IsErrorInDefectCreation: false
+[14-02-19 13:40:10:010] [Thread=main] INFO  (JiraDefectLoggingController.java:28) - shouldConsiderDefectCreation = false
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (Controller.java:1209) - Before running QualitiaTestCase.class
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:95) - Test Case Name=|New Travel Insurance policy creation_E2E| Executing
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:136) - TestCaseName=|New Travel Insurance policy creation_E2E| ManualTCID=|New Travel Insurance policy creation_E2E| RunID=|4ed86e862b2247a984b3d13545eeb6fa| TC SeqID=|1|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:145) - Before creating Test Case Folder at 'D:/HDFCergo_projectdb/QualitiaOffline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/1'
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:152) - After creating Test Case folder successfully at 'D:/HDFCergo_projectdb/QualitiaOffline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/1'
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:906) - IS_WEB_EXECUTION_PLATFORM_DESKTOP system variable is updated to true
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:910) - IS_WEB_EXECUTION_PLATFORM_MOBILE system variable is updated to false
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:176) - Before creating iteration folder at 'D:/HDFCergo_projectdb/QualitiaOffline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/1/ITR_1'
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:183) - After creating iteration folder successfully at 'D:/HDFCergo_projectdb/QualitiaOffline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/1/ITR_1'
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:185) - Before creating log files inside iteration folder 'D:/HDFCergo_projectdb/QualitiaOffline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/1/ITR_1'
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:193) - After creating log files successfully inside iteration folder 'D:/HDFCergo_projectdb/QualitiaOffline/LOG/RACLAP23-COMP/admin/hdfcergo/1.01/1.01/ITR_1/1/ITR_1'
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:199) - createBitmapFolderPath executed successfully
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:274) - Task Details ... 
+Task Id=|86fa313e9c224d9f9ea1d3084a469922|
+taskName=|To Hit URL and verify HomePage|
+TaskSeq=|1|
+Is System Task=|false|
+task ParentId=||
+task OnError=|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaTestCase.java:281) - tcOnError=|Continue|After taskOnError overriding OnError Action =|ExitTCIteration|
+[14-02-19 13:40:10:010] [Thread=main] INFO  (General.java:349) - Input URL is https://wwwf1.hdfcergo.com/UTesting/TravelOnline/Integration/TravelIndexDetail/NiyCY03bZpJnDZ8n9h,kLytbmczh,9LZIvrN1eg4xWxoVUz9VlWcs858c1x3EhoE
+[14-02-19 13:40:10:010] [Thread=main] INFO  (General.java:357) - Web execution platform is Desktop. Launching desktop browser
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (QualitiaSelenium.java:209) - Launching googlechrome
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (WebDriverHandler.java:68) - getWebDriver()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (WebDriverHandler.java:75) - Identifying execution environment....
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (WebDriverHandler.java:82) - Calling getDesiredCapabilities() by passing parameters: Environment Type=LOCAL, browserName=googlechrome
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:80) - getWebDesiredCapabilities()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:82) - Creating DesiredCapabilities object and assigning capabilities to it...
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:86) - Calling setDCAPFilePaths()
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1063) - setDCAPFilePaths()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1067) - googlechrome DCAP file path= ./config/googlechromedc.properties
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1077) - setDCAPFilePaths()--
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:89) - Calling assignDesiredCapabilitiesObject()
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1087) - assignDesiredCapabilitiesObject()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1099) - DesiredCapabilities object is created for GoogleChrome.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1125) - setDesiredCapabilitiesProperties()++
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:42) - getPropertiesReader()++
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:31) - PropertiesReader()++
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:32) - PropertiesReader()--
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:45) - getPropertiesReader()-- Returning newly created PropertiesReader object reference.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1137) - Calling getMap() by passing parameter user specified capabilities file
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:54) - getMap()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesReader.java:56) - Reading properties from file D:\HDFCergo_projectdb\QualitiaOffline\.\config\googlechromedc.properties and setting them in in-memory Map...
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:82) - getMap()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesReader.java:103) - Getting properties in Map completed.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:104) - getMap()-- Returning properties Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1144) - Calling getMap() by passing expected capabilities file
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:82) - getMap()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesReader.java:103) - Getting properties in Map completed.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesReader.java:104) - getMap()-- Returning properties Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesValidator.java:40) - getValidator()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:42) - Creating Validator class object
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesValidator.java:29) - Validator()++
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesValidator.java:30) - Validator()--
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesValidator.java:44) - getValidator()-- Returning Validator object reference.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1161) - Calling validateProperties() by passing parameters: user capabilities Map and expected capabilities Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesValidator.java:63) - validateProperties()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:64) - Validating properties user properties against expected properties...
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key socksPassword present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key excludeSwitches present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key logtype_performance_level present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key bufferUsageReportingInterval present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key useAutomationExtension present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key proxyAutoconfigUrl present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key logtype_browser_level present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key acceptSslCerts present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key webStorageEnabled present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key noProxy present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key javascriptEnabled present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key enableTimeline present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key minidumpPath present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key unexpectedAlertBehaviour present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key mobileEmulation present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key rotatable present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key socksUsername present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key logtype_profiler_level present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key enablePage present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key custom_proxy_address present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key debuggerAddress present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key proxyType present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key handlesAlerts present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key databaseEnabled present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key logtype_server_level present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key localState present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key logtype_driver_level present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key version present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key prefs present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key custom_use_proxy present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key logtype_client_level present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key args present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key enableNetwork present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key browserConnectionEnabled present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key extensions present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key nativeEvents present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key elementScrollBehavior present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key binary present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key custom_use_perfloggingprefs present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key locationContextEnabled present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key detach present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key chrome.chromedriverVersion present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key tracingCategories present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key custom_use_loggingpreferences present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key userDataDir present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:72) - The key cssSelectorsEnabled present in expected properties but not in user properties.
+[14-02-19 13:40:10:010] [Thread=main] INFO  (PropertiesValidator.java:81) - Validation completed
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (PropertiesValidator.java:82) - validateProperties()-- Returning validated properties Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1175) - Calling removeLoggingPreferencesCapabilities() by passing parameter validatedCapabilities Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1817) - removeLoggingPreferencesCapabilities()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1819) - Removing Logging Preferences capabilities from validatedCapabilities Map
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1855) - Removing Logging Preferences capabilities from validatedCapabilities Map completed.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1856) - removeLoggingPreferencesCapabilities()--
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1187) - Calling removeProxyCapabilities() by passing parameter: validatedCapabilities Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1390) - removeProxyCapabilities()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1391) - Removing Proxy capabilities from validatedCapabilities Map...
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1427) - Proxy capabilities removed from validatedCapabilities Map.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1428) - removeProxyCapabilities()--
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1232) - Calling removeChromeOptionsCapabilities() by passing parameter: validatedCapabilities Map
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1577) - removeChromeOptionsCapabilities()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1578) - Removing Chrome options capabilities from validatedCapabilities Map...
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1582) - Removed:  custom_use_chromeoptions
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1680) - Removing Chrome options capabilities from validatedCapabilities Map completed.
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1681) - removeChromeOptionsCapabilities()--
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1251) - Setting remaining desired capabilities...
+[14-02-19 13:40:10:010] [Thread=main] INFO  (DesiredCapabilitiesHandler.java:1258) - Set Boolean capability applicationCacheEnabled = false
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:1277) - setDesiredCapabilitiesProperties()--
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (LogUtil.java:14) - >> getPrintalbeDesiredCapabilities()
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (LogUtil.java:35) - << getPrintalbeDesiredCapabilities()
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:111) - Desired capabilities set by user =====> {applicationCacheEnabled=false, browserName=chrome, platform=ANY, version=}
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (DesiredCapabilitiesHandler.java:113) - getDesiredCapabilities()--  Returning DesiredCapabilitities object
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (WebDriverHandler.java:85) - Calling getLocalWebDriver() by passing parameters: browserName=googlechrome and desiredCapabilities
+[14-02-19 13:40:10:010] [Thread=main] DEBUG (WebDriverHandler.java:373) - getLocalWebDriver()++
+[14-02-19 13:40:10:010] [Thread=main] INFO  (WebDriverHandler.java:374) - Creating WebDriver object for browser: googlechrome
+[14-02-19 13:40:14:014] [Thread=main] INFO  (WebDriverHandler.java:385) - ChromeDriver object is created.
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (LogUtil.java:14) - >> getPrintalbeDesiredCapabilities()
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (LogUtil.java:35) - << getPrintalbeDesiredCapabilities()
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (WebDriverHandler.java:396) - Capabilities used by Selenium WebDriver =====> {acceptInsecureCerts=false, acceptSslCerts=false, applicationCacheEnabled=false, browserConnectionEnabled=false, browserName=chrome, chrome={chromedriverVersion=2.43.600210 (68dcf5eebde37173d4027fa8635e332711d2874a), userDataDir=C:\Users\CHIRAG~1.JAI\AppData\Local\Temp\scoped_dir10276_21375}, cssSelectorsEnabled=true, databaseEnabled=false, goog:chromeOptions={debuggerAddress=localhost:51604}, handlesAlerts=true, hasTouchScreen=false, javascriptEnabled=true, locationContextEnabled=true, mobileEmulationEnabled=false, nativeEvents=true, networkConnectionEnabled=false, pageLoadStrategy=normal, platform=XP, platformName=XP, rotatable=false, setWindowRect=true, takesHeapSnapshot=true, takesScreenshot=true, unexpectedAlertBehaviour=, unhandledPromptBehavior=, version=72.0.3626.109, webStorageEnabled=true}
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (WebDriverHandler.java:402) - getLocalWebDriver()--
+[14-02-19 13:40:14:014] [Thread=main] INFO  (WebDriverHandler.java:91) - WebDriver object creation for local machine completed...
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (WebDriverHandler.java:201) - getWebDriver()--
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (ChromeLauncher.java:51) - Launched browser on attempt No.:<01>
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (QualitiaSelenium.java:211) - Finished Launching googlechrome
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (QualitiaSelenium.java:284) - getBrowserVersion()++ 
+[14-02-19 13:40:14:014] [Thread=main] INFO  (QualitiaSelenium.java:298) - browser version found in getVersion() method
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (QualitiaSelenium.java:311) - getBrowserVersion()-- Returning browserVersion=72.0.3626.109
+[14-02-19 13:40:14:014] [Thread=main] DEBUG (QualitiaSelenium.java:227) - caps >>Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\CHIRAG~1.JAI\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51604}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.109, webStorageEnabled: true}
+[14-02-19 13:40:14:014] [Thread=main] INFO  (QualitiaSelenium.java:318) - Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.43.600210 (68dcf5eebde371..., userDataDir: C:\Users\CHIRAG~1.JAI\AppDa...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:51604}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.109, webStorageEnabled: true}
+[14-02-19 13:40:15:015] [Thread=main] DEBUG (QualitiaSelenium.java:420) - takeScreenshot >>webdriver
+[14-02-19 13:40:18:018] [Thread=main] DEBUG (QualitiaSelenium.java:420) - takeScreenshot >>webdriver

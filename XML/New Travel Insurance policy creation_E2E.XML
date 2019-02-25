@@ -1,0 +1,2470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ExecutionTC TCId="61b3eb5111ef4ed8a812973cc18d8fb3" ManualTCId="New Travel Insurance policy creation_E2E" TCName="New Travel Insurance policy creation_E2E">
+  <WF>
+    <TaskName ID="86fa313e9c224d9f9ea1d3084a469922" LineNumber="1" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="1" Desc="To Hit URL and verify HomePage" ParentID="" WFId="">To Hit URL and verify HomePage</TaskName>
+    <TaskName ID="ab423441fd11444ab2a0afd1a5bb104f" LineNumber="6" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="2" Desc="Select Value for TripType" ParentID="" WFId="">Select Value for TripType</TaskName>
+    <TaskName ID="9f65fe1f994b41cf95ad34465944bf6a" LineNumber="12" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="3" Desc="Select Value for Travellers &amp; enter age" ParentID="" WFId="">Select Value for Travellers &amp; enter age</TaskName>
+    <TaskName ID="5967debeeeb141daa735d395d0a0ec01" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="4" Desc="SystemPurpose" ParentID="" WFId="">5967debeeeb141daa735d395d0a0ec01</TaskName>
+    <TaskName ID="1b5a2f9b08a54b5686a72a8aa464d088" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="5" Desc="IF" ParentID="" WFId="">1b5a2f9b08a54b5686a72a8aa464d088</TaskName>
+    <TaskName ID="bed2cf4fceee478a969e7a5691c86782" LineNumber="32" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="6" Desc="Select value for Parent Traveller" ParentID="1b5a2f9b08a54b5686a72a8aa464d088" WFId="">Select value for Parent Traveller</TaskName>
+    <TaskName ID="8946d0382fde43bdb38fd3c03a6fbdc3" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="7" Desc="END IF" ParentID="1b5a2f9b08a54b5686a72a8aa464d088" WFId="">8946d0382fde43bdb38fd3c03a6fbdc3</TaskName>
+    <TaskName ID="261bab12ea1b4524ba9a974a5c9b946a" LineNumber="45" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="8" Desc="Click On Continue button" ParentID="" WFId="">Click On Continue button</TaskName>
+    <TaskName ID="85d0d0d781634d0ba9e343a47cee2118" LineNumber="49" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="9" Desc="To enter details on Travel details page" ParentID="" WFId="">To enter details on Travel details page</TaskName>
+    <TaskName ID="619b1c8e6f9b4264917122467097bee9" LineNumber="66" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="10" Desc="Click on View Quote button" ParentID="" WFId="">Click on View Quote button</TaskName>
+    <TaskName ID="58686952972348858a5a15b1cfe1231a" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="11" Desc="IF" ParentID="" WFId="">58686952972348858a5a15b1cfe1231a</TaskName>
+    <TaskName ID="8e39157aea6948da8b36731d90337ae0" LineNumber="73" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="12" Desc="Select Region from popup" ParentID="58686952972348858a5a15b1cfe1231a" WFId="">Select Region from popup</TaskName>
+    <TaskName ID="09b2369c0adc440ba5cea0c5bc40707c" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="13" Desc="END IF" ParentID="58686952972348858a5a15b1cfe1231a" WFId="">09b2369c0adc440ba5cea0c5bc40707c</TaskName>
+    <TaskName ID="49da300e99bc42a79d80b60aa9702641" LineNumber="80" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="14" Desc="Fill Your Details_Popup" ParentID="" WFId="">Fill Your Details_Popup</TaskName>
+    <TaskName ID="d014fb36712e41b0bd0c3e0730c6e1bb" LineNumber="97" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="15" Desc="To Select Plan on Choose your travel insurance plan Screen" ParentID="" WFId="">To Select Plan on Choose your travel insurance plan Screen</TaskName>
+    <TaskName ID="62a3e0b9212e45af9d70da2e64ebe7eb" LineNumber="103" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="16" Desc="To fill in details of Proposer details Screen" ParentID="" WFId="">To fill in details of Proposer details Screen</TaskName>
+    <TaskName ID="d2ac9c26d91d4e55ade3a24aa5e95bad" LineNumber="114" IsSystemTask="False" OnError="Continue" TaskSeq="17" Desc="To enter Insured details" ParentID="" WFId="">To enter Insured details</TaskName>
+    <TaskName ID="b4998295ab7a45f9ac6e7562935ffa51" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="18" Desc="IF" ParentID="" WFId="">b4998295ab7a45f9ac6e7562935ffa51</TaskName>
+    <TaskName ID="bbdf9e2271c14b2b900f1d0fe4f35003" LineNumber="" IsSystemTask="True" OnError="Continue" TaskSeq="19" Desc="END IF" ParentID="b4998295ab7a45f9ac6e7562935ffa51" WFId="">bbdf9e2271c14b2b900f1d0fe4f35003</TaskName>
+    <TaskName ID="18130fbbd9444272ac958913e222ba63" LineNumber="174" IsSystemTask="False" OnError="Continue" TaskSeq="20" Desc="Click on Next" ParentID="" WFId="">Click on Next</TaskName>
+    <TaskName ID="e82c096197fe4586813da7d7bf6be3ac" LineNumber="178" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="21" Desc="To enter Kindly Confirm page details" ParentID="" WFId="">To enter Kindly Confirm page details</TaskName>
+    <TaskName ID="539fa144570e41889ef2642c27fc4f69" LineNumber="184" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="22" Desc="GetTransactionNo" ParentID="" WFId="">GetTransactionNo</TaskName>
+    <TaskName ID="ec7c7705a49a41889afbe831b43a1974" LineNumber="192" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="23" Desc="To enter detail Make Payement page" ParentID="" WFId="">To enter detail Make Payement page</TaskName>
+    <TaskName ID="e1fa0a6fc6de425a9624a0287c85d9f1" LineNumber="197" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="24" Desc="To Select Bank details" ParentID="" WFId="">To Select Bank details</TaskName>
+    <TaskName ID="d87b297712eb4ff28230a015e53b5125" LineNumber="205" IsSystemTask="False" OnError="ExitTCIteration" TaskSeq="25" Desc="To Select Bank status" ParentID="" WFId="">To Select Bank status</TaskName>
+    <TaskName ID="6c17c22fbdff454aa538d4b37d706ded" LineNumber="212" IsSystemTask="False" OnError="Continue" TaskSeq="26" Desc="To store Policy Number" ParentID="" WFId="">To store Policy Number</TaskName>
+  </WF>
+  <TaskInfo>
+    <Task ID="86fa313e9c224d9f9ea1d3084a469922" TaskSeq="1" LineNumber="1" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="2" stepSeq="1" ActionId="bb49d1ead632466aa02b76cdc17c9cce" ActionName="OpenURL" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="2" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="2" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="3" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="3" ActionId="d2510f73a1214511bcfe723732cdc09e" ActionName="MaximizeBrowser" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="4" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="4" ActionId="cdc9623807e111e8ad2cf01faf1c4dfc" ActionName="WaitForVisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="0a212a2a6d674c32b8eeb256e060e31e" ObjectName="Ele_TripTypeDD" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="5" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="ab423441fd11444ab2a0afd1a5bb104f" TaskSeq="2" LineNumber="6" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="2" stepSeq="1" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="0a212a2a6d674c32b8eeb256e060e31e" ObjectName="Ele_TripTypeDD" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="7" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="2" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="8" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="3" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="9" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="4" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="6ddaa953f4bf45828af1c42139a16c0a" ObjectName="Ele_TripTypeValue" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="10" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="5" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="11" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="9f65fe1f994b41cf95ad34465944bf6a" TaskSeq="3" LineNumber="12" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="10" stepSeq="1" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="13" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="2" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="360f6ba419ea42bc99af802d48619363" ObjectName="Ele_SelectTravellersDD" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="14" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="3" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="15" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="15" stepSeq="4" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="16" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="3" stepSeq="5" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="17" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="16" stepSeq="6" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="18" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="14" stepSeq="7" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="19" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="13" stepSeq="8" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="20" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="11" stepSeq="9" ActionId="30321856b5e2447d9c2cd4cf8ce93f76" ActionName="VerifyVisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="d1b7e7cedb7b4dabb34a37a4146a23a5" ObjectName="Ele_SelectTravellerValue" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="21" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="1" stepSeq="10" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="d1b7e7cedb7b4dabb34a37a4146a23a5" ObjectName="Ele_SelectTravellerValue" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="22" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="8" stepSeq="11" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="f33825998b9940579cd20440d19f2753" ObjectName="Input_TravellerAge" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="24" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="12" stepSeq="12" ActionId="42f93734b94211e7a426c85b76dc4d92" ActionName="ClickJS" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="dbc2ec2fe5d1496cb64a56f557d05847" ObjectName="Ele_TravellerAgeResultOption" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="25" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="20" stepSeq="13" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="360f6ba419ea42bc99af802d48619363" ObjectName="Ele_SelectTravellersDD" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="26" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="22" stepSeq="14" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="27" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="7" stepSeq="15" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="29" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+    </Task>
+    <Task ID="5967debeeeb141daa735d395d0a0ec01" TaskSeq="4" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="30" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="1b5a2f9b08a54b5686a72a8aa464d088" TaskSeq="5" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="31" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="bed2cf4fceee478a969e7a5691c86782" TaskSeq="6" LineNumber="32" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="1b5a2f9b08a54b5686a72a8aa464d088">
+      <Step StepId="2" stepSeq="1" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="e9406b460f564fb3bd30ab0ab74d82f5" ObjectName="Ele_SelectParentDD" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="33" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="10" stepSeq="2" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="34" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="12" stepSeq="3" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="35" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="4" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="36" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="5" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="37" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="14" stepSeq="6" ActionId="30321856b5e2447d9c2cd4cf8ce93f76" ActionName="VerifyVisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="b58af6919de641a6ab2e5cc21f46c2a3" ObjectName="Ele_SelectParentValue" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="38" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="15" stepSeq="7" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="b58af6919de641a6ab2e5cc21f46c2a3" ObjectName="Ele_SelectParentValue" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="39" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="8" stepSeq="8" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="f33825998b9940579cd20440d19f2753" ObjectName="Input_TravellerAge" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="40" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="13" stepSeq="9" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="e9406b460f564fb3bd30ab0ab74d82f5" ObjectName="Ele_SelectParentDD" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="41" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="9" stepSeq="10" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="42" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+      <Step StepId="7" stepSeq="11" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="43" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="6" />
+    </Task>
+    <Task ID="8946d0382fde43bdb38fd3c03a6fbdc3" TaskSeq="7" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="1b5a2f9b08a54b5686a72a8aa464d088">
+      <Step StepId="1" stepSeq="1" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="44" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="261bab12ea1b4524ba9a974a5c9b946a" TaskSeq="8" LineNumber="45" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="2" stepSeq="1" ActionId="8f1164921a134830ae1446e6ac22bdeb" ActionName="WaitForClickability" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="f297006a66f44a96b39084d230cc5f96" ObjectName="Btn_ContinueButton" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="46" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="2" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="47" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="3" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="f297006a66f44a96b39084d230cc5f96" ObjectName="Btn_ContinueButton" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="48" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="85d0d0d781634d0ba9e343a47cee2118" TaskSeq="9" LineNumber="49" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="15" stepSeq="1" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="50" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="2" ActionId="cdc9623807e111e8ad2cf01faf1c4dfc" ActionName="WaitForVisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="892db04c661e4c298b42920c6cb32540" ObjectName="Ele_TravelDetails_heading" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="51" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="11" stepSeq="3" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="52" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="14" stepSeq="4" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="53" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="18" stepSeq="5" ActionId="82b0f354d167470785f7aed171c39ce9" ActionName="WaitForVisibility" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="1979b038058040e2a5800a7992a2fedd" ObjectName="WebEdit_TravellingTo" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="54" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="12" stepSeq="6" ActionId="26d67865cc6547338a15ca0a4af600ef" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="1979b038058040e2a5800a7992a2fedd" ObjectName="WebEdit_TravellingTo" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="55" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="7" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="1979b038058040e2a5800a7992a2fedd" ObjectName="WebEdit_TravellingTo" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="56" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="13" stepSeq="8" ActionId="cdc9623807e111e8ad2cf01faf1c4dfc" ActionName="WaitForVisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="6210541d46764da09510175dc90f25a8" ObjectName="Ele_SearchResultOption" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="57" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="8" stepSeq="9" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="6210541d46764da09510175dc90f25a8" ObjectName="Ele_SearchResultOption" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="58" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="17" stepSeq="10" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="59" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="11" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="6525ef7045a041bfb84b44dda61d9766" ObjectName="WebEdit_DepartureDate" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="60" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="7" stepSeq="12" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="61" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="16" stepSeq="13" ActionId="b8d8fdfb050b4243b5eaf68d3a647066" ActionName="ChangeDateAndStore" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="62" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="14" ActionId="26d67865cc6547338a15ca0a4af600ef" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="55a2678432834975a29f7db55c7e7609" ObjectName="WebEdit_ReturnDate" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="63" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="15" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="55a2678432834975a29f7db55c7e7609" ObjectName="WebEdit_ReturnDate" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="64" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="16" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="65" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="619b1c8e6f9b4264917122467097bee9" TaskSeq="10" LineNumber="66" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="2" stepSeq="1" ActionId="d9b305043faf4a5e9d687b2f97705b00" ActionName="WaitForClickability" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="2596cf3fb9ac4be995df5c99bc64ff07" ObjectName="Link_ViewQuoteButton" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="67" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="2" ActionId="f70024a57b384993987d5a0ace7db20b" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="2596cf3fb9ac4be995df5c99bc64ff07" ObjectName="Link_ViewQuoteButton" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="68" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="3" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="69" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="4" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="70" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="7" stepSeq="5" ActionId="588ab5d315224ba9b16c187cb06d0aee" ActionName="StoreExistence" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="c556bc8950de4b639917f59e7e791e3b" ObjectName="Ele_SelectRegion" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="71" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="58686952972348858a5a15b1cfe1231a" TaskSeq="11" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="72" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="8e39157aea6948da8b36731d90337ae0" TaskSeq="12" LineNumber="73" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="58686952972348858a5a15b1cfe1231a">
+      <Step StepId="7" stepSeq="1" ActionId="588ab5d315224ba9b16c187cb06d0aee" ActionName="StoreExistence" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="c556bc8950de4b639917f59e7e791e3b" ObjectName="Ele_SelectRegion" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="74" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="2" ActionId="616f4d1947054fbcb677692fb3ef1b07" ActionName="VerifyEnability" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="c556bc8950de4b639917f59e7e791e3b" ObjectName="Ele_SelectRegion" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="75" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="3" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="c556bc8950de4b639917f59e7e791e3b" ObjectName="Ele_SelectRegion" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="76" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="4" ActionId="f70024a57b384993987d5a0ace7db20b" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="b82b667f33854ffb887fce587b7ff02f" ObjectName="Link_ContinueButton" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="77" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="5" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="78" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="09b2369c0adc440ba5cea0c5bc40707c" TaskSeq="13" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="58686952972348858a5a15b1cfe1231a">
+      <Step StepId="1" stepSeq="1" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="79" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="49da300e99bc42a79d80b60aa9702641" TaskSeq="14" LineNumber="80" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="ff62874e51cc45639958cb3a491ff415" ObjectName="Text_FullName" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="81" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="2" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="e61caafae63547c28ca8e53ab3412382" ObjectName="Text_Email" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="82" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="3" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="1bc86ae0b08f47a4b986479cf73975db" ObjectName="Text_MobileNo" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="83" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="4" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="ac7db56865bb4687a501d48dc7c281b5" ObjectName="Text_Pincode" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="84" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="10" stepSeq="5" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="85" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="9" stepSeq="6" ActionId="e11f1a7407e011e8ad2cf01faf1c4dfc" ActionName="WaitForClickability" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="007c13b25b5d443e97e5aa763f6c9339" ObjectName="Webelement_PincodeOption" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="86" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="11" stepSeq="7" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="007c13b25b5d443e97e5aa763f6c9339" ObjectName="Webelement_PincodeOption" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="87" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="12" stepSeq="8" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="007c13b25b5d443e97e5aa763f6c9339" ObjectName="Webelement_PincodeOption" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="88" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="13" stepSeq="9" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="89" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="15" stepSeq="10" ActionId="9060abf684d44d4cac5e799318f59933" ActionName="StoreValueAttribute" QClass="com.webdriverfw.Wrappers.WebCheckbox" ObjectId="07954c4cacb04337a43b24cea62e0848" ObjectName="CheckBox_IHereBy" ObjectTypeId="6a77f8e41e2a41c79b7a100bf41ea112" LineNumber="90" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="16" stepSeq="11" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="91" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="12" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="125001376a644050a59def6eb6cbe43f" ObjectName="Ele_HereBy_Checkbox" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="92" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="16" />
+      <Step StepId="17" stepSeq="13" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="93" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="16" />
+      <Step StepId="7" stepSeq="14" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="94" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="15" ActionId="f70024a57b384993987d5a0ace7db20b" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="af85aad2bafc4f43816a1aa1ef2bf4a4" ObjectName="WebLink_ViewQuote" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="95" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="14" stepSeq="16" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="96" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="d014fb36712e41b0bd0c3e0730c6e1bb" TaskSeq="15" LineNumber="97" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="98" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="2" ActionId="d9b305043faf4a5e9d687b2f97705b00" ActionName="WaitForClickability" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="f474d96bef364cb6a93d661dcf6bc7ae" ObjectName="Buy_Button" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="99" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="7" stepSeq="3" ActionId="4a4438accbca49c3b2c47fb79f4e3542" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="f474d96bef364cb6a93d661dcf6bc7ae" ObjectName="Buy_Button" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="100" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="8" stepSeq="4" ActionId="49cc1b3fb94211e7a426c85b76dc4d92" ActionName="ClickJS" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="f474d96bef364cb6a93d661dcf6bc7ae" ObjectName="Buy_Button" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="101" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="5" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="102" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="62a3e0b9212e45af9d70da2e64ebe7eb" TaskSeq="16" LineNumber="103" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="37" stepSeq="1" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="9170894dbd254dd6961d96656ef90a15" ObjectName="TextFeild_DateOfBirth" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="104" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="36" stepSeq="2" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="105" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="35" stepSeq="3" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="ef8e2bf391974e6ebad4912dd49de27e" ObjectName="TextFeild_HouseNo" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="106" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="34" stepSeq="4" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="107" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="33" stepSeq="5" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="10df8458a2d945e190da995080f6fc00" ObjectName="TextFeild_StreetSectorArea" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="108" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="32" stepSeq="6" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="109" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="31" stepSeq="7" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="110" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="30" stepSeq="8" ActionId="b82b5a81961e4cec885934a0e8f5e520" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="bd1636041cfd4aacaf081aab379b09b4" ObjectName="Btn_Generic_BuyNow_Next_Get OTP" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="111" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="29" stepSeq="9" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="bd1636041cfd4aacaf081aab379b09b4" ObjectName="Btn_Generic_BuyNow_Next_Get OTP" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="112" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="28" stepSeq="10" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="113" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="d2ac9c26d91d4e55ade3a24aa5e95bad" TaskSeq="17" LineNumber="114" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="8" stepSeq="1" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="116" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="24" stepSeq="2" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="117" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="23" stepSeq="3" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="118" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="18" stepSeq="4" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="119" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="30" stepSeq="5" ActionId="bcffb579c3aa4cf0aa4138767b39063d" ActionName="StoreVariable" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="120" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="26" stepSeq="6" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="121" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="28" stepSeq="7" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="08d3ba2ce85a4b6e98836ce2eedc70c7" ObjectName="Text_FamilyFullName" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="122" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="26" />
+      <Step StepId="25" stepSeq="8" ActionId="fed0f35405ae11e8b4f300ff38b90989" ActionName="SelectItemByText" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="92d16a79b8c149228f82a51c7b979ab3" ObjectName="WebList_FamilyTravellerTittle" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="123" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="26" />
+      <Step StepId="29" stepSeq="9" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="559ab832024444a9a1e0ec8f24eab0a6" ObjectName="Text_FamilyDateofBirth" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="124" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="26" />
+      <Step StepId="27" stepSeq="10" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="125" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="26" />
+      <Step StepId="43" stepSeq="11" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="126" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="38" stepSeq="12" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="9d6c86f454b9459b89bfd635848289ec" ObjectName="TextFeild_UniversityName" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="127" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="45" stepSeq="13" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="9cbc1af0dcd744c392e411617262b824" ObjectName="TextFeild_CourseName" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="128" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="46" stepSeq="14" ActionId="1f8819b058a340679506f01168f50751" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="7353b8d8998f4ea1af936776dc341412" ObjectName="WebList_CourseDuration" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="129" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="47" stepSeq="15" ActionId="fed0f35405ae11e8b4f300ff38b90989" ActionName="SelectItemByText" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="7353b8d8998f4ea1af936776dc341412" ObjectName="WebList_CourseDuration" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="130" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="52" stepSeq="16" ActionId="c76677bb6c2b40f6bf832fe5072d9d09" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="8ddcc056be724e95931237144b88c9f1" ObjectName="TextFeild_UniversityAddress" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="131" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="42" stepSeq="17" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="8ddcc056be724e95931237144b88c9f1" ObjectName="TextFeild_UniversityAddress" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="132" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="41" stepSeq="18" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="443cdaeaeb844a82aabaa4fde58af223" ObjectName="TextFeild_UniversityCountry" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="133" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="39" stepSeq="19" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="fe56f1b802c34ebc81ff1eb001eab6f6" ObjectName="TextFeild_UniversityState" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="134" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="40" stepSeq="20" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="eeab46a5e26440d6ad64d267ff7173a4" ObjectName="TextFeild_UniversityCity" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="135" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="48" stepSeq="21" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="136" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="51" stepSeq="22" ActionId="c76677bb6c2b40f6bf832fe5072d9d09" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="0a468569791c447784cfcb8ed2b6f53b" ObjectName="TextFeild_SponserName" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="137" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="50" stepSeq="23" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="0a468569791c447784cfcb8ed2b6f53b" ObjectName="TextFeild_SponserName" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="138" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="49" stepSeq="24" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="ca0e6491e3a8432fbd48107c4140f16b" ObjectName="TextFeild_SponserDOB" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="139" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="44" stepSeq="25" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="140" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="43" />
+      <Step StepId="4" stepSeq="26" ActionId="c76677bb6c2b40f6bf832fe5072d9d09" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="27bd06b8ef364c7bb0e456532aed8cc2" ObjectName="Text_Nominee_Fullname" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="141" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="22" stepSeq="27" ActionId="c3eb0c034b2643c68fe2046c325283c1" ActionName="Set" QClass="com.webdriverfw.Wrappers.WebEdit" ObjectId="27bd06b8ef364c7bb0e456532aed8cc2" ObjectName="Text_Nominee_Fullname" ObjectTypeId="14c9007341cf4d6ea42123b734b2d3c4" LineNumber="142" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="11" stepSeq="28" ActionId="82d698817fec4af783bb34090a6e38cd" ActionName="PressKeys" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="143" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="21" stepSeq="29" ActionId="82d698817fec4af783bb34090a6e38cd" ActionName="PressKeys" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="144" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="16" stepSeq="30" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="145" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="31" ActionId="fed0f35405ae11e8b4f300ff38b90989" ActionName="SelectItemByText" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="2d776eae513b41eeb4764a3a3d2392f6" ObjectName="WebList_Nominee_Relation" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="146" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="31" stepSeq="32" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="147" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="32" stepSeq="33" ActionId="1b6a64aa3c8e40fbb70431dd071398dc" ActionName="StoreExistence" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="615d381cf646400881e1143ddc71169e" ObjectName="Button_Done" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="148" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="35" stepSeq="34" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="149" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="34" stepSeq="35" ActionId="f70024a57b384993987d5a0ace7db20b" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="615d381cf646400881e1143ddc71169e" ObjectName="Button_Done" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="150" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="35" />
+      <Step StepId="36" stepSeq="36" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="151" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="35" />
+      <Step StepId="37" stepSeq="37" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="152" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="b4998295ab7a45f9ac6e7562935ffa51" TaskSeq="18" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="-1" ActionName="IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="153" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="bbdf9e2271c14b2b900f1d0fe4f35003" TaskSeq="19" LineNumber="" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="b4998295ab7a45f9ac6e7562935ffa51">
+      <Step StepId="1" stepSeq="1" ActionId="-2" ActionName="END IF" QClass="com.zensoft.ztaf.selfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="165" BreakPoint="" Comment="" IsCommented="" IsSkipped="" ParentID="" />
+    </Task>
+    <Task ID="18130fbbd9444272ac958913e222ba63" TaskSeq="20" LineNumber="174" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="3" stepSeq="1" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="175" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="2" ActionId="49bddf49b94211e7a426c85b76dc4d92" ActionName="ClickAction" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="18a6a629f1f54587bda924f657a74489" ObjectName="Button_Next" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="176" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="3" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="177" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="e82c096197fe4586813da7d7bf6be3ac" TaskSeq="21" LineNumber="178" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="5" stepSeq="1" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="179" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="1" stepSeq="2" ActionId="b82b5a81961e4cec885934a0e8f5e520" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="a5bdf5cfd2a44b7faf931eeaa0909f0a" ObjectName="WebButton_IAccept" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="180" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="3" ActionId="31199c1db94211e7a426c85b76dc4d92" ActionName="ClickJS" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="a5bdf5cfd2a44b7faf931eeaa0909f0a" ObjectName="WebButton_IAccept" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="181" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="4" ActionId="b82b5a81961e4cec885934a0e8f5e520" ActionName="ScrollIntoView" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="2574c1f0ef984292bed0ca645b0abdf4" ObjectName="WebButton_BuyNow" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="182" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="5" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="2574c1f0ef984292bed0ca645b0abdf4" ObjectName="WebButton_BuyNow" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="183" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="539fa144570e41889ef2642c27fc4f69" TaskSeq="22" LineNumber="184" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="7" stepSeq="1" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="185" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="8" stepSeq="2" ActionId="f6b1bf42b8144423a3f5f7b3919c48c2" ActionName="WaitForPageToLoad" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="186" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="3" ActionId="84a5532dda514201ad47cb2dfb7f78a0" ActionName="StoreText" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="73de18cbd3c443b2b2cfe366394a4c23" ObjectName="Webelement_Transactionnumber" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="187" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="4" ActionId="48521d2a5fc44443b7f9a31b9cff2709" ActionName="StoreSplitString" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="188" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="5" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="189" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="6" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="a6057856f6a44a6d8cd2dfa3f685bf9e" ObjectName="Webbutton_Ok" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="190" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="7" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="73de18cbd3c443b2b2cfe366394a4c23" ObjectName="Webelement_Transactionnumber" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="191" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="ec7c7705a49a41889afbe831b43a1974" TaskSeq="23" LineNumber="192" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="4" stepSeq="1" ActionId="49cc1b3fb94211e7a426c85b76dc4d92" ActionName="ClickJS" QClass="com.webdriverfw.Wrappers.WebLink" ObjectId="eaaf5108eed1436d9e7bb88f125c6516" ObjectName="Weblink_Netbanking" ObjectTypeId="6825ab6cc81b41e4bfa64d519bbfb975" LineNumber="193" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="2" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="d2cff3fea4384c968d2f3b1f96fb83b9" ObjectName="Webelement_OtherPayType" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="194" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="3" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="40de63a598634c00b12e89480e780bab" ObjectName="Webbutton_Proceed" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="195" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="4" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="196" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="e1fa0a6fc6de425a9624a0287c85d9f1" TaskSeq="24" LineNumber="197" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="7" stepSeq="1" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="198" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="2" ActionId="d9e92bdfdae34082b68a75f74675dda3" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="7185f1fd12a14b20be4d4cf643024578" ObjectName="Webelement_InternetBanking" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="199" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="8" stepSeq="3" ActionId="f6b1bf42b8144423a3f5f7b3919c48c2" ActionName="WaitForPageToLoad" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="201" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="4" ActionId="fed0f35405ae11e8b4f300ff38b90989" ActionName="SelectItemByText" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="661acb8ccdcb4377a4c2e6815530df25" ObjectName="Weblist_SelectBank_option" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="202" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="5" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="430c35c0439f42d5ac431ced8215834c" ObjectName="Webbutton_MakePayment" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="203" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="d87b297712eb4ff28230a015e53b5125" TaskSeq="25" LineNumber="205" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="1f8819b058a340679506f01168f50751" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="17782f615bfb44c6aa33b22547f3b54e" ObjectName="Weblist_SelectStatus" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="206" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="2" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="207" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="2" stepSeq="3" ActionId="fed0f35405ae11e8b4f300ff38b90989" ActionName="SelectItemByText" QClass="com.webdriverfw.Wrappers.WebList" ObjectId="17782f615bfb44c6aa33b22547f3b54e" ObjectName="Weblist_SelectStatus" ObjectTypeId="86fb71da0ddc40df8ef0aad6fb767bcc" LineNumber="208" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="3" stepSeq="4" ActionId="dc01ffd84135445ea0eb52dd78220f50" ActionName="Click" QClass="com.webdriverfw.Wrappers.WebButton" ObjectId="51812d9c69d0442bb1f41394ffd3d95c" ObjectName="Webbutton_Submit" ObjectTypeId="2213d41c6e414141abafe619c5f05402" LineNumber="209" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="5" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="210" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+    <Task ID="6c17c22fbdff454aa538d4b37d706ded" TaskSeq="26" LineNumber="212" BreakPoint="" Comment="" IsCommented="False" IsSkipped="" ParentID="">
+      <Step StepId="1" stepSeq="1" ActionId="d28491ec07e111e8ad2cf01faf1c4dfc" ActionName="WaitForInvisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="43c103e4d87b46d7a2655e5b114aeb74" ObjectName="Ele_LoadingObject" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="213" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="4" stepSeq="2" ActionId="cdc9623807e111e8ad2cf01faf1c4dfc" ActionName="WaitForVisibility" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="770946152520453ca31a1e3b2c919b37" ObjectName="Ele_PolicyNumber" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="214" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="6" stepSeq="3" ActionId="84a5532dda514201ad47cb2dfb7f78a0" ActionName="StoreText" QClass="com.webdriverfw.Wrappers.WebElement" ObjectId="15ed7669fce145f8b2053640eb744791" ObjectName="Ele_PolicyNumber1" ObjectTypeId="67e307a05ba3486e9f3bb7af3e96bc4f" LineNumber="215" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+      <Step StepId="5" stepSeq="4" ActionId="66bb4a26a15748da955fbf464045b669" ActionName="Sleep" QClass="com.webdriverfw.Wrappers.General" ObjectId="" ObjectName="" ObjectTypeId="" LineNumber="217" BreakPoint="" Comment="" IsCommented="False" IsSkipped="false" ParentID="" />
+    </Task>
+  </TaskInfo>
+  <Data>
+    <TCDataSet Iteration="1" Mark="True" TCDataSetTag="">
+      <Task ID="86fa313e9c224d9f9ea1d3084a469922" TaskSeq="1" Name="To Hit URL and verify HomePage">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{url}&quot;">{url}</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="4" />
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="ab423441fd11444ab2a0afd1a5bb104f" TaskSeq="2" Name="Select Value for TripType">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2" />
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Individual International Travel</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="9f65fe1f994b41cf95ad34465944bf6a" TaskSeq="3" Name="Select Value for Travellers &amp; enter age">
+        <TaskDataSet Iteration="1">
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">Yes</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType">Traveller</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerIndex&quot;">TravellerIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerIndex">0</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Age&quot;">Age</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Age">23</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;AgeUnit&quot;">AgeUnit</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="AgeUnit">Years</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Age}&quot;">{Age}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="20" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="5967debeeeb141daa735d395d0a0ec01" TaskSeq="4">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentInsurance&quot;">ParentInsurance</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentInsurance">No</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="1b5a2f9b08a54b5686a72a8aa464d088" TaskSeq="5">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{ParentInsurance}"=="Yes"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="bed2cf4fceee478a969e7a5691c86782" TaskSeq="6" Name="Select value for Parent Traveller">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2" />
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">No</Param>
+          </Step>
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentIndex&quot;">ParentIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentIndex" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="15" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="1" Name="value" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="13" />
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="8946d0382fde43bdb38fd3c03a6fbdc3" TaskSeq="7">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="261bab12ea1b4524ba9a974a5c9b946a" TaskSeq="8" Name="Click On Continue button">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="85d0d0d781634d0ba9e343a47cee2118" TaskSeq="9" Name="To enter details on Travel details page">
+        <TaskDataSet Iteration="1">
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellingToValue&quot;">TravellingToValue</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellingToValue">India</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellingToValue}&quot;">{TravellingToValue}</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="8" />
+          <Step StepId="17">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DepartureDate&quot;">DepartureDate</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="DepartureDate">01/11/2018</Param>
+          </Step>
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{DepartureDate}&quot;">{DepartureDate}</Param>
+          </Step>
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{DepartureDate}&quot;">{DepartureDate}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;dd/MM/yyyy&quot;">dd/MM/yyyy</Param>
+            <Param ParamSeq="3" Parameterized="1" Name="days">10</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;0&quot;">0</Param>
+            <Param ParamSeq="5" Parameterized="0" Name="&quot;0&quot;">0</Param>
+            <Param ParamSeq="6" Parameterized="0" Name="&quot;ReturnDate&quot;">ReturnDate</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{ReturnDate}&quot;">{ReturnDate}</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="619b1c8e6f9b4264917122467097bee9" TaskSeq="10" Name="Click on View Quote button">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Region&quot;">Region</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;Worldwide&quot;">Worldwide</Param>
+          </Step>
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;RegionExistence&quot;">RegionExistence</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="58686952972348858a5a15b1cfe1231a" TaskSeq="11">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{RegionExistence}"=="true"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="8e39157aea6948da8b36731d90337ae0" TaskSeq="12" Name="Select Region from popup">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;RegionExistence&quot;">RegionExistence</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="1" />
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="09b2369c0adc440ba5cea0c5bc40707c" TaskSeq="13">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="49da300e99bc42a79d80b60aa9702641" TaskSeq="14" Name="Fill Your Details_Popup">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">Chirag Jain</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="1" Name="Email">bhagyashree.patil@zensoftservices.com</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="1" Name="MobileNo">9561532194</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="Pincode">411001</Param>
+          </Step>
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="11" />
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;checked&quot;">checked</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{checked}"=="on"</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="17" />
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="5" />
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="d014fb36712e41b0bd0c3e0730c6e1bb" TaskSeq="15" Name="To Select Plan on Choose your travel insurance plan Screen">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;PlanType&quot;">PlanType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="PlanType">Gold</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="7" />
+          <Step StepId="8" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="62a3e0b9212e45af9d70da2e64ebe7eb" TaskSeq="16" Name="To fill in details of Proposer details Screen">
+        <TaskDataSet Iteration="1">
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="1" Name="DateOfBirth">22/02/1995</Param>
+          </Step>
+          <Step StepId="36">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="1" Name="HouseNumber">201</Param>
+          </Step>
+          <Step StepId="34">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="33">
+            <Param ParamSeq="1" Parameterized="1" Name="Street">Dange chowk</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ButtonName&quot;">ButtonName</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ButtonName">Next</Param>
+          </Step>
+          <Step StepId="30" />
+          <Step StepId="29" />
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="d2ac9c26d91d4e55ade3a24aa5e95bad" TaskSeq="17" Name="To enter Insured details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravelMember&quot;">TravelMember</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravelMember">Traveller</Param>
+          </Step>
+          <Step StepId="24">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Single</Param>
+          </Step>
+          <Step StepId="23">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;NomineeAge&quot;">NomineeAge</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="NomineeAge">34</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Nomineename&quot;">Nomineename</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Nomineename">Disha d</Param>
+          </Step>
+          <Step StepId="30">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerTitle&quot;">TravellerTitle</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerTitle">Mr</Param>
+          </Step>
+          <Step StepId="26">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">jhgjh gjhg</Param>
+          </Step>
+          <Step StepId="25">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellerTitle}&quot;">{TravellerTitle}</Param>
+          </Step>
+          <Step StepId="29">
+            <Param ParamSeq="1" Parameterized="1" Name="DateofBirth">17/10/1996</Param>
+          </Step>
+          <Step StepId="27" />
+          <Step StepId="43">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Student"</Param>
+          </Step>
+          <Step StepId="38">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="45">
+            <Param ParamSeq="1" Parameterized="1" Name="CoureName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="46" />
+          <Step StepId="47">
+            <Param ParamSeq="1" Parameterized="1" Name="CourseDuration" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="52" />
+          <Step StepId="42">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityAddresss" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="41">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCountry" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="39">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityState" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="40">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCity" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="48">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="51" />
+          <Step StepId="50">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="49">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserDOB" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="44" />
+          <Step StepId="4" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Nomineename}&quot;">{Nomineename}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;~{TAB~}&quot;">~{TAB~}</Param>
+          </Step>
+          <Step StepId="21">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{NomineeAge}&quot;">{NomineeAge}</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="1" Name="NomineeRelation">Guardian</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DoneStatus&quot;">DoneStatus</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{DoneStatus}"=="true"</Param>
+          </Step>
+          <Step StepId="34" />
+          <Step StepId="36" />
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="b4998295ab7a45f9ac6e7562935ffa51" TaskSeq="18">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="bbdf9e2271c14b2b900f1d0fe4f35003" TaskSeq="19">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="18130fbbd9444272ac958913e222ba63" TaskSeq="20" Name="Click on Next">
+        <TaskDataSet Iteration="1">
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;10&quot;">10</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="e82c096197fe4586813da7d7bf6be3ac" TaskSeq="21" Name="To enter Kindly Confirm page details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="4" />
+          <Step StepId="2" />
+          <Step StepId="3" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="539fa144570e41889ef2642c27fc4f69" TaskSeq="22" Name="GetTransactionNo">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;100&quot;">100</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;key&quot;">key</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TransactionNo&quot;">TransactionNo</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{key}&quot;">{key}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot; &quot;" xml:space="preserve"> </Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;7&quot;">7</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="3" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="ec7c7705a49a41889afbe831b43a1974" TaskSeq="23" Name="To enter detail Make Payement page">
+        <TaskDataSet Iteration="1">
+          <Step StepId="4" />
+          <Step StepId="2" />
+          <Step StepId="3" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="e1fa0a6fc6de425a9624a0287c85d9f1" TaskSeq="24" Name="To Select Bank details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;20&quot;">20</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="BankName">Test Bank</Param>
+          </Step>
+          <Step StepId="3" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="d87b297712eb4ff28230a015e53b5125" TaskSeq="25" Name="To Select Bank status">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="Bankstatus">Success</Param>
+          </Step>
+          <Step StepId="3" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="6c17c22fbdff454aa538d4b37d706ded" TaskSeq="26" Name="To store Policy Number">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;100&quot;">100</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;5&quot;">5</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;true&quot;">true</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;Fail&quot;">Fail</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;PolicyNumber&quot;">PolicyNumber</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+    </TCDataSet>
+    <TCDataSet Iteration="2" Mark="True" TCDataSetTag="">
+      <Task ID="86fa313e9c224d9f9ea1d3084a469922" TaskSeq="1" Name="To Hit URL and verify HomePage">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{url}&quot;">{url}</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="4" />
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="ab423441fd11444ab2a0afd1a5bb104f" TaskSeq="2" Name="Select Value for TripType">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2" />
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Family International Travel</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="9f65fe1f994b41cf95ad34465944bf6a" TaskSeq="3" Name="Select Value for Travellers &amp; enter age">
+        <TaskDataSet Iteration="1">
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">Yes</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType">Me</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerIndex&quot;">TravellerIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerIndex">0</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Age&quot;">Age</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Age">34</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;AgeUnit&quot;">AgeUnit</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="AgeUnit">Years</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Age}&quot;">{Age}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="20" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+        <TaskDataSet Iteration="2">
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">Yes</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType">Spouse</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerIndex&quot;">TravellerIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerIndex">1</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Age&quot;">Age</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Age">30</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;AgeUnit&quot;">AgeUnit</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="AgeUnit">Years</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Age}&quot;">{Age}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="20" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="5967debeeeb141daa735d395d0a0ec01" TaskSeq="4">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentInsurance&quot;">ParentInsurance</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentInsurance">Yes</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="1b5a2f9b08a54b5686a72a8aa464d088" TaskSeq="5">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{ParentInsurance}"=="Yes"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="bed2cf4fceee478a969e7a5691c86782" TaskSeq="6" Name="Select value for Parent Traveller">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2" />
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">Yes</Param>
+          </Step>
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentIndex&quot;">ParentIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentIndex">1</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType">Father</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="15" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="1" Name="value">45</Param>
+          </Step>
+          <Step StepId="13" />
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+        <TaskDataSet Iteration="2">
+          <Step StepId="2" />
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">Yes</Param>
+          </Step>
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentIndex&quot;">ParentIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentIndex">0</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType">Mother</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="15" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="1" Name="value">40</Param>
+          </Step>
+          <Step StepId="13" />
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="8946d0382fde43bdb38fd3c03a6fbdc3" TaskSeq="7">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="261bab12ea1b4524ba9a974a5c9b946a" TaskSeq="8" Name="Click On Continue button">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="85d0d0d781634d0ba9e343a47cee2118" TaskSeq="9" Name="To enter details on Travel details page">
+        <TaskDataSet Iteration="1">
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellingToValue&quot;">TravellingToValue</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellingToValue">India</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellingToValue}&quot;">{TravellingToValue}</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="8" />
+          <Step StepId="17">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DepartureDate&quot;">DepartureDate</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="DepartureDate">01/11/2018</Param>
+          </Step>
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{DepartureDate}&quot;">{DepartureDate}</Param>
+          </Step>
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{DepartureDate}&quot;">{DepartureDate}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;dd/MM/yyyy&quot;">dd/MM/yyyy</Param>
+            <Param ParamSeq="3" Parameterized="1" Name="days">10</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;0&quot;">0</Param>
+            <Param ParamSeq="5" Parameterized="0" Name="&quot;0&quot;">0</Param>
+            <Param ParamSeq="6" Parameterized="0" Name="&quot;ReturnDate&quot;">ReturnDate</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{ReturnDate}&quot;">{ReturnDate}</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="619b1c8e6f9b4264917122467097bee9" TaskSeq="10" Name="Click on View Quote button">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Region&quot;">Region</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;Worldwide&quot;">Worldwide</Param>
+          </Step>
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;RegionExistence&quot;">RegionExistence</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="58686952972348858a5a15b1cfe1231a" TaskSeq="11">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{RegionExistence}"=="true"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="8e39157aea6948da8b36731d90337ae0" TaskSeq="12" Name="Select Region from popup">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;RegionExistence&quot;">RegionExistence</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="1" />
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="09b2369c0adc440ba5cea0c5bc40707c" TaskSeq="13">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="49da300e99bc42a79d80b60aa9702641" TaskSeq="14" Name="Fill Your Details_Popup">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">Chirag Jain</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="1" Name="Email">bhagyashree.patil@zensoftservices.com</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="1" Name="MobileNo">9561532194</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="Pincode">411001</Param>
+          </Step>
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="11" />
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;checked&quot;">checked</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{checked}"=="on"</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="17" />
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="5" />
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="d014fb36712e41b0bd0c3e0730c6e1bb" TaskSeq="15" Name="To Select Plan on Choose your travel insurance plan Screen">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;PlanType&quot;">PlanType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="PlanType">Gold</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="7" />
+          <Step StepId="8" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="62a3e0b9212e45af9d70da2e64ebe7eb" TaskSeq="16" Name="To fill in details of Proposer details Screen">
+        <TaskDataSet Iteration="1">
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="1" Name="DateOfBirth">22/02/1984</Param>
+          </Step>
+          <Step StepId="36">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="1" Name="HouseNumber">201</Param>
+          </Step>
+          <Step StepId="34">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="33">
+            <Param ParamSeq="1" Parameterized="1" Name="Street">Dange chowk</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ButtonName&quot;">ButtonName</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ButtonName">Next</Param>
+          </Step>
+          <Step StepId="30" />
+          <Step StepId="29" />
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="d2ac9c26d91d4e55ade3a24aa5e95bad" TaskSeq="17" Name="To enter Insured details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravelMember&quot;">TravelMember</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravelMember">Me</Param>
+          </Step>
+          <Step StepId="24">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Single</Param>
+          </Step>
+          <Step StepId="23">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;NomineeAge&quot;">NomineeAge</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="NomineeAge">34</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Nomineename&quot;">Nomineename</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Nomineename">Disha d</Param>
+          </Step>
+          <Step StepId="30">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerTitle&quot;">TravellerTitle</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerTitle">Mr</Param>
+          </Step>
+          <Step StepId="26">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">jhgjh gjhg</Param>
+          </Step>
+          <Step StepId="25">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellerTitle}&quot;">{TravellerTitle}</Param>
+          </Step>
+          <Step StepId="29">
+            <Param ParamSeq="1" Parameterized="1" Name="DateofBirth">17/10/1984</Param>
+          </Step>
+          <Step StepId="27" />
+          <Step StepId="43">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Student"</Param>
+          </Step>
+          <Step StepId="38">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="45">
+            <Param ParamSeq="1" Parameterized="1" Name="CoureName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="46" />
+          <Step StepId="47">
+            <Param ParamSeq="1" Parameterized="1" Name="CourseDuration" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="52" />
+          <Step StepId="42">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityAddresss" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="41">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCountry" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="39">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityState" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="40">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCity" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="48">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="51" />
+          <Step StepId="50">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="49">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserDOB" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="44" />
+          <Step StepId="4" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Nomineename}&quot;">{Nomineename}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;~{TAB~}&quot;">~{TAB~}</Param>
+          </Step>
+          <Step StepId="21">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{NomineeAge}&quot;">{NomineeAge}</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="1" Name="NomineeRelation">Father</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DoneStatus&quot;">DoneStatus</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{DoneStatus}"=="true"</Param>
+          </Step>
+          <Step StepId="34" />
+          <Step StepId="36" />
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+        <TaskDataSet Iteration="2">
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravelMember&quot;">TravelMember</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravelMember">Spouse</Param>
+          </Step>
+          <Step StepId="24">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Family</Param>
+          </Step>
+          <Step StepId="23">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;NomineeAge&quot;">NomineeAge</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="NomineeAge">30</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Nomineename&quot;">Nomineename</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Nomineename">Pooja j</Param>
+          </Step>
+          <Step StepId="30">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerTitle&quot;">TravellerTitle</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerTitle">Mrs</Param>
+          </Step>
+          <Step StepId="26">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">jhgjh gjhg</Param>
+          </Step>
+          <Step StepId="25">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellerTitle}&quot;">{TravellerTitle}</Param>
+          </Step>
+          <Step StepId="29">
+            <Param ParamSeq="1" Parameterized="1" Name="DateofBirth">17/10/1988</Param>
+          </Step>
+          <Step StepId="27" />
+          <Step StepId="43">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Student"</Param>
+          </Step>
+          <Step StepId="38">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="45">
+            <Param ParamSeq="1" Parameterized="1" Name="CoureName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="46" />
+          <Step StepId="47">
+            <Param ParamSeq="1" Parameterized="1" Name="CourseDuration" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="52" />
+          <Step StepId="42">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityAddresss" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="41">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCountry" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="39">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityState" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="40">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCity" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="48">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="51" />
+          <Step StepId="50">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="49">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserDOB" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="44" />
+          <Step StepId="4" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Nomineename}&quot;">{Nomineename}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;~{TAB~}&quot;">~{TAB~}</Param>
+          </Step>
+          <Step StepId="21">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{NomineeAge}&quot;">{NomineeAge}</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="1" Name="NomineeRelation">Guardian</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DoneStatus&quot;">DoneStatus</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{DoneStatus}"=="true"</Param>
+          </Step>
+          <Step StepId="34" />
+          <Step StepId="36" />
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+        <TaskDataSet Iteration="3">
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravelMember&quot;">TravelMember</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravelMember">Father</Param>
+          </Step>
+          <Step StepId="24">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Family</Param>
+          </Step>
+          <Step StepId="23">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;NomineeAge&quot;">NomineeAge</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="NomineeAge">45</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Nomineename&quot;">Nomineename</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Nomineename">dfcsdf</Param>
+          </Step>
+          <Step StepId="30">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerTitle&quot;">TravellerTitle</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerTitle">Mr</Param>
+          </Step>
+          <Step StepId="26">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">Bzrere K</Param>
+          </Step>
+          <Step StepId="25">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellerTitle}&quot;">{TravellerTitle}</Param>
+          </Step>
+          <Step StepId="29">
+            <Param ParamSeq="1" Parameterized="1" Name="DateofBirth">15/10/1973</Param>
+          </Step>
+          <Step StepId="27" />
+          <Step StepId="43">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Student"</Param>
+          </Step>
+          <Step StepId="38">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="45">
+            <Param ParamSeq="1" Parameterized="1" Name="CoureName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="46" />
+          <Step StepId="47">
+            <Param ParamSeq="1" Parameterized="1" Name="CourseDuration" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="52" />
+          <Step StepId="42">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityAddresss" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="41">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCountry" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="39">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityState" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="40">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCity" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="48">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="51" />
+          <Step StepId="50">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="49">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserDOB" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="44" />
+          <Step StepId="4" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Nomineename}&quot;">{Nomineename}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;~{TAB~}&quot;">~{TAB~}</Param>
+          </Step>
+          <Step StepId="21">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{NomineeAge}&quot;">{NomineeAge}</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="1" Name="NomineeRelation">Guardian</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DoneStatus&quot;">DoneStatus</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{DoneStatus}"=="true"</Param>
+          </Step>
+          <Step StepId="34" />
+          <Step StepId="36" />
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+        <TaskDataSet Iteration="4">
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravelMember&quot;">TravelMember</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravelMember">Mother</Param>
+          </Step>
+          <Step StepId="24">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Family</Param>
+          </Step>
+          <Step StepId="23">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;NomineeAge&quot;">NomineeAge</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="NomineeAge">40</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Nomineename&quot;">Nomineename</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Nomineename">zdff</Param>
+          </Step>
+          <Step StepId="30">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerTitle&quot;">TravellerTitle</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerTitle">Mrs</Param>
+          </Step>
+          <Step StepId="26">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">Dahf P</Param>
+          </Step>
+          <Step StepId="25">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellerTitle}&quot;">{TravellerTitle}</Param>
+          </Step>
+          <Step StepId="29">
+            <Param ParamSeq="1" Parameterized="1" Name="DateofBirth">10/10/1978</Param>
+          </Step>
+          <Step StepId="27" />
+          <Step StepId="43">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Student"</Param>
+          </Step>
+          <Step StepId="38">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="45">
+            <Param ParamSeq="1" Parameterized="1" Name="CoureName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="46" />
+          <Step StepId="47">
+            <Param ParamSeq="1" Parameterized="1" Name="CourseDuration" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="52" />
+          <Step StepId="42">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityAddresss" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="41">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCountry" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="39">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityState" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="40">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCity" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="48">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="51" />
+          <Step StepId="50">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserName" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="49">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserDOB" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="44" />
+          <Step StepId="4" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Nomineename}&quot;">{Nomineename}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;~{TAB~}&quot;">~{TAB~}</Param>
+          </Step>
+          <Step StepId="21">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{NomineeAge}&quot;">{NomineeAge}</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="1" Name="NomineeRelation">Guardian</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DoneStatus&quot;">DoneStatus</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{DoneStatus}"=="true"</Param>
+          </Step>
+          <Step StepId="34" />
+          <Step StepId="36" />
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="b4998295ab7a45f9ac6e7562935ffa51" TaskSeq="18">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="bbdf9e2271c14b2b900f1d0fe4f35003" TaskSeq="19">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="18130fbbd9444272ac958913e222ba63" TaskSeq="20" Name="Click on Next">
+        <TaskDataSet Iteration="1">
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;10&quot;">10</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="e82c096197fe4586813da7d7bf6be3ac" TaskSeq="21" Name="To enter Kindly Confirm page details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="4" />
+          <Step StepId="2" />
+          <Step StepId="3" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="539fa144570e41889ef2642c27fc4f69" TaskSeq="22" Name="GetTransactionNo">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;100&quot;">100</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;key&quot;">key</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TransactionNo&quot;">TransactionNo</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{key}&quot;">{key}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot; &quot;" xml:space="preserve"> </Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;7&quot;">7</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="3" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="ec7c7705a49a41889afbe831b43a1974" TaskSeq="23" Name="To enter detail Make Payement page">
+        <TaskDataSet Iteration="1">
+          <Step StepId="4" />
+          <Step StepId="2" />
+          <Step StepId="3" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="e1fa0a6fc6de425a9624a0287c85d9f1" TaskSeq="24" Name="To Select Bank details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;20&quot;">20</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="BankName">Test Bank</Param>
+          </Step>
+          <Step StepId="3" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="d87b297712eb4ff28230a015e53b5125" TaskSeq="25" Name="To Select Bank status">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="Bankstatus">Success</Param>
+          </Step>
+          <Step StepId="3" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="6c17c22fbdff454aa538d4b37d706ded" TaskSeq="26" Name="To store Policy Number">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;100&quot;">100</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;5&quot;">5</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;true&quot;">true</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;Fail&quot;">Fail</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;PolicyNumber&quot;">PolicyNumber</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+    </TCDataSet>
+    <TCDataSet Iteration="3" Mark="True" TCDataSetTag="">
+      <Task ID="86fa313e9c224d9f9ea1d3084a469922" TaskSeq="1" Name="To Hit URL and verify HomePage">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{url}&quot;">{url}</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="4" />
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="ab423441fd11444ab2a0afd1a5bb104f" TaskSeq="2" Name="Select Value for TripType">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2" />
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Student Travel</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="9f65fe1f994b41cf95ad34465944bf6a" TaskSeq="3" Name="Select Value for Travellers &amp; enter age">
+        <TaskDataSet Iteration="1">
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration">Yes</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType">Student</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerIndex&quot;">TravellerIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerIndex">0</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Age&quot;">Age</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Age">23</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;AgeUnit&quot;">AgeUnit</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="AgeUnit">Years</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Age}&quot;">{Age}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="20" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="5967debeeeb141daa735d395d0a0ec01" TaskSeq="4">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentInsurance&quot;">ParentInsurance</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentInsurance">No</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="1b5a2f9b08a54b5686a72a8aa464d088" TaskSeq="5">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{ParentInsurance}"=="Yes"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="bed2cf4fceee478a969e7a5691c86782" TaskSeq="6" Name="Select value for Parent Traveller">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2" />
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Iteration&quot;">Iteration</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Iteration" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ParentIndex&quot;">ParentIndex</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ParentIndex" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{Iteration}"=="Yes"</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerType&quot;">TravellerType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerType" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="15" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="1" Name="value" xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" />
+          </Step>
+          <Step StepId="13" />
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="7" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="8946d0382fde43bdb38fd3c03a6fbdc3" TaskSeq="7">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="261bab12ea1b4524ba9a974a5c9b946a" TaskSeq="8" Name="Click On Continue button">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="85d0d0d781634d0ba9e343a47cee2118" TaskSeq="9" Name="To enter details on Travel details page">
+        <TaskDataSet Iteration="1">
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellingToValue&quot;">TravellingToValue</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellingToValue">India</Param>
+          </Step>
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="12" />
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellingToValue}&quot;">{TravellingToValue}</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="8" />
+          <Step StepId="17">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DepartureDate&quot;">DepartureDate</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="DepartureDate">01/11/2018</Param>
+          </Step>
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{DepartureDate}&quot;">{DepartureDate}</Param>
+          </Step>
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{DepartureDate}&quot;">{DepartureDate}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;dd/MM/yyyy&quot;">dd/MM/yyyy</Param>
+            <Param ParamSeq="3" Parameterized="1" Name="days">7</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;0&quot;">0</Param>
+            <Param ParamSeq="5" Parameterized="0" Name="&quot;0&quot;">0</Param>
+            <Param ParamSeq="6" Parameterized="0" Name="&quot;ReturnDate&quot;">ReturnDate</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{ReturnDate}&quot;">{ReturnDate}</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="619b1c8e6f9b4264917122467097bee9" TaskSeq="10" Name="Click on View Quote button">
+        <TaskDataSet Iteration="1">
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Region&quot;">Region</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;Worldwide&quot;">Worldwide</Param>
+          </Step>
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;RegionExistence&quot;">RegionExistence</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="58686952972348858a5a15b1cfe1231a" TaskSeq="11">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{RegionExistence}"=="true"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="8e39157aea6948da8b36731d90337ae0" TaskSeq="12" Name="Select Region from popup">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;RegionExistence&quot;">RegionExistence</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;true&quot;">true</Param>
+          </Step>
+          <Step StepId="2" />
+          <Step StepId="1" />
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="09b2369c0adc440ba5cea0c5bc40707c" TaskSeq="13">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="49da300e99bc42a79d80b60aa9702641" TaskSeq="14" Name="Fill Your Details_Popup">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">Chirag Jain</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="1" Name="Email">bhagyashree.patil@zensoftservices.com</Param>
+          </Step>
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="1" Name="MobileNo">9561532194</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="Pincode">411001</Param>
+          </Step>
+          <Step StepId="10">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="9">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="11" />
+          <Step StepId="12">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="13">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="15">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;checked&quot;">checked</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{checked}"=="on"</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="17" />
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="5" />
+          <Step StepId="14">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="d014fb36712e41b0bd0c3e0730c6e1bb" TaskSeq="15" Name="To Select Plan on Choose your travel insurance plan Screen">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;PlanType&quot;">PlanType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="PlanType">Gold</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="7" />
+          <Step StepId="8" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="62a3e0b9212e45af9d70da2e64ebe7eb" TaskSeq="16" Name="To fill in details of Proposer details Screen">
+        <TaskDataSet Iteration="1">
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="1" Name="DateOfBirth">22/02/1995</Param>
+          </Step>
+          <Step StepId="36">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="1" Name="HouseNumber">201</Param>
+          </Step>
+          <Step StepId="34">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="33">
+            <Param ParamSeq="1" Parameterized="1" Name="Street">Dange chowk</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;ButtonName&quot;">ButtonName</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="ButtonName">Next</Param>
+          </Step>
+          <Step StepId="30" />
+          <Step StepId="29" />
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="d2ac9c26d91d4e55ade3a24aa5e95bad" TaskSeq="17" Name="To enter Insured details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravelMember&quot;">TravelMember</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravelMember">Student</Param>
+          </Step>
+          <Step StepId="24">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TripType&quot;">TripType</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TripType">Student</Param>
+          </Step>
+          <Step StepId="23">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;NomineeAge&quot;">NomineeAge</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="NomineeAge">30</Param>
+          </Step>
+          <Step StepId="18">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;Nomineename&quot;">Nomineename</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="Nomineename">Demo Q</Param>
+          </Step>
+          <Step StepId="30">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TravellerTitle&quot;">TravellerTitle</Param>
+            <Param ParamSeq="2" Parameterized="1" Name="TravellerTitle">Mr</Param>
+          </Step>
+          <Step StepId="26">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+          <Step StepId="28">
+            <Param ParamSeq="1" Parameterized="1" Name="FullName">Dahf P</Param>
+          </Step>
+          <Step StepId="25">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{TravellerTitle}&quot;">{TravellerTitle}</Param>
+          </Step>
+          <Step StepId="29">
+            <Param ParamSeq="1" Parameterized="1" Name="DateofBirth">10/10/1974</Param>
+          </Step>
+          <Step StepId="27" />
+          <Step StepId="43">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Student"</Param>
+          </Step>
+          <Step StepId="38">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityName">Pune</Param>
+          </Step>
+          <Step StepId="45">
+            <Param ParamSeq="1" Parameterized="1" Name="CoureName">B.E</Param>
+          </Step>
+          <Step StepId="46" />
+          <Step StepId="47">
+            <Param ParamSeq="1" Parameterized="1" Name="CourseDuration">1 Year</Param>
+          </Step>
+          <Step StepId="52" />
+          <Step StepId="42">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityAddresss">Pune laness</Param>
+          </Step>
+          <Step StepId="41">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCountry">India</Param>
+          </Step>
+          <Step StepId="39">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityState">Maharashtra</Param>
+          </Step>
+          <Step StepId="40">
+            <Param ParamSeq="1" Parameterized="1" Name="UniversityCity">Pune</Param>
+          </Step>
+          <Step StepId="48">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="51" />
+          <Step StepId="50">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserName">Ashish Nehra</Param>
+          </Step>
+          <Step StepId="49">
+            <Param ParamSeq="1" Parameterized="1" Name="SponserDOB">10/10/1980</Param>
+          </Step>
+          <Step StepId="44" />
+          <Step StepId="4" />
+          <Step StepId="22">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{Nomineename}&quot;">{Nomineename}</Param>
+          </Step>
+          <Step StepId="11">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;~{TAB~}&quot;">~{TAB~}</Param>
+          </Step>
+          <Step StepId="21">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{NomineeAge}&quot;">{NomineeAge}</Param>
+          </Step>
+          <Step StepId="16">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="1" Name="NomineeRelation">Guardian</Param>
+          </Step>
+          <Step StepId="31">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="32">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;DoneStatus&quot;">DoneStatus</Param>
+          </Step>
+          <Step StepId="35">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{DoneStatus}"=="true"</Param>
+          </Step>
+          <Step StepId="34" />
+          <Step StepId="36" />
+          <Step StepId="37">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;2&quot;">2</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="b4998295ab7a45f9ac6e7562935ffa51" TaskSeq="18">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="Condition">"{TripType}"=="Family"</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="bbdf9e2271c14b2b900f1d0fe4f35003" TaskSeq="19">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="18130fbbd9444272ac958913e222ba63" TaskSeq="20" Name="Click on Next">
+        <TaskDataSet Iteration="1">
+          <Step StepId="3">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;10&quot;">10</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="e82c096197fe4586813da7d7bf6be3ac" TaskSeq="21" Name="To enter Kindly Confirm page details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+          <Step StepId="1" />
+          <Step StepId="4" />
+          <Step StepId="2" />
+          <Step StepId="3" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="539fa144570e41889ef2642c27fc4f69" TaskSeq="22" Name="GetTransactionNo">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;100&quot;">100</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;key&quot;">key</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;TransactionNo&quot;">TransactionNo</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{key}&quot;">{key}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot; &quot;" xml:space="preserve"> </Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;7&quot;">7</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="3" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{timeOut}&quot;">{timeOut}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="ec7c7705a49a41889afbe831b43a1974" TaskSeq="23" Name="To enter detail Make Payement page">
+        <TaskDataSet Iteration="1">
+          <Step StepId="4" />
+          <Step StepId="2" />
+          <Step StepId="3" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="e1fa0a6fc6de425a9624a0287c85d9f1" TaskSeq="24" Name="To Select Bank details">
+        <TaskDataSet Iteration="1">
+          <Step StepId="7">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="6" />
+          <Step StepId="8">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;20&quot;">20</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="BankName">Test Bank</Param>
+          </Step>
+          <Step StepId="3" />
+        </TaskDataSet>
+      </Task>
+      <Task ID="d87b297712eb4ff28230a015e53b5125" TaskSeq="25" Name="To Select Bank status">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1" />
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;3&quot;">3</Param>
+          </Step>
+          <Step StepId="2">
+            <Param ParamSeq="1" Parameterized="1" Name="Bankstatus">Success</Param>
+          </Step>
+          <Step StepId="3" />
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+      <Task ID="6c17c22fbdff454aa538d4b37d706ded" TaskSeq="26" Name="To store Policy Number">
+        <TaskDataSet Iteration="1">
+          <Step StepId="1">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;{LargeWaitTime}&quot;">{LargeWaitTime}</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;{pollingInterval}&quot;">{pollingInterval}</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;{keyClickability}&quot;">{keyClickability}</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;{statusIfConditionNotSatisfied}&quot;">{statusIfConditionNotSatisfied}</Param>
+          </Step>
+          <Step StepId="4">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;100&quot;">100</Param>
+            <Param ParamSeq="2" Parameterized="0" Name="&quot;5&quot;">5</Param>
+            <Param ParamSeq="3" Parameterized="0" Name="&quot;true&quot;">true</Param>
+            <Param ParamSeq="4" Parameterized="0" Name="&quot;Fail&quot;">Fail</Param>
+          </Step>
+          <Step StepId="6">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;PolicyNumber&quot;">PolicyNumber</Param>
+          </Step>
+          <Step StepId="5">
+            <Param ParamSeq="1" Parameterized="0" Name="&quot;5&quot;">5</Param>
+          </Step>
+        </TaskDataSet>
+      </Task>
+    </TCDataSet>
+  </Data>
+</ExecutionTC>

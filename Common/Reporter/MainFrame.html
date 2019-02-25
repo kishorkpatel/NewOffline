@@ -1,0 +1,1028 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>Qualitia Test Execution Report</title>
+    <style type="text/css" media="all">
+
+    html, body, #wrapper {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        border: none;
+        font-size: 11px;
+        font-family:Tahoma;
+        color:Black;
+    }
+
+    #header ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    #header li {
+        float: left;
+        border: 1px solid #bbb;
+        border-bottom-width: 0;
+        margin: 0;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    #header a {
+        text-decoration: none;
+        display: block;
+        background: #E2EAF9;
+        padding: 1px;
+        color: Black;
+        width: 90px;
+        text-align: center;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    #header a:hover {
+        background: #ddf;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    #header #selected {
+        border-color: #bbb;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    #header #selected a {
+        position: relative;
+        top: 1px;
+        background: white;
+        color: Black;
+        font-weight: bold;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    #content {
+        border: 0px solid lightblue;
+        clear: both;
+        padding: 0px;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    h1 {
+        margin: 0;
+        padding: 0 0 1em 0;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+</style>
+    <style type="text/css">
+    .treetable {
+        width: 100%;
+        text-align: left;
+        margin:0px;
+    }
+
+    .treetable th {
+        background-image: url(Images/GridHeader.png);
+        border-color: #9DC4ED;
+        border-style: solid;
+        border-width: 1px;
+        height: 20px;
+        margin: 0px;
+        padding: 0 0 0 5px;
+        font-weight: normal;
+        color: Black;
+        font-size: 11px;
+        font-family:Tahoma;
+
+    }
+
+    .treetable td {
+        background: white;
+        border-color: #9DC4ED;
+        border-style: solid;
+        border-width: 1px;
+        margin: 0px;
+        padding: 0 0 0 5px;
+        font-weight: normal;
+        color: Black;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    .treetable td.number {
+        text-align: right;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    a {
+        text-decoration: none;
+        color: Black;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+
+    .button {
+        border: none;
+        margin: 0 4px 0 0;
+        cursor: pointer;
+        font-size: 11px;
+        font-family:Tahoma;
+    }
+</style>
+
+    <!--script type="text/javascript" src="js/treetable.js"></script-->
+
+    <script language='javascript' type="text/javascript">
+        var logPath = "";
+
+        function CheckTafReport() {
+            //var Xml=null;
+
+            var reportUrl = new String(top.location.href);
+
+            var error = false;
+
+            var queryString = reportUrl.substring(reportUrl.indexOf('?') + 1, reportUrl.length);
+            if (queryString && queryString != '') {
+
+                var suiteExecutionId = "";
+                var paramList = queryString.split('&');
+
+                var arr;
+                for (var count = 0; count < paramList.length; count++) {
+                    var arr = paramList[count].split('=');
+                    if (arr[0] == 'SuiteExecutionId') {// Name of the url parameter (query string) suiteExecutionId
+                        suiteExecutionId = arr[1]; // Value for the above parameter 1234545
+                    } else if (arr[0] == 'LogPath') {
+                        logPath = "file:///" + arr[1] + "/";
+                    }
+                }
+
+
+                // alert("SuiteExecutionId = " + suiteExecutionId);
+                // alert("LogPath = " + logPath);
+                var logPathElement = document.getElementById("LogPath");
+                if (logPath == "") {
+                    logPathElement.value = "";
+                } else {
+                    logPathElement.value = logPath;
+                }
+
+                if (suiteExecutionId == 'SuiteExecutionId') {
+                    var nodeid;
+                    var mxml = new ActiveXObject("Microsoft.XMLDOM");
+                    mxml.async = false;
+
+                    var tafReportXMLPath = logPath + "TAF_Report.xml";
+                    tafReportXMLPath = tafReportXMLPath.replace("/", "\\");
+
+                    mxml.load(tafReportXMLPath); // The report xml needs to be parameterized to ExecutionID
+
+                    //alert ("mxml=" + mxml.xml);
+                    var root = mxml.selectSingleNode("//Tree");
+
+                    var xmlReportId = "";
+                    var rootAttrs = root.attributes;
+
+                    if (rootAttrs) {
+                        xmlReportId = rootAttrs.getNamedItem('SuiteExecutionID').value;
+                    }
+
+                    if (xmlReportId.toUpperCase() != suiteExecutionId.toUpperCase()) {
+                        error = true
+                        alert('Current Executed Report ID Does not match the Report \r\n Report Cannot be generated.');
+
+                        mxml = null;
+
+                    } //else 	alert("We are Done.");
+                }
+
+            }
+            else {
+                error = true
+                alert('Did Not Get ReportID. Cannot generate Report');
+                mxml = null;
+            }
+
+            if (!error)
+                CreateTreeTable();
+        }
+
+
+        var treeTable, bodyObj, strhtml;
+        var szCurrentScenario;
+        var szProjectName;
+        var szBuildNumber;
+        var szReleaseNumber;
+        var szIterationNumber;
+        var isStartTimeCaptured = false;
+        var szStartTime = "";
+        var szEndTime = "";
+		var absTime = "";
+        var isLogFrameVisible = false;
+        var szCurrentTestCaseName = "";
+        var szCurrentDatasetTag = "";
+        var szCurrentDatasetId = "";
+
+        treetable_callbacks['eventRowStateChanged'] = 'treetable_eventRowChanged';
+        function treetable_eventRowChanged(rowId, state) {
+            return (true);
+        }
+
+        function CreateTreeTable() {
+            bodyObj = document.getElementById("thediv");
+
+            var nodeid;
+            var mxml = new ActiveXObject("Microsoft.XMLDOM");
+
+            mxml.async = false;
+            var tafReportXMLPath = logPath + "TAF_Report.xml";
+            tafReportXMLPath = tafReportXMLPath.replace("/", "\\");
+
+            mxml.load(tafReportXMLPath); // The report xml needs to be parameterized to ExecutionID
+
+            var root = mxml.selectSingleNode("//Tree");
+            var attrList;
+            attrList = root.attributes;
+            szProjectName = attrList.getNamedItem("ProjectName").value;
+            szReleaseNumber = attrList.getNamedItem("ReleaseNumber").value;
+            szBuildNumber = attrList.getNamedItem("BuildNumber").value;
+            szIterationNumber = attrList.getNamedItem("IterationNumber").value;
+
+            var isInfoLogExists = attrList.getNamedItem("CreateInfoLog");
+            var isDebugLogExists = attrList.getNamedItem("CreateDebugLog");
+            var isErrorLogExists = attrList.getNamedItem("CreateErrorLog");
+
+            /* Made By Sachin*/
+            var isPassBitMapExists = attrList.getNamedItem("CapturePassBitMap");
+            var isFailBitMapExists = attrList.getNamedItem("CaptureFailBitMap");
+            var isDefectBitMapExists = attrList.getNamedItem("CaptureDefectBitMap");
+
+            isPassBitMapExists = isPassBitMapExists != null ? isPassBitMapExists.value.toLowerCase() == 'true' : false;
+            isFailBitMapExists = isFailBitMapExists != null ? isFailBitMapExists.value.toLowerCase() == 'true' : false;
+            isDefectBitMapExists = isDefectBitMapExists != null ? isDefectBitMapExists.value.toLowerCase() == 'true' : false;
+            /*-----------------------------------------------------------------------*/
+
+            isInfoLogExists = isInfoLogExists != null ? isInfoLogExists.value.toLowerCase() == 'true' : false;
+            isDebugLogExists = isDebugLogExists != null ? isDebugLogExists.value.toLowerCase() == 'true' : false;
+            isErrorLogExists = isErrorLogExists != null ? isErrorLogExists.value.toLowerCase() == 'true' : false;
+
+            //var start = new Date();
+            //strhtml = "<table id=\"table1\" cellpadding=\"2\" cellspacing=\"0\" width=\"100%\" border=\"0\" class=\"treetable\"><colgroup><col width=\"200\"/><col width=\"0*\"/><col width=\"0*\"/><col width=\"0*\"/><col width=\"0*\"/><col width=\"0*\"/></colgroup><tr id=\"tableColumn\"><th>Test Case Name</th><th>Status</th><th>Scenario</th><th>Object</th><th>Action</th><th>Data</th></tr>";
+            strhtml = "<table id=\"table1\" cellpadding=\"2\" cellspacing=\"0\" width=\"100%\" border=\"0\" class=\"treetable\"><colgroup><col width=\"200\"/><col width=\"20px\"/><col width=\"80\"/><col width=\"0*\"/><col width=\"0*\"/><col width=\"0*\"/><col width=\"0*\"/></colgroup><tr id=\"tableColumn\"><th>Test Case Name</th><th>Status</th><th>Execution time</th><th>Scenario</th><th>Object</th><th>Action</th><th>Data</th></tr>";
+            //strhtml = "<table id=\"table1\" cellpadding=\"2\" cellspacing=\"0\" width=\"100%\" border=\"0px\" class=\"treetable\" style=\"table-layout:auto\"><colgroup><col width=\"200\"/><col width=\"0%\"/><col width=\"0%\"/><col width=\"0%\"/><col width=\"0%\"/><col width=\"0%\"/></colgroup><tr id=\"tableColumn\"><th>Test&nbsp;Case&nbsp;Name<br><select id='CmbTestCaseName'><option>a</option></select></th><th>Status<br><select id='CmbStatus'><option>Passed</option><option>Failed</option><option>Defect</option><option>NotExecuted</option></select></th><th>Scenario<br><select id='CmbScenario'><option>a</option></select></th><th>Object</th><th>Action</th><th>Data</th></tr>";
+
+
+            WriteNodes(root.childNodes, "table1");
+            strhtml = strhtml + "</table>";
+
+            bodyObj.innerHTML = strhtml;
+            //alert(start + "  " + new Date());
+
+            ChangeStatus();
+
+            //treetable_expandAll('table1');
+			treetable_collapseAll('table1');
+
+            var i;
+            var szRowName = new String();
+            var szStatus;
+
+            var iPassed, iFailed, iDefect, iNotExecuted;
+            iPassed = 0;
+            iFailed = 0;
+            iDefect = 0;
+            iNotExecuted = 0;
+
+
+            var objTable = document.getElementById('table1');
+            for (i = 1; i < objTable.rows.length; i++) {
+                szRowName = objTable.rows[i].Name;
+
+                if (szRowName != "") {
+                    if (szRowName.indexOf("TCIteration", 0) != 0) {
+                        if (szRowName.indexOf("TC", 0) >= 0) { //TC Row
+                            szStatus = objTable.rows[i].cells[1].title;
+
+                            if (szStatus == "PASSED")
+                                iPassed = iPassed + 1;
+                            else if (szStatus == "FAILED")
+                                iFailed = iFailed + 1;
+                            else if (szStatus == "DEFECT")
+                                iDefect = iDefect + 1;
+                            else if (szStatus == "NOT EXECUTED")
+                                iNotExecuted = iNotExecuted + 1;
+                        }
+                    }
+                }
+            }
+
+            document.getElementById("panalHeader").innerHTML = "<p style='margin:4px 0px 0px 0px;'>Start Time:&nbsp;" + szStartTime + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;End Time:&nbsp;" + szEndTime + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pass:&nbsp;" + iPassed + "&nbsp;&nbsp;&nbsp;&nbsp;Fail:&nbsp;" + iFailed + "&nbsp;&nbsp;&nbsp;&nbsp;Not Executed:&nbsp;" + iNotExecuted + "&nbsp;&nbsp;&nbsp;&nbsp;Defect:&nbsp;" + iDefect + "</p><p style='margin:4px 0px 0px 0px;'>" + document.getElementById("panalHeader").innerHTML + "</p>";
+            CheckLogs(isInfoLogExists, isDebugLogExists, isErrorLogExists, isPassBitMapExists, isFailBitMapExists, isDefectBitMapExists);
+        }
+
+        function CheckLogs(isInfoLogExists, isDebugLogExists, isErrorLogExists, isPassBitMapExists, isFailBitMapExists, isDefectBitMapExists) {
+            if (!isInfoLogExists && !isDebugLogExists && !isErrorLogExists) {
+                var frameSet = window.parent.document.getElementById('FrameSet1');
+                frameSet.cols = "0,100%";
+
+
+                /*var frameSet = window.parent.document.getElementById('FrameSet');
+                frameSet.rows = "100%";	*/
+
+            }
+            else {
+                isLogFrameVisible = true;
+                var logFrame = (window.parent.frames[1]);
+                var logLinkList = logFrame.document.getElementById("logLinkList");
+                if (!isInfoLogExists) {
+                    var infologLink = logFrame.document.getElementById("infologLink").parentNode;
+                    logLinkList.removeChild(infologLink);
+                    logFrame.document.getElementById("debuglogLink").parentNode.id = "selected";
+                }
+
+                if (!isDebugLogExists) {
+                    var debuglogLink = logFrame.document.getElementById("debuglogLink").parentNode;
+                    logLinkList.removeChild(debuglogLink);
+                    if (!isInfoLogExists) logFrame.document.getElementById("errorlogLink").parentNode.id = "selected";
+                }
+
+                if (!isErrorLogExists) {
+                    var errorlogLink = logFrame.document.getElementById("errorlogLink").parentNode;
+                    logLinkList.removeChild(errorlogLink);
+                }
+
+                var logPathElement = document.getElementById("LogPath");
+                var logPath = logPathElement.value;
+
+                if (!logFrame.document.getElementById("logFrame")) return;
+
+                if (isInfoLogExists) {
+                    logFrame.document.getElementById("logFrame").src = logPath + "InfoLog.html";
+                }
+                else if (isDebugLogExists) {
+                    logFrame.document.getElementById("logFrame").src = logPath + "DebugLog.html";
+                }
+                else if (isErrorLogExists) {
+                    logFrame.document.getElementById("logFrame").src = logPath + "ErrorLog.html";
+                }
+            }
+        }
+
+        function CheckSpecial(aText) {
+            var szResult = "";
+            var i;
+            var cchar;
+            var nChars;
+
+            for (i = 0; i < aText.length; i++) {
+                cchar = aText.substr(i, 1);
+
+                switch (cchar) {
+                    case "<":
+                        nChars = "&lt;";
+                        break;
+                    case ">":
+                        nChars = "&gt;";
+                        break;
+                    case "&":
+                        nChars = "&amp;"
+                        break;
+                    case "\"":
+                        nChars = "&quot;"
+                        break;
+                    case "\'":
+                        nChars = "&#39;"
+                        break;
+                    default:
+                        nChars = cchar;
+                }
+
+                szResult = szResult + nChars;
+            }
+
+            return szResult;
+        }
+
+        function WriteNodes(nodeList, rowid) {
+            var treeRow, treeCell;
+            var attrList;
+            var szType;
+            var szSpaces;
+            var j, k;
+            var szTitle;
+            var i = 0;
+            var isLeaf = false;
+            var szStatus = "";
+            var szTreeRowId = rowid;
+
+
+            for (i = 0; i < nodeList.length; i++) {
+                attrList = nodeList.item(i).attributes;
+                szType = attrList.getNamedItem("Type").value;
+
+                szSpaces = "&nbsp;";
+                j = 0;
+
+                szTitle = "branchText";
+
+                if (szType == "SUITE") {
+                    document.getElementById("panalHeader").innerHTML = "Test Execution Report:&nbsp;&nbsp;&nbsp;&nbsp;Project:&nbsp;" + szProjectName + "&nbsp;&nbsp;&nbsp;Suite:&nbsp;" + attrList.getNamedItem("branchText").value + "&nbsp;&nbsp;&nbsp;Build:&nbsp;" + szBuildNumber + "&nbsp;&nbsp;&nbsp;Release:&nbsp;" + szReleaseNumber + "&nbsp;&nbsp;&nbsp;Iteration:&nbsp;" + szIterationNumber;
+                }
+                else if (szType == "TC") {
+                    szCurrentScenario = attrList.getNamedItem("ScenarioName").value;
+                    //alert(attrList.getNamedItem("RunId").value);
+                    szTreeRowId = "table1" + CheckSpecial(szCurrentScenario) + "" + i;
+                    j = 1;
+                    szCurrentTestCaseName = attrList.getNamedItem("branchText").value;
+					absTime = attrList.getNamedItem("AbsTime").value;
+
+                }
+                else if (szType == "TCIteration") {
+                    szCurrentDatasetTag = attrList.getNamedItem("TCDataSetTag").value;
+                    szTitle = "IterationNo";
+                    j = 2;
+					absTime = attrList.getNamedItem("AbsTime").value;
+                }
+                else if (szType == "TASK") {
+                    j = 3;
+					absTime = attrList.getNamedItem("AbsTime").value;
+                }
+                else if (szType == "TaskIteration") {
+                    szTitle = "IterationNo";
+                    j = 4;
+					absTime = attrList.getNamedItem("AbsTime").value;
+                }
+                else if (szType == "STEP") {
+                    isLeaf = true;
+                    szTitle = "Action";
+                    j = 5;
+                    szEndTime = attrList.getNamedItem("EndTime").value;
+
+                    if (!isStartTimeCaptured) {
+                        isStartTimeCaptured = true;
+                        szStartTime = attrList.getNamedItem("StartTime").value;
+                    }
+					absTime = attrList.getNamedItem("AbsTime").value;
+                }
+
+                if (szType != "SUITE" && szType != "SCEN") {
+
+                    for (k = 0; k < j; k++) {
+                        szSpaces = szSpaces + "&nbsp;&nbsp;&nbsp;";
+                    }
+
+                    treeRow = " <tr ";
+
+                    //            treeRow.style.cursor = "pointer";
+                    //  treeRow
+
+                    //          treeRow.id = rowid + "?" + i;
+
+                    treeRow = treeRow + "id=\"" + rowid + "þ" + i + "\" ";
+                    treeRow = treeRow + "style=\"cursor:pointer\"";
+
+                    szTreeRowId = rowid + "þ" + i;
+                    if (szType == "TC" || szType == "TASK") {
+                        treeRow = treeRow + "Name = \"" + szType + "þ" + attrList.getNamedItem("SeqId").value + "\" ";
+                    } else if (szType == "TCIteration") {
+                        treeRow = treeRow + "Name = \"" + szType + "þ" + attrList.getNamedItem("IterationNo").value +"\" ";
+
+                    } else if (szType == "TaskIteration") {
+                        treeRow = treeRow + "Name = \"" + szType + "þ" + attrList.getNamedItem("IterationNo").value + "\" ";
+                    } else if (szType == "STEP") {
+                        treeRow = treeRow + "Name = \"" + szType + "þ" + attrList.getNamedItem("Id").value + "þ" + attrList.getNamedItem("Status").value + "\" ";
+                    }
+                    else {
+                        //                treeRow.Name = szType + "?0";
+                        treeRow = treeRow + "Name = \"" + szType + "þ0" + "\" ";
+                    }
+                    //dont uncomment //treeRow.title = attrList.getNamedItem(szTitle).value;
+                    // treeRow.title = szCurrentTestCaseName;
+                    treeRow = treeRow + "title = \"" + CheckSpecial(szCurrentTestCaseName) + "\" ";
+
+                    //Test Case Name
+                    //treeCell = treeRow.insertCell();
+
+                    if (isLeaf) {
+                        treeRow = treeRow + " onclick = \"NavigateLog(GetTrNode());\"";
+                    }
+                    else {
+                        treeRow = treeRow + " onclick = \"NavigateLogNew();\"";
+                    }
+
+                    treeRow = treeRow + ">";
+                    treeCell = "<td ";
+                    //		alert(szTitle);
+                    //		alert(attrList.getNamedItem(szTitle).value);
+
+                    treeCell = treeCell + " Name = \"" + CheckSpecial(attrList.getNamedItem(szTitle).value) + "\" >";
+
+                    if (isLeaf) {
+                        treeCell = treeCell + szSpaces;
+                    }
+                    else {
+                        /*
+                        treeRow.onclick = function()
+                        {
+                        treetable_toggleRow(GetTrNode());
+                        NavigateLog(GetTrNode());
+                        };
+                        treeCell.innerHTML = szSpaces + "<a style='cursor:pointer;');><img src='Images/minus.gif' class='button' alt=''/>" + attrList.getNamedItem(szTitle).value + "</a>";
+                        */
+						//alert(attrList.getNamedItem(szTitle).value);
+                        treeCell = treeCell + szSpaces + "<a style='cursor:pointer;');><img src='Images/plus.gif' class='button' alt=''/>" + CheckSpecial(attrList.getNamedItem(szTitle).value) + "</a>";
+                    }
+                    //treeCell.Name = attrList.getNamedItem(szTitle).value;
+
+                    treeCell = treeCell + "</td>";
+
+                    treeRow = treeRow + treeCell; // + " </tr>";			
+                    //Status
+                    //treeCell = treeRow.insertCell();
+                    treeCell = "<td ";
+                    if (isLeaf) {
+                        szStatus = attrList.getNamedItem("Status").value;
+
+                        if (szStatus == "0")
+                            treeCell = treeCell + " title=\"Passed\" ";
+                        else if (szStatus == "-1")
+                            treeCell = treeCell + " title = \"Not Executed\" ";
+                        else if (szStatus == "2")
+                            treeCell = treeCell + " title = \"Defect\" ";
+                        else
+                            treeCell = treeCell + " title = \"Failed\" ";
+
+                        treeCell = ChangeStatusTextForString(treeCell);
+                        //alert(treeCell);
+                    }
+                    else {
+                        //treeCell.title = "";
+                        treeCell = treeCell + " title = \"\" ";
+
+                        //treeCell.innerText = "--";
+                        treeCell = treeCell + ">--</td>";
+
+                    }
+                    treeRow = treeRow + treeCell;
+                    //			treeRow = treeRow + " </tr>";
+					
+					
+					/////////////////////////////////////////////////
+
+					//Iohbha : Create a new column here , to display Execution Time Taken [absoluteTime]
+					treeCell = "<td ";
+					treeCell = treeCell + " title = \"\" ";
+					treeCell = treeCell + "> " + absTime + "</td>";
+					absTime = "";
+					treeRow = treeRow + treeCell;
+
+					/////////////////////////////////////////////////
+
+                    //Scenario
+                    // treeCell = treeRow.insertCell();
+                    treeCell = "<td ";
+
+                    //treeCell.title = "";
+                    treeCell = treeCell + " title = \"\" ";
+
+                    //	treeCell.innerText = szCurrentScenario;
+                    treeCell = treeCell + ">" + CheckSpecial(szCurrentScenario) + "</td>";
+
+                    treeRow = treeRow + treeCell;
+
+                    //Object Name
+                    // treeCell = treeRow.insertCell();
+                    treeCell = "<td ";
+                    //  treeCell.title = "";
+                    treeCell = treeCell + " title = \"\" ";
+
+                    if (isLeaf) {
+                        var szObject = attrList.getNamedItem("object").value;
+
+                        if (szObject != "")
+                        // treeCell.innerText = attrList.getNamedItem("object").value;
+                            treeCell = treeCell + "> " + CheckSpecial(attrList.getNamedItem("object").value) + "</td>";
+                        else
+                        //treeCell.innerHTML = "&nbsp;";
+                            treeCell = treeCell + ">&nbsp;</td>";
+                    }
+                    else {
+                        treeCell = treeCell + ">&nbsp;</td>";
+                    }
+                    treeRow = treeRow + treeCell;
+
+
+                    //Action
+                    // treeCell = treeRow.insertCell();
+                    treeCell = "<td ";
+                    //treeCell.title = "";
+                    treeCell = treeCell + " title = \"\" ";
+
+                    if (isLeaf)
+                    //treeCell.innerText = attrList.getNamedItem("Action").value;
+                        treeCell = treeCell + "> " + attrList.getNamedItem("Action").value + "</td>";
+                    else
+                    //treeCell.innerHTML = "&nbsp;";
+                        treeCell = treeCell + ">&nbsp;</td>";
+
+                    treeRow = treeRow + treeCell;
+
+
+                    //Data
+                    //treeCell = treeRow.insertCell();
+                    treeCell = "<td ";
+                    //treeCell.title = "";
+                    treeCell = treeCell + " title = \"\" ";
+
+                    //treeCell.innerHTML = "&nbsp;";
+
+                    if (isLeaf) {
+                        var paramNodeList = nodeList.item(i).childNodes;
+                        var paramAttrList;
+                        var szStr = "";
+
+                        for (k = 0; k < paramNodeList.length; k++) {
+                            paramAttrList = paramNodeList.item(k).attributes;
+                            szStr += CheckSpecial(paramAttrList.getNamedItem("Name").value) + "&nbsp;(" + CheckSpecial(RemoveEscapeCharacters(paramNodeList.item(k).text)) + ")&nbsp;&nbsp;";
+                        }
+
+                        if (szStr != "")
+                        //treeCell.innerHTML = szStr;
+                            treeCell = treeCell + ">" + szStr + "</td>";
+                        else
+                        //treeCell.innerHTML = "&nbsp;";
+                            treeCell = treeCell + ">&nbsp;</td>";
+
+                    } else if (szType == "TCIteration") {
+                        if (1==1){//(szCurrentDatasetId != "") {
+                            treeCell = treeCell + " >Dataset Tag: <B>" + CheckSpecial(szCurrentDatasetTag) + "</B></td>";
+                        } else {
+                            treeCell = treeCell + ">&nbsp;</td>";
+                        }
+                    } else {
+                        treeCell = treeCell + ">&nbsp;</td>";
+                    }
+                    treeRow = treeRow + treeCell;
+                    strhtml = strhtml + treeRow;
+                }
+
+                //Recursive Code
+                if (szType != "STEP") {
+                    if (nodeList.item(i).hasChildNodes())
+                        WriteNodes(nodeList.item(i).childNodes, szTreeRowId);
+
+                }
+            }
+        }
+
+        function RemoveEscapeCharacters(value) {
+            if (value == null || value == "")
+                return value;
+
+            value = value.replace("/\^", "^");
+            value = value.replace("/{", "{");
+            value = value.replace("/}", "}");
+            value = value.replace("//", "/");
+
+            return value;
+        }
+
+        function NavigateLogNew() {
+            treetable_toggleRow(GetTrNode());
+            NavigateLog(GetTrNode());
+        };
+
+
+        function ChangeStatusTextForString(treeCell) {
+            //    if (treeCell.title.toLowerCase() == "passed")
+            if (treeCell.indexOf("Passed") != -1)
+            //treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/passed.png'/>&nbsp;&nbsp;Passed";
+                treeCell = treeCell + ">&nbsp;<img alt='' align='middle' src='Images/passed.png'/>&nbsp;&nbsp;</td>";
+
+
+            // else if (treeCell.title.toLowerCase() == "failed")
+            else if (treeCell.indexOf("Failed") != -1)
+            // treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/fail.PNG'/>&nbsp;&nbsp;Failed";
+                treeCell = treeCell + ">&nbsp;<img alt='' align='middle' src='Images/fail.PNG'/>&nbsp;&nbsp;</td>";
+
+
+
+            //else if (treeCell.title.toLowerCase() == "not executed")
+            else if (treeCell.indexOf("Not Executed") != -1)
+            //treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/Not_Executed.png'/>&nbsp;&nbsp;Not Executed";
+                treeCell = treeCell + ">&nbsp;<img alt='' align='middle' src='Images/Not_Executed.png'/>&nbsp;&nbsp;</td>";
+
+
+            // else if (treeCell.title.toLowerCase() == "defect")
+            else if (treeCell.indexOf("Defect") != -1)
+            // treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/Defect.png'/>&nbsp;&nbsp;Defect";
+                treeCell = treeCell + ">&nbsp;<img alt='' align='middle' src='Images/Defect.png'/>&nbsp;&nbsp;</td>";
+
+            return treeCell;
+        }
+        function showImage(testCaseSequence, taskSequence, stepSeq, szStatus, TCIteration, TaskIteration) {
+
+            var objFrame = parent.frames[2];
+            var captureBitMap = objFrame.document.getElementById("imgCaptureBitMap");
+            if (stepSeq != "") {
+                //alert("_Capture_Images/"+"snapshot_"+testCaseSequence+"_"+taskSequence+"_"+stepSeq);
+                var path = document.URL;
+
+                var imagePath, captureImagePath, errorImagePath;
+
+                path = path.replace(/\\/g, "/");
+                path = path.substr(0, path.lastIndexOf("/") + 1);
+                path = path.replace("file://", "")
+                //alert(path+"Snapshot_"+testCaseSequence+"_"+taskSequence+"_"+stepSeq+".png");
+                errorImagePath = path + "Images/";
+                captureImagePath = path + "Capture_Images/";
+                if (szStatus == -1) {
+                    captureBitMap.src = errorImagePath + "CI_NotExecuted.png";
+                }
+                else if (CheckFolderExist(path)) {
+
+                    imagePath = captureImagePath + "Snapshot_" + testCaseSequence + "_" + TCIteration + "_" + taskSequence + "_" + TaskIteration + "_" + stepSeq + ".png";
+
+                    if (CheckFileExist(imagePath))
+                        captureBitMap.src = imagePath;
+                    else {
+                        captureBitMap.src = errorImagePath + "CI_FileNotFound.png";
+                    }
+                } else {
+                    path = path + "Images/";
+                    captureBitMap.src = errorImagePath + "CI_FolderNotFound.png";
+                }
+
+
+            }
+
+
+            //	parent.frames[2].location="capture/ssf7.png";
+
+        }
+        function CheckFolderExist(path) {
+		try{
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+            var folderBool;
+            folderBool = fso.FolderExists(path + "/Capture_Images");
+            //alert(folderBool);
+            return folderBool;
+			}
+			catch(err)
+			{
+			return false;
+			}
+        }
+        function CheckFileExist(imagePath) {
+		try{
+            var fso = new ActiveXObject("Scripting.FileSystemObject");
+            var fileBool = fso.FileExists(imagePath);
+
+            return fileBool;
+		}
+		catch(err)
+		{
+			return false;
+		}
+        }
+        function ChangeStatusText(treeCell) {
+            if (treeCell.title.toLowerCase() == "passed")
+                treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/passed.png'/>&nbsp;&nbsp;";
+            else if (treeCell.title.toLowerCase() == "failed")
+                treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/fail.PNG'/>&nbsp;&nbsp;";
+            else if (treeCell.title.toLowerCase() == "not executed")
+                treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/Not_Executed.png'/>&nbsp;&nbsp;";
+            else if (treeCell.title.toLowerCase() == "defect")
+                treeCell.innerHTML = "&nbsp;<img alt='' align='middle' src='Images/Defect.png'/>&nbsp;&nbsp;";
+        }
+
+
+        function ChangeStatus() {
+            //debugger
+            var treeTable = document.getElementById("table1");
+            var rowLen = treeTable.rows.length;
+            var i = 0;
+            var rowType = 0;
+            //    var prevRowType = 6;
+            var objRow = null;
+
+            var szTitle = "";
+
+            for (j = 6; j > 0; j--) {
+                for (i = rowLen - 1; i > 0; i--) {
+                    objRow = treeTable.rows[i];
+                    rowType = objRow.id.split('þ').length;
+                    //alert(rowType);
+                    if (j == rowType) {
+                        szTitle = objRow.cells[1].title + "|" + szTitle;
+
+                    }
+                    else if (rowType == j - 1) {
+
+                        szTitle = szTitle.toLowerCase();
+                        if (szTitle.indexOf("failed") >= 0) {
+                            objRow.cells[1].title = "FAILED";
+                            ChangeStatusText(objRow.cells[1]);
+                        }
+                        else if (szTitle.indexOf("not executed") >= 0) {
+                            objRow.cells[1].title = "NOT EXECUTED";
+                            ChangeStatusText(objRow.cells[1]);
+                        }
+                        else if (szTitle.indexOf("defect") >= 0) {
+                            objRow.cells[1].title = "DEFECT";
+                            ChangeStatusText(objRow.cells[1]);
+                        }
+                        else {
+                            objRow.cells[1].title = "PASSED";
+                            ChangeStatusText(objRow.cells[1]);
+                        }
+
+                        szTitle = "";
+                    }
+                }
+            }
+        }
+
+        function NavigateLog(rowid) {
+            //debugger;
+
+            var szLogId = "";
+            var objRow;
+            var szTempId = new String();
+            szTempId = rowid;
+
+            var szTestCaseSequence, szTaskSequence, szStepId, szTcIteration, szTaskIteration;
+            var szSplit, szType, szStatus;
+
+            szTestCaseSequence = "";
+            szTaskSequence = "";
+            szStepId = "";
+            szStatus = "";
+            szTcIteration = "";
+            szTaskIteration = "";
+
+
+            while (true) {
+                //alert(szTempId);
+                objRow = document.getElementById(szTempId);
+                //alert(szTempId);
+                if (objRow != null && objRow.tagName == "TR") {
+
+                    if (szLogId == "") {
+                        szLogId = objRow.cells[0].Name;
+                    }
+                    else
+                        szLogId = objRow.cells[0].Name + "þ" + szLogId;
+                    //szStatus=objRow.cells[1].title;
+                    szSplit = objRow.Name.split('þ');
+
+                    if (szSplit.length > 0) {
+                        szType = szSplit[0];
+
+                        if (szType == "TC") {
+                            szTestCaseSequence = szSplit[1];
+
+                        }
+                        else if (szType == "TCIteration") {
+                            szTcIteration = szSplit[1];
+
+                        }
+                        else if (szType == "TASK") {
+                            szTaskSequence = szSplit[1];
+
+                        }
+                        else if (szType == "TaskIteration") {
+                            szTaskIteration = szSplit[1];
+
+                        }
+                        else if (szType == "STEP") {
+                            szStepId = szSplit[1];
+                            szStatus = szSplit[2];
+                        }
+                    }
+                    szTempId = szTempId.substring(0, szTempId.lastIndexOf("þ"));
+                    objRow = null;
+                }
+                else
+                    break;
+            }
+
+            szSplit = szLogId.split('þ');
+            szLogId = szSplit[0] + 'þ' + szTestCaseSequence + 'þ' + szSplit[1] + 'þ' + szSplit[2] + 'þ' + szTaskSequence + 'þ' + szSplit[3] + 'þ' + szStepId + 'þ' + szSplit[4];
+
+            ScrollIframe('logFrame', szLogId, szTestCaseSequence, szTaskSequence, szStepId);
+            showImage(szTestCaseSequence, szTaskSequence, szStepId, szStatus, szTcIteration, szTaskIteration);
+        }
+
+        function ScrollIframe(frameName, LogId, TestCaseSequence, TaskSequence, StepId) {
+            // var objIframe = document.getElementById(frameName);
+            ///debugger;
+            //debugger;
+
+            var logframe = window.parent.frames[1];
+
+            if (logframe == undefined) return;
+            var objIframe = logframe.document.getElementById(frameName);
+            //alert(objIframe);
+
+            //	alert(objIframe);
+            if (isLogFrameVisible)
+                objIframe.style.visibility = "visible";
+            else
+                return;
+
+            var objLink;
+            var objs;
+            var LinkId = new String();
+            var re;
+            var objAction;
+            var szSplit;
+
+            try {
+                objs = objIframe.contentWindow.document.getElementsByTagName('a');
+                //alert(objs);
+            }
+            catch (exception) {
+                //alert(exception);
+                return;
+            }
+
+            for (k = 0; k < objs.length; k++) {
+                LinkId = objs[k].id;
+                //alert(LinkId);
+                //alert(LogId);
+                if (LinkId.toLowerCase() == LogId.toLowerCase()) {
+                    objs[k].scrollIntoView();
+                    break;
+                }
+                else {
+                    if (LinkId.indexOf(LogId, 0) > 0) //if (LinkId.match(re))
+                    {
+                        szSplit = LinkId.split('-');
+                        szSplit = LinkId.split('?');
+
+                        if (TestCaseSequence != "" && TaskSequence != "" && StepId != "") { //Must be click on Step
+                            if (TestCaseSequence == szSplit[5] && TaskSequence == szSplit[6] && StepId == szSplit[7]) {
+                                objs[k].scrollIntoView();
+                                break;
+                            }
+                        }
+                        else if (TestCaseSequence != "" && TaskSequence != "") {//Must be click on Task
+                            if (TestCaseSequence == szSplit[5] && TaskSequence == szSplit[6]) {
+                                objs[k].scrollIntoView();
+                                break;
+                            }
+                        }
+                        else if (TestCaseSequence != "") {//Must be click on Test Case
+                            if (TestCaseSequence == szSplit[5]) {
+                                objs[k].scrollIntoView();
+                                break;
+                            }
+                        }
+                        else { //Click on Scenario Or Suite
+                            objs[k].scrollIntoView();
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body onload="CheckTafReport();" style="margin-left: 2px; margin-right: 2px;">
+    <input type="hidden" name="LogPath" id="LogPath" />
+    <table id="wrapper" cellpadding="0" style="height: 100%;" width="100%" cellspacing="0"
+        border="0">
+        <!--    <tr style="height:55%; background:white;">
+        <td>
+            <div id="divTitle" style="text-align:left;height:20px;padding:4px 0 0 9px;background-color:#cce0f2;font-size:12px;margin:0px 4px 0px 4px;"></div>
+        </td>
+    </tr>
+-->
+        <tr style="height: 55%;">
+            <td style="vertical-align: top; height: 90%; text-align: center;">
+                <div style="margin: 0; border: solid 1px #9DC4ED; width: 99%; height: 100%;">
+                    <div id="panalHeader" style="margin: 0px; text-align: left; background-image: url(Images/Header.PNG);
+                        background-repeat: repeat; height: 35px; padding: 2px 0px 0px 5px;">
+                        Suite: Functional                        
+                     </div>                     
+                    <div id="thediv" style="margin: 0px 0px 0px 0px; width: 100%; padding-right: 0px;
+                        text-align: left; overflow: scroll; height: 96%">
+                    </div>
+                    
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+margin:0 auto;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:12px;
+height:100%;
+}
+
+.container{
+margin:auto;
+margin-top:5px;
+width:99%;
+height:auto;
+margin-left:5px;
+}
+
+
+/* Typography  */
+.header{ font:Georgia, "Times New Roman", Times, serif; color:#313131; font-size:16px; border-bottom:1px solid #ccc; padding:10px 0 3px 0}
+#titleheader{ font:Georgia, "Times New Roman", Times, serif; color:#313131; font-size:15px; border-bottom:1px solid #ccc; padding:10px 0 3px 0}
+
+.clear{ clear:both;}
+
+#part1{float:left;width:100%;}
+
+#firstleft{ width:60%; float:left; margin-left=0px;}
+#logodate{ width:100%;}
+#logo{ float:left;margin-top:10px;}  
+#date{font-size:18px;color:#333333;float:left; margin-top:10px; margin-left:20px;}
+#summary
+{
+    float: left; 
+    text-align: left;
+	font-family:Georgia/*, "Times New Roman", Times, serif*/;
+	font-size:11px;
+	color:#3c3c3c;
+	background-color:#f5f4f4;
+	border:1px solid #ccc;
+	margin-top: 5px;
+	margin-left:5px;
+	width:60%;
+}
+
+#total{ float:right; font-size:13px; color:#3c3c3c; font-weight:bold;} 
+#divpassed{ float:left;padding:5px; color:#00bb33} 
+#divfailed{ float:left;padding:5px; color:#ff7700} 
+#divnotexecuted{ float:left;padding:5px; color:#888888} 
+#divdefects{ float:left;padding:5px; color:#ff0000}
+
+.attrname{ align:left; font-weight:bold}
+/*
+.dbcol1{ align:left; font-weight:bold; width:10%}
+.dbcol2{ align:left; font-weight:bold; width:5%}
+.dbcol3{ align:left; width:29%}
+.dbcol4{ align:left; font-weight:bold; width:10%}
+.dbcol5{ align:left; font-weight:bold; width:5%}
+.dbcol6{ align:left; width:29%}
+*/
+.subtitletext{ text-align:right; padding:2px; color:#313131}
+
+.left{ width:50%; float:left}
+.margintop{ margin-top:50px;}
+.gcenter{ z-index:100}
+
+#graphbackground{ background:#f5f4f4; border-top:1px solid #ccc; border-bottom: 12px solid #e2e2e2; height:200px; margin-top:20px;}
+
+#barbox{ float:left; width:600px; border:1px solid #d00;}
+#gleft{ float:none; width:300px; background:url(images/leftbar.png) no-repeat; text-align:right;}
+#gright{ float:none; width:300px; background:url(images/rightbar.png) no-repeat; overflow:hidden; text-align:right;}
+
+.breadcrumb{ font-size:11px; color:#666666; padding:0px 0 20px 0}
+
+
+#notice { float:left; width:850px;}
+#noticename{ width:400px; float:left;  padding:0 0 10px 0; font-size:24px; color:#990000}
+#noticesummary{ float:right; padding:0 0 10px 0;}
+.list a{ color:#990000; text-decoration:none}
+.list a:hover{ text-decoration:underline}
+.listheader{ background:url(images/listheader.png) repeat-x; padding-left:5px;}
+.border_bottom{ border-bottom:1px solid #ccc;}
+		
+.hide{
+    display:none;
+}
+
+.show{
+    display:inline;
+}
+
+.tctable
+{
+    width: 98.5%;
+    text-align: left;
+    margin-left:2px;
+    
+    border-top-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 0px;
+    border-right-width: 0px;
+                       
+}
+.tctable tr
+{
+    border-width: 0px;
+    cursor:default !important;
+}
+.tctable th
+{
+    background-image: url(Images/GridHeader.png);
+    border-color: #9DC4ED;
+    border-style: solid;
+    height: 20px;
+    margin: 0px;
+    padding: 0 0 0 5px;
+    font-weight: normal;
+    color: Black;
+    font-size: 11px;
+    font-family: Tahoma;   
+    
+    border-top-width: 1px;
+    border-left-width: 0px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;         
+}
+.tctable td
+{
+    /*background: white; */
+    border-color: #9DC4ED;
+    border-style: solid;
+    margin: 0px;
+    padding: 0 0 0 7px;
+    font-weight: normal;
+    color: Black;
+    font-size: 11px;
+    font-family: Tahoma;
+    
+    border-top-width: 0px;
+    border-left-width: 0px;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    
+    
+}
+
+html, body, #xsltOutput
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 11px;
+            font-family: Tahoma;
+            color: Black;
+        }
+        #header ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #header li
+        {
+            float: left;
+            border: 1px solid #bbb;
+            border-bottom-width: 0;
+            margin: 0;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #header a
+        {
+            text-decoration: none;
+            display: block;
+            background: #E2EAF9;
+            padding: 1px;
+            color: Black;
+            width: 90px;
+            text-align: center;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #header a:hover
+        {
+            background: #ddf;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #header #selected
+        {
+            border-color: #bbb;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #header #selected a
+        {
+            position: relative;
+            top: 1px;
+            background: white;
+            color: Black;
+            font-weight: bold;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+        #content
+        {
+            border: 0px solid lightblue;
+            clear: both;
+            padding: 0px;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+		
+		#thediv
+	{
+		margin-left:5px; 
+		margin-top:10px; 
+		width: 100%; 
+		height:85%; 
+		padding-right:0px; 
+		text-align:left; 
+		}
+
+		
+        h1
+        {
+            margin: 0;
+            padding: 0 0 1em 0;
+            font-size: 11px;
+            font-family: Tahoma;
+        }
+		
+.selected_row
+{
+    background-color:#ADD8E6;    
+}
+
+.disabled_row
+{
+    background-color:#D3D3D3;    
+}
